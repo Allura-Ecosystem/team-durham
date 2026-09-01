@@ -1,0 +1,7 @@
+module,skill,display-name,menu-code,description,action,args,phase,preceded-by,followed-by,required,output-location,outputs
+Team Durham,dur-setup,Setup Team Durham Module,DS,"Register Team Durham BMad module configuration and help entries.",configure,"{-H: headless mode}",anytime,,,false,{project-root}/_bmad,config.yaml and module-help.csv
+Team Durham,dur-agent-kotler,Activate Kotler,DK,"Route governed brand production through Kotler.",activate,,anytime,,,false,,brand route
+Team Durham,dur-agent-scout,Brand Scout,DC,"Find bounded Durham brand context before specialist work.",recon,"{task: scoped request}",before-brand,,,true,,ContextPacket
+Team Durham,dur-agent-munari,Brand QA,DM,"Verify brand compliance and readiness through Munari.",review,"{scope: brand artifacts}",review,dur-brand-delivery:deliver,,true,,QA verdict
+Team Durham,dur-brand-delivery,Deliver Brand Slice,DD,"Deliver one governed non-shipping brand slice through Team Durham.",deliver,"{brief: approved task}",delivery,dur-agent-scout:recon,dur-agent-munari:review,true,,brand evidence
+Team Durham,dur-brand-auto,Bounded Brand Auto,DA,"Run bounded Team Durham brand auto mode with HITL gates.",auto,"{task: approved task}",anytime,dur-agent-scout:recon,,false,,terminal state and receipt

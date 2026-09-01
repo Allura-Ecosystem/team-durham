@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "name": "team-durham",
+  "canonicalRepository": "https://github.com/Allura-Ecosystem/team-durham",
+  "defaultBranch": "main",
+  "revision": null,
+  "revisionMode": "injected-at-export",
+  "exportManifest": "export-manifest.json",
+  "exportScript": "scripts/export_catalog.py",
+  "catalogConsumer": "https://github.com/Allura-Ecosystem/allura-plugins/tree/main/team-durham",
+  "canonicalRoles": [
+    "agentic-trust-architect",
+    "brand-kit-builder",
+    "brand-orchestrator",
+    "brand-strategist",
+    "copywriter",
+    "data-analyst",
+    "evidence-collector",
+    "qa-reviewer",
+    "reality-checker",
+    "scout-recon",
+    "visual-director",
+    "workflow-architect"
+  ],
+  "compatibilityDefinitions": [
+    "openagent"
+  ],
+  "roleCount": {
+    "canonical": 12,
+    "loadableDefinitions": 13
+  }
+}

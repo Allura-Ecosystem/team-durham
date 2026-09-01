@@ -1,0 +1,68 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://allura.dev/contracts/context-packet.schema.json",
+  "title": "Allura ContextPacket",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "version",
+    "goal",
+    "summary",
+    "files",
+    "memories",
+    "risks",
+    "recommended_route",
+    "validation_commands",
+    "token_usage"
+  ],
+  "properties": {
+    "version": { "const": "1.0" },
+    "goal": { "type": "string", "minLength": 1 },
+    "summary": { "type": "string", "minLength": 1 },
+    "files": {
+      "type": "array",
+      "maxItems": 12,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["path", "reason"],
+        "properties": {
+          "path": { "type": "string", "minLength": 1 },
+          "reason": { "type": "string", "minLength": 1 },
+          "lines": { "type": "string" }
+        }
+      }
+    },
+    "memories": {
+      "type": "array",
+      "maxItems": 5,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["summary"],
+        "properties": {
+          "id": { "type": "string" },
+          "summary": { "type": "string", "minLength": 1 },
+          "relevance": { "type": "number", "minimum": 0, "maximum": 1 }
+        }
+      }
+    },
+    "risks": { "type": "array", "maxItems": 8, "items": { "type": "string" } },
+    "recommended_route": { "type": "string", "minLength": 1 },
+    "validation_commands": {
+      "type": "array",
+      "maxItems": 5,
+      "items": { "type": "string" }
+    },
+    "token_usage": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["input", "output", "budget"],
+      "properties": {
+        "input": { "type": "integer", "minimum": 0 },
+        "output": { "type": "integer", "minimum": 0 },
+        "budget": { "type": "integer", "minimum": 1 }
+      }
+    }
+  }
+}

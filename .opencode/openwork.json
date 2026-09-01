@@ -1,0 +1,20 @@
+{
+  "version": 2,
+  "workspace": {
+    "name": "Allura Ecosystem",
+    "description": "Team RAM + Team Durham unified workspace. Brooks primary for dev/arch. Kotler for design/brand.",
+    "createdAt": 1780948984487,
+    "updatedAt": 1780948984487,
+    "preset": "team-ram"
+  },
+  "agents": {
+    "primary": "brooks",
+    "teams": {
+      "ram": ".opencode/agents/",
+      "durham": "Allura-brandmaker/.claude/agents/"
+    }
+  },
+  "authorizedRoots": [
+    "/media/ronin704/Games/Projects/Allura-ecosystem"
+  ]
+}

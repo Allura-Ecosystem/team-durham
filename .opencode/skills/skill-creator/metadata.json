@@ -1,0 +1,13 @@
+{
+  "id": "skill-creator",
+  "name": "Skill Creator",
+  "description": "Create and manage agent skills",
+  "agents": [
+    "brooks"
+  ],
+  "platforms": [
+    "claude"
+  ],
+  "tier": 1,
+  "installed": "2026-04-08T21:24:52.313Z"
+}

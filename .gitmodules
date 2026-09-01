@@ -1,0 +1,3 @@
+[submodule "allura-memory"]
+	path = Allura-ecosystem/allura-memory
+	url = https://github.com/Allura-Ecosystem/Allura_Memory.git

@@ -1,0 +1,20 @@
+# Team Durham Gitleaks configuration
+# Extend the maintained default rules; add only narrow, documented false-positive allowances.
+
+title = "Team Durham secret scanning"
+
+[extend]
+useDefault = true
+
+[allowlist]
+description = "Non-secret semantic identifiers used in Figma Plugin API examples"
+regexTarget = "secret"
+regexes = [
+  '''^collection/(primitives|color|spacing)$''',
+  '''^primitive/blue/500$'''
+]
+paths = [
+  '''(^|/)node_modules/''',
+  '''(^|/)\.git/''',
+  '''(^|/)dist/'''
+]

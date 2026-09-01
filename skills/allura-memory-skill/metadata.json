@@ -1,0 +1,54 @@
+{
+  "name": "allura-memory-skill",
+  "description": "Governance layer for Allura Brain memory operations. Use when working with persistent memory — storing, retrieving, promoting, superseding, deprecating, or revoking memories. Two-layer architecture: MCP server (runtime) + this skill (behavior contract).",
+  "version": "2.1.0",
+  "triggers": [
+    "memory",
+    "remember",
+    "recall",
+    "search brain",
+    "allura-brain",
+    "semantic graph",
+    "knowledge graph",
+    "promote",
+    "supersede",
+    "deprecate",
+    "insight",
+    "raw trace",
+    "session start",
+    "session end",
+    "store decision",
+    "store pattern",
+    "blocker",
+    "ARCHITECTURE_DECISION",
+    "LESSON_LEARNED"
+  ],
+  "layer": "behavior-contract",
+  "runtime": "mcp-docker",
+  "companion_skills": [
+    "memory-client",
+    "mcp-docker-memory"
+  ],
+  "primary_tools": [
+    "MCP_DOCKER_search_memories",
+    "MCP_DOCKER_create_entities",
+    "MCP_DOCKER_create_relations",
+    "MCP_DOCKER_add_observations",
+    "MCP_DOCKER_find_memories_by_name",
+    "MCP_DOCKER_execute_sql",
+    "MCP_DOCKER_insert_data",
+    "allura-brain_memory_search",
+    "allura-brain_memory_add",
+    "allura-brain_memory_promote"
+  ],
+  "references": [
+    "references/allura-memory-model.md",
+    "references/allura-promotion-policy.md",
+    "references/allura-dual-context-retrieval.md",
+    "references/allura-troubleshooting.md"
+  ],
+  "scripts": [
+    "scripts/validate-env.sh",
+    "scripts/smoke-test-memory.sh"
+  ]
+}

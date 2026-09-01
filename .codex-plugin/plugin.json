@@ -1,0 +1,52 @@
+{
+  "name": "team-durham",
+  "version": "0.3.0",
+  "description": "Team Durham brand production team for Codex: agents, skills, commands, governance, and persona research.",
+  "author": {
+    "name": "Team Durham"
+  },
+  "license": "MIT",
+  "skills": "./skills/",
+  "commands": [
+    "./commands/start-session.md",
+    "./commands/orchestrate.md",
+    "./commands/analyst.md",
+    "./commands/architect.md",
+    "./commands/party.md",
+    "./commands/dashboard.md",
+    "./commands/scribe.md",
+    "./commands/sync-governance.md",
+    "./commands/quick-commands.md",
+    "./commands/brand-auto.md",
+    "./commands/auto.md",
+    "./commands/scout.md",
+    "./commands/task.md",
+    "./commands/status.md",
+    "./commands/query.md",
+    "./commands/ralph.md",
+    "./commands/validate.md",
+    "./commands/validate-repo.md",
+    "./commands/end-session.md",
+    "./commands/mcp-approve.md",
+    "./commands/mcp-discover.md",
+    "./commands/mcp-load.md"
+  ],
+  "interface": {
+    "displayName": "Team Durham",
+    "shortDescription": "A multi-agent brand production team for Codex.",
+    "longDescription": "Team Durham packages a complete design-team harness for brand production: Kotler, Aaker, Glaser, Ogilvy, Rand, Munari, Tufte, operations agents, shared skills, orchestration commands, governance rules, and persona research. Use it to take client briefs through strategy, naming, visual direction, brand kit assembly, QA, memory, and delivery.",
+    "developerName": "Team Durham",
+    "category": "Design",
+    "capabilities": [
+      "Brand Strategy",
+      "Design Production",
+      "Agent Routing",
+      "Governance"
+    ],
+    "defaultPrompt": [
+      "Activate Kotler for a new brand brief.",
+      "Run Team Durham status for this client.",
+      "Create a brand kit from locked strategy."
+    ]
+  }
+}

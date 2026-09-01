@@ -1,0 +1,19 @@
+code: dur
+name: "Team Durham"
+description: "Governed brand strategy, production, QA, and bounded brand automation"
+module_version: 1.0.0
+default_selected: false
+module_greeting: >
+  Team Durham is ready. Begin with brand Scout context, then route the approved slice through the correct specialist.
+agents:
+  - { code: dur-agent-kotler, name: "Kotler", title: "Brand Orchestrator", icon: "🎯", description: "Team Durham brand orchestration adapter" }
+  - { code: dur-agent-scout, name: "Scout", title: "Brand Recon", icon: "🔎", description: "Read-only Team Durham brand reconnaissance" }
+  - { code: dur-agent-munari, name: "Munari", title: "Brand QA", icon: "✅", description: "Team Durham quality and readiness adapter" }
+team_durham_source:
+  prompt: "Where is the Team Durham plugin installed?"
+  default: "{project-root}"
+  result: "{project-root}/{value}"
+allura_group_id:
+  prompt: "Which Allura tenant should Team Durham use?"
+  default: "allura-team-durham"
+  result: "{value}"

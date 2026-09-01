@@ -1,0 +1,150 @@
+---
+# Global MCP Registry — Team Durham
+# Canonical machine-readable server index
+# Updated: 2026-04-28
+---
+
+registry_version: "1.0.0"
+last_updated: "2026-04-28T00:00:00Z"
+group_id: "allura-team-durham"
+
+servers:
+  mcpgateway:
+    id: "MCP_DOCKER"
+    name: "MCP Docker Gateway"
+    description: "Docker-based MCP gateway for databases, web search, and productivity tools"
+    runtime: "local"
+    command: ["docker", "mcp", "gateway", "run"]
+    enabled: true
+    connection: "Auto-configured via opencode.json"
+
+  allura_brain:
+    id: "allura-brain"
+    name: "Allura Brain"
+    description: "Native MCP server for persistent memory (PostgreSQL (episodic) + RuVector semantic graph)"
+    runtime: "native"
+    connection: "Direct MCP connection"
+    enabled: true
+    status: "degraded"  # SASL bug present
+    fallback: "mcpgateway"
+
+  penpot:
+    id: "penpot"
+    name: "Penpot"
+    description: "UI/UX design system MCP"
+    runtime: "remote"
+    connection: "http://localhost:4401/mcp"
+    enabled: true
+    endpoints:
+      plugin: "http://localhost:4400/manifest.json"
+      mcp: "http://localhost:4401/mcp"
+      ws: "ws://localhost:4402"
+      debug: "http://localhost:4403"
+
+  context7:
+    id: "context7"
+    name: "Context7 Library Docs"
+    description: "Live library documentation API"
+    runtime: "api"
+    connection: "https://context7.com/api/v2"
+    enabled: true
+
+  figma:
+    id: "figma"
+    name: "Figma"
+    description: "Design system and code integration"
+    runtime: "custom"
+    connection: "Figma API via OAuth"
+    enabled: true
+
+  notion:
+    id: "notion"
+    name: "Notion"
+    description: "Documentation and publishing platform"
+    runtime: "docker"
+    connection: "via MCP_DOCKER_notion-* tools"
+    enabled: true
+
+  neo4j:
+    id: "neo4j"
+    name: "Neo4j Knowledge Graph"
+    description: "Semantic graph database for promoted memory"
+    runtime: "docker"
+    connection: "bolt://localhost:7687"
+    enabled: true
+
+  postgresql:
+    id: "postgresql"
+    name: "PostgreSQL"
+    description: "Episodic memory and event log storage"
+    runtime: "docker"
+    connection: "host.docker.internal:5432"
+    enabled: true
+    database: "memory"
+
+  perplexica:
+    id: "perplexica"
+    name: "Perplexica Web Search"
+    description: "Self-hosted open-source AI search"
+    runtime: "remote"
+    connection: "http://127.0.0.1:7722/mcp"
+    enabled: true
+
+  fal_ai:
+    id: "fal-ai"
+    name: "fal.ai Image Generation"
+    description: "AI image generation platform"
+    runtime: "custom"
+    connection: "@fal-ai/client npm package"
+    enabled: true
+
+permissions:
+  mcpgateway:
+    read: ["kotler", "aaker", "glaser", "rand", "ogilvy", "munari", "tufte", "scout"]
+    write: ["kotler", "aaker", "glaser", "rand"]
+    admin: ["kotler"]
+  allura_brain:
+    read: ["kotler", "aaker", "glaser", "rand", "ogilvy", "munari", "tufte", "scout"]
+    write: ["kotler", "aaker", "glaser", "rand"]
+    admin: ["kotler"]
+  penpot:
+    read: ["kotler", "aaker", "glaser", "rand", "ogilvy", "munari", "tufte", "scout"]
+    write: ["glaser", "rand"]
+    admin: ["kotler"]
+  context7:
+    read: ["kotler", "aaker", "glaser", "rand", "ogilvy", "munari", "tufte", "scout"]
+    write: []
+    admin: []
+  figma:
+    read: ["kotler", "aaker", "glaser", "rand", "ogilvy", "munari", "tufte", "scout"]
+    write: ["glaser", "rand"]
+    admin: ["kotler"]
+  notion:
+    read: ["kotler", "aaker", "glaser", "rand", "ogilvy", "munari", "tufte", "scout"]
+    write: ["kotler", "aaker", "rand", "ogilvy"]
+    admin: ["kotler"]
+  neo4j:
+    read: ["kotler", "aaker", "glaser", "rand", "ogilvy", "munari", "tufte", "scout"]
+    write: ["kotler", "aaker", "glaser", "rand"]
+    admin: ["kotler"]
+  postgresql:
+    read: ["kotler", "aaker", "glaser", "rand", "ogilvy", "munari", "tufte", "scout"]
+    write: ["kotler", "aaker", "glaser", "rand"]
+    admin: ["kotler"]
+  perplexica:
+    read: ["kotler", "aaker", "glaser", "rand", "ogilvy", "munari", "tufte", "scout"]
+    write: []
+    admin: []
+  fal_ai:
+    read: ["kotler", "aaker", "glaser", "rand", "ogilvy", "munari", "tufte", "scout"]
+    write: ["glaser", "rand"]
+    admin: ["kotler"]
+
+env_vars:
+  POSTGRES_URL: "postgresql://user:pass@host:port/database"
+  NEO4J_URL: "bolt://localhost:7687"
+  NEO4J_USER: "neo4j"
+  NEO4J_PASSWORD: "password"
+  FAL_API_KEY: "fal.ai API key"
+  NOTION_TOKEN: "Notion integration token"
+  NOTION_VERSION: "YYYY-MM-DD"

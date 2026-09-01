@@ -1,0 +1,13 @@
+{
+  "id": "github",
+  "name": "GitHub Integration",
+  "description": "GitHub workflows and automation",
+  "agents": [
+    "all"
+  ],
+  "platforms": [
+    "github"
+  ],
+  "tier": 1,
+  "installed": "2026-04-08T21:24:52.313Z"
+}

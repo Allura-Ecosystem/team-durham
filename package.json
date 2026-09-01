@@ -1,0 +1,48 @@
+{
+  "name": "team-durham",
+  "version": "0.3.0",
+  "description": "Governed multi-agent brand production system for strategy, design, QA, and delivery.",
+  "license": "MIT",
+  "main": "index.js",
+  "files": [
+    ".claude-plugin/",
+    ".codex-plugin/",
+    "agents/",
+    "bmad-module/",
+    "commands/",
+    "contracts/",
+    "docs/",
+    "evals/",
+    "governance/",
+    "rules/",
+    "skills/",
+    "ARCHITECTURE.md",
+    "CHANGELOG.md",
+    "LICENSE",
+    "README.md",
+    "SOURCE.json",
+    "export-manifest.json"
+  ],
+  "scripts": {
+    "test": "python3 scripts/validate_repository.py",
+    "validate": "python3 scripts/validate_repository.py",
+    "export": "python3 scripts/export_catalog.py",
+    "export:check": "python3 scripts/export_catalog.py --check"
+  },
+  "opencode": {
+    "agents": "./agents/",
+    "skills": "./skills/",
+    "commands": "./commands/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Allura-Ecosystem/team-durham.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Allura-Ecosystem/team-durham/issues"
+  },
+  "homepage": "https://github.com/Allura-Ecosystem/team-durham#readme",
+  "engines": {
+    "node": ">=18"
+  }
+}

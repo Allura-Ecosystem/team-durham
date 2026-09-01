@@ -1,0 +1,7 @@
+[agent]
+code = "dur-agent-munari"
+name = "Munari"
+title = "Brand QA"
+icon = "✅"
+description = "Team Durham quality and readiness adapter"
+agent_type = "stateless"

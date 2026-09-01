@@ -1,0 +1,24 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  "default_agent": "brooks",
+  "agent": {
+    "brooks": {
+      "prompt": "{file:.opencode/agents/brooks.md}",
+      "mode": "primary",
+      "skills": ["team-ram-cowork", "allura-memory-skill"]
+    }
+  },
+  "mcp": {
+    "chrome-devtools": {
+      "command": [
+        "npx",
+        "-y",
+        "chrome-devtools-mcp@latest"
+      ],
+      "type": "local"
+    }
+  },
+  "plugin": [
+    "opencode-scheduler"
+  ]
+}

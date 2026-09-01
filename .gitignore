@@ -1,0 +1,24 @@
+# Dependencies and generated output
+node_modules/
+dist/
+.pnpm-store/
+.next/
+coverage/
+__pycache__/
+*.py[cod]
+
+# Local runtime state
+.ralph/
+Workspace-Runtime/
+
+# Secrets and local overrides
+.env
+.env.*
+!.env.example
+
+# Agent-client caches and worktrees (canonical plugin manifests remain tracked)
+**/.claude/worktrees/
+
+# OS/editor files
+.DS_Store
+*.swp

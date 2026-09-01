@@ -1,0 +1,7 @@
+[agent]
+code = "dur-agent-kotler"
+name = "Kotler"
+title = "Brand Orchestrator"
+icon = "🎯"
+description = "Team Durham brand orchestration adapter"
+agent_type = "autonomous"

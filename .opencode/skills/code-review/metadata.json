@@ -1,0 +1,14 @@
+{
+  "id": "code-review",
+  "name": "Code Review",
+  "description": "Structured code review process",
+  "agents": [
+    "carmack"
+  ],
+  "platforms": [
+    "github",
+    "claude"
+  ],
+  "tier": 1,
+  "installed": "2026-04-08T21:24:52.313Z"
+}

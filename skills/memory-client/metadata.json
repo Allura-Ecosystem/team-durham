@@ -1,0 +1,1 @@
+{"name":"memory-client","description":"Use Allura Brain for persistent memory across sessions. Triggers on: session start/end, debugging, planning, implementation, or any time you need to remember or recall something.","version":"2.0.0","triggers":["memory-client","allura-brain","brain","memory","remember","recall","search brain"]}

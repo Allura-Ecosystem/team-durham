@@ -1,0 +1,48 @@
+{
+  "schemaVersion": 1,
+  "package": "team-durham",
+  "description": "Deterministic catalog distribution generated from the canonical standalone repository.",
+  "include": [
+    ".claude-plugin",
+    ".codex-plugin",
+    "agents",
+    "bmad-module",
+    "commands",
+    "contracts",
+    "docs",
+    "evals",
+    "governance",
+    "rules",
+    "skills",
+    "ARCHITECTURE.md",
+    "CHANGELOG.md",
+    "CONTRIBUTING.md",
+    "LICENSE",
+    "README.md",
+    "SECURITY.md",
+    "SOURCE.json",
+    "export-manifest.json",
+    "index.js",
+    "package.json"
+  ],
+  "generated": [
+    "EXPORT.json"
+  ],
+  "excludedWorkspaceRoots": [
+    ".git",
+    ".github",
+    ".opencode",
+    "clients",
+    "evidence",
+    "scripts",
+    "AGENTS.md",
+    "PROGRESS.md",
+    "opencode.jsonc"
+  ],
+  "minimums": {
+    "canonicalRoles": 12,
+    "loadableAgentDefinitions": 13,
+    "commands": 20,
+    "skills": 70
+  }
+}

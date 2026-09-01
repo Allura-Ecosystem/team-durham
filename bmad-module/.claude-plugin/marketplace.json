@@ -1,0 +1,25 @@
+{
+  "name": "team-durham-bmad-module",
+  "owner": { "name": "Allura Ecosystem" },
+  "license": "MIT",
+  "homepage": "https://github.com/Allura-Ecosystem/allura-plugins/tree/main/team-durham",
+  "repository": "https://github.com/Allura-Ecosystem/allura-plugins",
+  "keywords": ["bmad", "team-durham", "allura", "brand", "agents"],
+  "plugins": [
+    {
+      "name": "team-durham-bmad-module",
+      "source": "./",
+      "description": "BMad module adapter for Team Durham governed brand agents and workflows.",
+      "version": "1.0.0",
+      "author": { "name": "Allura Ecosystem" },
+      "skills": [
+        "./skills/dur-setup",
+        "./skills/dur-agent-kotler",
+        "./skills/dur-agent-scout",
+        "./skills/dur-agent-munari",
+        "./skills/dur-brand-delivery",
+        "./skills/dur-brand-auto"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "id": "postgres-best-practices",
+  "name": "PostgreSQL Best Practices",
+  "description": "Database consistency and query optimization",
+  "agents": [
+    "knuth",
+    "fowler"
+  ],
+  "platforms": [
+    "claude"
+  ],
+  "tier": 1,
+  "installed": "2026-04-08T21:24:52.312Z"
+}

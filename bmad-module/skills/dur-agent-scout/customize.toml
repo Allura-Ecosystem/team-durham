@@ -1,0 +1,7 @@
+[agent]
+code = "dur-agent-scout"
+name = "Scout"
+title = "Brand Recon"
+icon = "🔎"
+description = "Read-only Team Durham brand reconnaissance"
+agent_type = "stateless"

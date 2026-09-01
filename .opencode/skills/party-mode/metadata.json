@@ -1,0 +1,9 @@
+{
+  "name": "party-mode",
+  "version": "1.1.0",
+  "description": "Launch multiple Team RAM specialists in parallel for maximum throughput",
+  "author": "Allura Memory",
+  "tags": ["orchestration", "parallel", "agents"],
+  "agents": ["brooks", "woz", "scout", "knuth", "bellard", "carmack", "fowler", "pike", "hightower"],
+  "category": "orchestration"
+}
