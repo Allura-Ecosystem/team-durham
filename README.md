@@ -4,6 +4,70 @@ Team Durham is a portable, governed multi-agent system for turning a client brie
 
 This repository is the **canonical public source** for Team Durham. Catalog copies are generated exports; they are not edited independently.
 
+---
+
+## How Team Durham operates
+
+### 1. One framework, five pillars
+
+<p align="center">
+  <a href="docs/images/framework-and-harness.png"><img src="docs/images/framework-and-harness.png" alt="Team Durham framework: strategy, production, QA, evidence, and governance around the brand core" width="900" /></a>
+</p>
+
+Team Durham is built on **strategy foundation** (Kotler and Aaker lock the truth), **specialist production** (Ogilvy, Glaser, and Rand craft the system), **independent QA** (Munari verifies consistency), **evidence collection** (Reality Checker and Evidence Collector prove claims), and **governance gates** (authority and safety constraints shape decisions).
+
+---
+
+### 2. Every request follows a controlled path
+
+<p align="center">
+  <a href="docs/images/agent-runtime-request-flow.png"><img src="docs/images/agent-runtime-request-flow.png" alt="Brand workflow: from brief through discovery, strategy, production, QA, and evidence, all governed by policy" width="900" /></a>
+</p>
+
+**Brief** → **Scout discovers context** → **Kotler and Aaker lock strategy** → **Ogilvy, Glaser, Rand produce** → **QA and reality-check** → **Evidence collected** → **Delivered with proof**. Every step is documented and reversible.
+
+---
+
+### 3. Validation before every release
+
+<p align="center">
+  <a href="docs/images/test-before-release.png"><img src="docs/images/test-before-release.png" alt="Brand validation: scenario setup, production execution, QA verification, and confident handoff" width="900" /></a>
+</p>
+
+No brand ships without proof. The system runs declared QA checks, collects evidence (screenshots, artifacts, measurements), and blocks release if validation fails. You decide what constitutes brand-ready; the system enforces it.
+
+---
+
+### 4. Humans approve before truth is written
+
+<p align="center">
+  <a href="docs/images/people-review-important-changes.png"><img src="docs/images/people-review-important-changes.png" alt="Human review gate: proposal passes policy check, then a person reviews before approval" width="900" /></a>
+</p>
+
+Brand decisions require human review. **Proposal** → **policy check** → **human decision** → **approved or queued**. This is not optional; it protects the brand and your authority.
+
+---
+
+### 5. Everything stays traceable forever
+
+<p align="center">
+  <a href="docs/images/memory-keeps-its-history.png"><img src="docs/images/memory-keeps-its-history.png" alt="Append-only audit trail: new versions supersede old ones while evidence remains intact and traceable" width="900" /></a>
+</p>
+
+Brand decisions are versioned, not overwritten. Version 1 is preserved. Version 2 records what changed and why. Version 3 is current but built on verified history. Audit trails and immutable versioning mean every creative decision is auditable.
+
+---
+
+### 6. An answer can show its work
+
+<p align="center">
+  <a href="docs/images/an-answer-can-show-its-work.png"><img src="docs/images/an-answer-can-show-its-work.png" alt="Evidence-backed delivery: design carries rationale, source strategy, and review trail" width="900" /></a>
+</p>
+
+Every deliverable carries **rationale** (why this direction), **source strategy** (which brand truth it expresses), and a **review trail** (who approved it and when). Transparency builds stakeholder confidence.
+
+---
+
 ## What is included
 
 - **12 canonical roles** for strategy, creative production, QA, evidence, workflow, and trust
