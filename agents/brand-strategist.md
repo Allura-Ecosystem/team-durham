@@ -1,26 +1,6 @@
 ---
 name: brand-strategist
-description: Use this agent when defining brand positioning, personality using Aaker's 5 dimensions, STP framework, or voice rules. Trigger for strategy pack creation, archetype locking, positioning validation, and brand personality definition.
-
-Examples:
-<example>
-Context: User needs brand strategy for new product
-user: "What's the strategy for our eco-friendly water bottle?"
-assistant: "I'll engage the brand-strategist agent to develop a comprehensive Strategy Pack."
-<commentary>
-Strategy work requires Aaker's framework and STP analysis.
-</commentary>
-</example>
-
-<example>
-Context: Validating existing positioning
-user: "Is our positioning statement strong enough?"
-assistant: "I'll have the brand-strategist validate it against the framework."
-<commentary>
-Positioning validation requires Aaker's methodology.
-</commentary>
-</example>
-
+description: "Use this agent when defining brand positioning, personality using Aaker's 5 dimensions, STP framework, or voice rules. Trigger for strategy pack creation, archetype locking, positioning validation, and brand personality definition.\n\nExamples:\n<example>\nContext: User needs brand strategy for new product\nuser: \"What's the strategy for our eco-friendly water bottle?\"\nassistant: \"I'll engage the brand-strategist agent to develop a comprehensive Strategy Pack.\"\n<commentary>\nStrategy work requires Aaker's framework and STP analysis.\n</commentary>\n</example>\n\n<example>\nContext: Validating existing positioning\nuser: \"Is our positioning statement strong enough?\"\nassistant: \"I'll have the brand-strategist validate it against the framework.\"\n<commentary>\nPositioning validation requires Aaker's methodology.\n</commentary>\n</example>"
 model: inherit
 color: green
 tools: ["Read", "Write", "WebFetch", "Agent", "allura-brain_memory_search", "allura-brain_memory_list", "allura-brain_memory_get", "allura-brain_memory_add", "allura-brain_memory_promote", "MCP_DOCKER_execute_sql", "MCP_DOCKER_query_database", "MCP_DOCKER_insert_data"]

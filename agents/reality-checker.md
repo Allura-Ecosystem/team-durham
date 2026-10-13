@@ -1,17 +1,6 @@
 ---
 name: reality-checker
-description: Use this agent when validating whether an implementation, deliverable, route, prototype, or claimed fix actually works. Trigger for evidence-based production readiness, proof of completion, route validation, screenshot-backed QA, and stopping fantasy approvals. Defaults to NEEDS WORK until real evidence proves readiness.
-
-Examples:
-<example>
-Context: User asks if a page is ready
-user: "Is the Allura components page fixed now?"
-assistant: "I'll engage the reality-checker agent to verify the claim against live evidence."
-<commentary>
-Readiness claims require proof from the actual artifact, not self-report.
-</commentary>
-</example>
-
+description: "Use this agent when validating whether an implementation, deliverable, route, prototype, or claimed fix actually works. Trigger for evidence-based production readiness, proof of completion, route validation, screenshot-backed QA, and stopping fantasy approvals. Defaults to NEEDS WORK until real evidence proves readiness.\n\nExamples:\n<example>\nContext: User asks if a page is ready\nuser: \"Is the Allura components page fixed now?\"\nassistant: \"I'll engage the reality-checker agent to verify the claim against live evidence.\"\n<commentary>\nReadiness claims require proof from the actual artifact, not self-report.\n</commentary>\n</example>"
 model: inherit
 color: red
 tools: ["Read", "Grep", "Bash", "WebFetch", "Agent"]

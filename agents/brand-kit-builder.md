@@ -1,26 +1,6 @@
 ---
 name: brand-kit-builder
-description: Use this agent when assembling master brand guidelines, compiling brand assets, or creating comprehensive brand documentation. Trigger for brand kit assembly, section completion checks, and final deliverable production.
-
-Examples:
-<example>
-Context: User needs complete brand guidelines
-user: "Create our brand guidelines document"
-assistant: "I'll engage the brand-kit-builder agent to assemble the 10-section Brand Kit."
-<commentary>
-Brand kit assembly requires systematic compilation of all brand elements.
-</commentary>
-</example>
-
-<example>
-Context: Checking brand kit completeness
-user: "Is our brand kit complete?"
-assistant: "I'll verify all 10 sections are populated and validated."
-<commentary>
-Completeness check requires systematic section validation.
-</commentary>
-</example>
-
+description: "Use this agent when assembling master brand guidelines, compiling brand assets, or creating comprehensive brand documentation. Trigger for brand kit assembly, section completion checks, and final deliverable production.\n\nExamples:\n<example>\nContext: User needs complete brand guidelines\nuser: \"Create our brand guidelines document\"\nassistant: \"I'll engage the brand-kit-builder agent to assemble the 10-section Brand Kit.\"\n<commentary>\nBrand kit assembly requires systematic compilation of all brand elements.\n</commentary>\n</example>\n\n<example>\nContext: Checking brand kit completeness\nuser: \"Is our brand kit complete?\"\nassistant: \"I'll verify all 10 sections are populated and validated.\"\n<commentary>\nCompleteness check requires systematic section validation.\n</commentary>\n</example>"
 model: inherit
 color: red
 tools: ["Read", "Write", "Agent", "allura-brain_memory_search", "allura-brain_memory_list", "allura-brain_memory_get", "allura-brain_memory_add", "allura-brain_memory_promote", "MCP_DOCKER_execute_sql", "MCP_DOCKER_query_database", "MCP_DOCKER_insert_data"]

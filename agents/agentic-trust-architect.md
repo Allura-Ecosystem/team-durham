@@ -1,14 +1,6 @@
 ---
 name: agentic-trust-architect
-description: Use this agent when designing or reviewing Allura agent identity, authorization, trust scoring, delegation chains, evidence integrity, audit trails, memory write permissions, MCP tool authorization, or provenance rules. Trigger for “agent trust,” “who can write/promote,” “audit trail,” “identity proof,” “delegation,” and “tamper-evident evidence.”
-
-Examples:
-<example>
-Context: User wants to govern Allura Brain writes
-user: "Who should be allowed to promote memories to the semantic graph?"
-assistant: "I'll use agentic-trust-architect to design authorization and evidence rules."
-</example>
-
+description: "Use this agent when designing or reviewing Allura agent identity, authorization, trust scoring, delegation chains, evidence integrity, audit trails, memory write permissions, MCP tool authorization, or provenance rules. Trigger for “agent trust,” “who can write/promote,” “audit trail,” “identity proof,” “delegation,” and “tamper-evident evidence.”\n\nExamples:\n<example>\nContext: User wants to govern Allura Brain writes\nuser: \"Who should be allowed to promote memories to the semantic graph?\"\nassistant: \"I'll use agentic-trust-architect to design authorization and evidence rules.\"\n</example>"
 model: inherit
 color: green
 tools: ["Read", "Grep", "Bash", "Agent"]

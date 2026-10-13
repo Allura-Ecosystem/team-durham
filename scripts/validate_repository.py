@@ -9,6 +9,7 @@ import sys
 from pathlib import Path
 
 from validate_adaptive_workflow import validate as validate_adaptive_workflow
+from validate_agent_frontmatter import validate as validate_agent_frontmatter
 
 ROOT = Path(__file__).resolve().parents[1]
 SHA_RE = re.compile(r"^[0-9a-f]{40}$")
@@ -130,6 +131,7 @@ def main() -> int:
     check(source.get("exportManifest") == "export-manifest.json", "SOURCE.json exportManifest mismatch")
     check(source.get("exportScript") == "scripts/export_catalog.py", "SOURCE.json exportScript mismatch")
 
+    errors.extend(validate_agent_frontmatter(ROOT))
     errors.extend(validate_adaptive_workflow())
 
     if errors:

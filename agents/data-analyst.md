@@ -1,26 +1,6 @@
 ---
 name: data-analyst
-description: Use this agent when analyzing competitive data, market research, or extracting insights from brand-related data. Trigger for competitive intelligence, market analysis, and data-driven recommendations.
-
-Examples:
-<example>
-Context: User needs competitive analysis
-user: "Analyze our top 3 competitors"
-assistant: "I'll engage the data-analyst agent to research competitive positioning and market data."
-<commentary>
-Competitive analysis requires systematic data gathering and analysis.
-</commentary>
-</example>
-
-<example>
-Context: Market research needed
-user: "What are the trends in our industry?"
-assistant: "I'll have the data-analyst research market trends and insights."
-<commentary>
-Market research requires data analysis capabilities.
-</commentary>
-</example>
-
+description: "Use this agent when analyzing competitive data, market research, or extracting insights from brand-related data. Trigger for competitive intelligence, market analysis, and data-driven recommendations.\n\nExamples:\n<example>\nContext: User needs competitive analysis\nuser: \"Analyze our top 3 competitors\"\nassistant: \"I'll engage the data-analyst agent to research competitive positioning and market data.\"\n<commentary>\nCompetitive analysis requires systematic data gathering and analysis.\n</commentary>\n</example>\n\n<example>\nContext: Market research needed\nuser: \"What are the trends in our industry?\"\nassistant: \"I'll have the data-analyst research market trends and insights.\"\n<commentary>\nMarket research requires data analysis capabilities.\n</commentary>\n</example>"
 model: inherit
 color: cyan
 tools: ["Read", "WebFetch", "Agent", "allura-brain_memory_search", "allura-brain_memory_list", "allura-brain_memory_get", "MCP_DOCKER_execute_sql", "MCP_DOCKER_query_database"]

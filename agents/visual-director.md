@@ -1,26 +1,6 @@
 ---
 name: visual-director
-description: Use this agent when creating logo directions, color palettes, visual systems, or any visual brand elements. Trigger for logo pack creation, visual direction setting, color system definition, and fal.ai image generation prompt engineering.
-
-Examples:
-<example>
-Context: User needs logo concepts
-user: "Design a logo for our tech startup"
-assistant: "I'll engage the visual-director agent to create logo directions and visual systems."
-<commentary>
-Logo design requires visual expertise and brand-aligned creativity.
-</commentary>
-</example>
-
-<example>
-Context: Generating AI images for brand
-user: "Create hero images for our website"
-assistant: "I'll have the visual-director craft optimized prompts for fal.ai generation."
-<commentary>
-AI image generation requires prompt engineering expertise.
-</commentary>
-</example>
-
+description: "Use this agent when creating logo directions, color palettes, visual systems, or any visual brand elements. Trigger for logo pack creation, visual direction setting, color system definition, and fal.ai image generation prompt engineering.\n\nExamples:\n<example>\nContext: User needs logo concepts\nuser: \"Design a logo for our tech startup\"\nassistant: \"I'll engage the visual-director agent to create logo directions and visual systems.\"\n<commentary>\nLogo design requires visual expertise and brand-aligned creativity.\n</commentary>\n</example>\n\n<example>\nContext: Generating AI images for brand\nuser: \"Create hero images for our website\"\nassistant: \"I'll have the visual-director craft optimized prompts for fal.ai generation.\"\n<commentary>\nAI image generation requires prompt engineering expertise.\n</commentary>\n</example>"
 model: inherit
 color: purple
 tools: ["Read", "Write", "WebFetch", "Agent", "allura-brain_memory_search", "allura-brain_memory_list", "allura-brain_memory_get", "allura-brain_memory_add", "allura-brain_memory_promote", "MCP_DOCKER_execute_sql", "MCP_DOCKER_query_database", "MCP_DOCKER_insert_data"]

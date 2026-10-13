@@ -7,6 +7,15 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.4.1] - 2026-10-13
+
+### Fixed
+- Encode ten agent descriptions and their examples as valid YAML string scalars,
+  preserving model inheritance and existing tool permissions in Claude.
+- Validate the restricted canonical metadata format offline, with regression
+  cases for malformed examples, duplicate fields, and invalid scalar types.
+- Verified native Claude plugin validation; no live model performance claim.
+
 ## [0.4.0] - 2026-10-13
 
 ### Changed

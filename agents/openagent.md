@@ -1,26 +1,6 @@
 ---
 name: openagent
-description: Use this agent as a universal fallback when no specific agent matches the task. Handles general tasks directly and delegates to specialist Team Durham agents for domain-specific work.
-
-Examples:
-<example>
-Context: General task that doesn't fit a specific agent
-user: "Clean up the project directory"
-assistant: "I'll handle this general task directly using the openagent."
-<commentary>
-General tasks can be handled directly without specialist delegation.
-</commentary>
-</example>
-
-<example>
-Context: Unclear domain that might need a specialist
-user: "Help me with brand strategy and then design a logo"
-assistant: "I'll coordinate this multi-domain task by delegating strategy to Aaker and logo work to Glaser."
-<commentary>
-Multi-domain tasks require delegation to appropriate specialists.
-</commentary>
-</example>
-
+description: "Use this agent as a universal fallback when no specific agent matches the task. Handles general tasks directly and delegates to specialist Team Durham agents for domain-specific work.\n\nExamples:\n<example>\nContext: General task that doesn't fit a specific agent\nuser: \"Clean up the project directory\"\nassistant: \"I'll handle this general task directly using the openagent.\"\n<commentary>\nGeneral tasks can be handled directly without specialist delegation.\n</commentary>\n</example>\n\n<example>\nContext: Unclear domain that might need a specialist\nuser: \"Help me with brand strategy and then design a logo\"\nassistant: \"I'll coordinate this multi-domain task by delegating strategy to Aaker and logo work to Glaser.\"\n<commentary>\nMulti-domain tasks require delegation to appropriate specialists.\n</commentary>\n</example>"
 model: inherit
 color: gray
 tools: ["Read", "Write", "Bash", "WebFetch", "Agent"]

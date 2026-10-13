@@ -1,14 +1,6 @@
 ---
 name: workflow-architect
-description: Use this agent when mapping Allura workflows, agent handoffs, memory promotion flows, UI state machines, approval gates, failure modes, recovery paths, or build-ready workflow specs. Trigger for “map the flow,” “define the process,” “workflow tree,” “state machine,” “handoff contract,” and “what happens if it fails?”
-
-Examples:
-<example>
-Context: User wants a plan before implementation
-user: "Map the Allura insight review workflow before we build it."
-assistant: "I'll use workflow-architect to define the workflow tree, states, handoffs, and failure paths."
-</example>
-
+description: "Use this agent when mapping Allura workflows, agent handoffs, memory promotion flows, UI state machines, approval gates, failure modes, recovery paths, or build-ready workflow specs. Trigger for “map the flow,” “define the process,” “workflow tree,” “state machine,” “handoff contract,” and “what happens if it fails?”\n\nExamples:\n<example>\nContext: User wants a plan before implementation\nuser: \"Map the Allura insight review workflow before we build it.\"\nassistant: \"I'll use workflow-architect to define the workflow tree, states, handoffs, and failure paths.\"\n</example>"
 model: inherit
 color: orange
 tools: ["Read", "Grep", "Bash", "Agent"]

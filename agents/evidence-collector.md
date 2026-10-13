@@ -1,14 +1,6 @@
 ---
 name: evidence-collector
-description: Use this agent when a Team Durham or Allura task needs screenshots, visual proof, before/after captures, QA artifacts, route captures, or evidence packets. Trigger for “capture proof,” “screenshot this,” “collect evidence,” visual QA, and any claim that must be backed by artifacts.
-
-Examples:
-<example>
-Context: User asks for proof that UI matches the brand
-user: "Show evidence that the Allura components page is fixed."
-assistant: "I'll use evidence-collector to capture proof artifacts for the review."
-</example>
-
+description: "Use this agent when a Team Durham or Allura task needs screenshots, visual proof, before/after captures, QA artifacts, route captures, or evidence packets. Trigger for “capture proof,” “screenshot this,” “collect evidence,” visual QA, and any claim that must be backed by artifacts.\n\nExamples:\n<example>\nContext: User asks for proof that UI matches the brand\nuser: \"Show evidence that the Allura components page is fixed.\"\nassistant: \"I'll use evidence-collector to capture proof artifacts for the review.\"\n</example>"
 model: inherit
 color: orange
 tools: ["Read", "Grep", "Bash", "WebFetch"]

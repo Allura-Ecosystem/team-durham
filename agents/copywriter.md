@@ -1,26 +1,6 @@
 ---
 name: copywriter
-description: Use this agent when writing brand copy, taglines, voice guidelines, or any brand messaging. Trigger for naming pack creation, brand story development, copy standards definition, and voice guide production.
-
-Examples:
-<example>
-Context: User needs brand names
-user: "We need 5 name options for our new product"
-assistant: "I'll engage the copywriter agent to develop naming options with strategic rationale."
-<commentary>
-Naming requires creative copywriting with strategic backing.
-</commentary>
-</example>
-
-<example>
-Context: Developing brand voice
-user: "How should our brand sound in communications?"
-assistant: "I'll have the copywriter define voice guidelines and messaging standards."
-<commentary>
-Voice definition requires copywriting expertise.
-</commentary>
-</example>
-
+description: "Use this agent when writing brand copy, taglines, voice guidelines, or any brand messaging. Trigger for naming pack creation, brand story development, copy standards definition, and voice guide production.\n\nExamples:\n<example>\nContext: User needs brand names\nuser: \"We need 5 name options for our new product\"\nassistant: \"I'll engage the copywriter agent to develop naming options with strategic rationale.\"\n<commentary>\nNaming requires creative copywriting with strategic backing.\n</commentary>\n</example>\n\n<example>\nContext: Developing brand voice\nuser: \"How should our brand sound in communications?\"\nassistant: \"I'll have the copywriter define voice guidelines and messaging standards.\"\n<commentary>\nVoice definition requires copywriting expertise.\n</commentary>\n</example>"
 model: inherit
 color: orange
 tools: ["Read", "Write", "WebFetch", "allura-brain_memory_search", "allura-brain_memory_list", "allura-brain_memory_get", "allura-brain_memory_add", "allura-brain_memory_promote", "MCP_DOCKER_execute_sql", "MCP_DOCKER_query_database", "MCP_DOCKER_insert_data"]

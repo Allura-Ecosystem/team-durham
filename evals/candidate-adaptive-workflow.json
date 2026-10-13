@@ -1,20 +1,20 @@
 {
-  "version": "0.4.0",
+  "version": "0.4.1",
   "status": "offline-contract-checked; runtime-quality-unmeasured",
   "prompts": [
     {
       "id": "agentic-trust-architect",
       "path": "agents/agentic-trust-architect.md",
-      "chars": 4135,
-      "lines": 115,
-      "approximate_tokens": 1034
+      "chars": 4147,
+      "lines": 107,
+      "approximate_tokens": 1037
     },
     {
       "id": "brand-kit-builder",
       "path": "agents/brand-kit-builder.md",
-      "chars": 9794,
-      "lines": 275,
-      "approximate_tokens": 2449
+      "chars": 9822,
+      "lines": 255,
+      "approximate_tokens": 2456
     },
     {
       "id": "brand-orchestrator",
@@ -26,37 +26,37 @@
     {
       "id": "brand-strategist",
       "path": "agents/brand-strategist.md",
-      "chars": 7806,
-      "lines": 210,
-      "approximate_tokens": 1952
+      "chars": 7834,
+      "lines": 190,
+      "approximate_tokens": 1959
     },
     {
       "id": "copywriter",
       "path": "agents/copywriter.md",
-      "chars": 7656,
-      "lines": 268,
-      "approximate_tokens": 1914
+      "chars": 7684,
+      "lines": 248,
+      "approximate_tokens": 1921
     },
     {
       "id": "data-analyst",
       "path": "agents/data-analyst.md",
-      "chars": 6297,
-      "lines": 202,
-      "approximate_tokens": 1575
+      "chars": 6325,
+      "lines": 182,
+      "approximate_tokens": 1582
     },
     {
       "id": "evidence-collector",
       "path": "agents/evidence-collector.md",
-      "chars": 3726,
-      "lines": 108,
-      "approximate_tokens": 932
+      "chars": 3738,
+      "lines": 100,
+      "approximate_tokens": 935
     },
     {
       "id": "openagent",
       "path": "agents/openagent.md",
-      "chars": 4861,
-      "lines": 130,
-      "approximate_tokens": 1216
+      "chars": 4889,
+      "lines": 110,
+      "approximate_tokens": 1223
     },
     {
       "id": "qa-reviewer",
@@ -68,9 +68,9 @@
     {
       "id": "reality-checker",
       "path": "agents/reality-checker.md",
-      "chars": 4474,
-      "lines": 125,
-      "approximate_tokens": 1119
+      "chars": 4489,
+      "lines": 114,
+      "approximate_tokens": 1123
     },
     {
       "id": "scout-recon",
@@ -82,16 +82,16 @@
     {
       "id": "visual-director",
       "path": "agents/visual-director.md",
-      "chars": 8915,
-      "lines": 280,
-      "approximate_tokens": 2229
+      "chars": 8943,
+      "lines": 260,
+      "approximate_tokens": 2236
     },
     {
       "id": "workflow-architect",
       "path": "agents/workflow-architect.md",
-      "chars": 4007,
-      "lines": 124,
-      "approximate_tokens": 1002
+      "chars": 4019,
+      "lines": 116,
+      "approximate_tokens": 1005
     }
   ]
 }
