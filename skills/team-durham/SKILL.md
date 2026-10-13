@@ -65,3 +65,36 @@ menu. The phase table describes dependencies, not mandatory serial agent calls.
 - Vision-critical agents inspect actual image files.
 - Project-specific gates apply only to that project.
 - Do not treat Allura Dashboard or RuVix/theDerm rules as global Team Durham law.
+
+## Codex workflow discovery
+
+Codex discovers this package through `skills/`. Agent definitions are role guidance
+referenced by skills; this manifest does not register native subagents or slash
+commands. Invoke Team Durham with a workflow name below. Read its bundled runbook
+and apply the adaptive operating policy. Existing `source-command-*` skills remain
+available as direct skill entry points; auto and brand-auto use `brand-loop`.
+
+| Workflow | Runbook |
+|---|---|
+| analyst | [analyst](../../commands/analyst.md) |
+| architect | [architect](../../commands/architect.md) |
+| auto | [auto](../../commands/auto.md) |
+| brand-auto | [brand-auto](../../commands/brand-auto.md) |
+| dashboard | [dashboard](../../commands/dashboard.md) |
+| end-session | [end-session](../../commands/end-session.md) |
+| mcp-approve | [mcp-approve](../../commands/mcp-approve.md) |
+| mcp-discover | [mcp-discover](../../commands/mcp-discover.md) |
+| mcp-load | [mcp-load](../../commands/mcp-load.md) |
+| orchestrate | [orchestrate](../../commands/orchestrate.md) |
+| party | [party](../../commands/party.md) |
+| query | [query](../../commands/query.md) |
+| quick-commands | [quick-commands](../../commands/quick-commands.md) |
+| ralph | [ralph](../../commands/ralph.md) |
+| scout | [scout](../../commands/scout.md) |
+| scribe | [scribe](../../commands/scribe.md) |
+| start-session | [start-session](../../commands/start-session.md) |
+| status | [status](../../commands/status.md) |
+| sync-governance | [sync-governance](../../commands/sync-governance.md) |
+| task | [task](../../commands/task.md) |
+| validate-repo | [validate-repo](../../commands/validate-repo.md) |
+| validate | [validate](../../commands/validate.md) |

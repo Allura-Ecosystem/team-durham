@@ -31,7 +31,7 @@ The `.claude-plugin/plugin.json` manifest loads canonical definitions directly f
 
 ## Codex
 
-The `.codex-plugin/plugin.json` manifest declares the Codex distribution surface. Codex plugin packaging exposes skills and commands but does not create native Codex subagents. Use the bundled BMAD adapter when a Codex workflow needs agent-like persona routing; see `docs/BMAD-AGENTS.md` and `bmad-module/README.md`.
+The `.codex-plugin/plugin.json` manifest exposes `skills/`; it does not use unsupported `commands` or `agents` fields. Invoke the Team Durham skill with a workflow name. Its runbook index covers every bundled command, and migrated `source-command-*` skills offer direct entry points. Agent definitions are role guidance referenced by those skills, not automatically registered native Codex subagents. Optional BMAD persona routing is documented in `BMAD-AGENTS.md` and `../bmad-module/README.md`.
 
 ## Catalog installation
 

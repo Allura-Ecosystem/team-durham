@@ -70,11 +70,18 @@ def main() -> int:
         check((ROOT / rel_ref(ref)).is_file(), f"missing Claude agent reference: {ref}")
 
     command_files = {str(path.relative_to(ROOT)) for path in (ROOT / "commands").glob("*.md")}
-    for label, manifest in (("Claude", claude), ("Codex", codex)):
+    for label, manifest in (("Claude", claude),):
         refs = {rel_ref(ref) for ref in manifest.get("commands", [])}
         check(refs == command_files, f"{label} command manifest differs from commands/: missing={sorted(command_files-refs)}, extra={sorted(refs-command_files)}")
         for ref in refs:
             check((ROOT / ref).is_file(), f"missing {label} command reference: {ref}")
+
+    check("commands" not in codex and "agents" not in codex,
+          "Codex manifest must expose skills, not unsupported commands/agents fields")
+    entry_skill = (ROOT / "skills/team-durham/SKILL.md").read_text(encoding="utf-8")
+    indexed_commands = {"commands/" + name for name in re.findall(r"\(\.\./\.\./commands/([^\s)]+)\)", entry_skill)}
+    check(indexed_commands == command_files,
+          "Codex entry skill must link every bundled command runbook")
 
     skill_files = sorted((ROOT / "skills").glob("*/SKILL.md"))
     minimums = export.get("minimums", {})

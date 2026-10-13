@@ -23,6 +23,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Removed direct database fallback from orchestration; missing Brain is reported
   as degraded. Outcome traces do not autonomously promote brand truth.
 
+- Codex manifest exposes supported skills only; the main skill indexes all bundled
+  command runbooks without claiming native command or agent registration.
+
 ### Validation
 - Added deterministic offline risk/dependency fixtures and entry-policy contract
   checks. No live performance or model-quality improvement is claimed.

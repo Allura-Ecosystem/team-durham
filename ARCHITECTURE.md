@@ -59,7 +59,7 @@ Munari/`qa-reviewer` is read-only by design. A failed gate routes work back to t
 
 ### Codex
 
-`.codex-plugin/plugin.json` publishes skills and commands. Codex plugin packaging does not create native subagents, so Team Durham also includes BMAD adapter material under `bmad-module/`.
+`.codex-plugin/plugin.json` exposes `skills/`. The Team Durham entry skill indexes every bundled command runbook; migrated `source-command-*` skills provide direct workflow entry points. Agent files are referenced role guidance, not automatically registered native Codex subagents. Commands remain bundled documents, not a Codex manifest field. Optional BMAD adapter material lives under `bmad-module/`.
 
 ### OpenCode / Team RAM compatibility
 

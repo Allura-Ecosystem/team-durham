@@ -1,36 +1,12 @@
 {
   "name": "team-durham",
   "version": "0.4.0",
-  "description": "Team Durham brand production team for Codex: agents, skills, commands, governance, and persona research.",
+  "description": "Team Durham for Codex: discoverable workflow skills, referenced role guidance, and brand governance.",
   "author": {
     "name": "Team Durham"
   },
   "license": "MIT",
   "skills": "./skills/",
-  "commands": [
-    "./commands/start-session.md",
-    "./commands/orchestrate.md",
-    "./commands/analyst.md",
-    "./commands/architect.md",
-    "./commands/party.md",
-    "./commands/dashboard.md",
-    "./commands/scribe.md",
-    "./commands/sync-governance.md",
-    "./commands/quick-commands.md",
-    "./commands/brand-auto.md",
-    "./commands/auto.md",
-    "./commands/scout.md",
-    "./commands/task.md",
-    "./commands/status.md",
-    "./commands/query.md",
-    "./commands/ralph.md",
-    "./commands/validate.md",
-    "./commands/validate-repo.md",
-    "./commands/end-session.md",
-    "./commands/mcp-approve.md",
-    "./commands/mcp-discover.md",
-    "./commands/mcp-load.md"
-  ],
   "interface": {
     "displayName": "Team Durham",
     "shortDescription": "A multi-agent brand production team for Codex.",
