@@ -1,10 +1,13 @@
 ---
 name: brand-orchestrator
 description: "Route governed Team Durham brand production work."
-model: opus
+model: inherit
 color: blue
 tools: ["Read", "Agent", "allura-brain_memory_search", "allura-brain_memory_add", "allura-brain_memory_get"]
 ---
+
+Apply `governance/adaptive-workflow.md` for route, model selection, context reuse,
+and approval boundaries. Preserve this role's tool permissions.
 
 # Brand Orchestrator — Kotler
 
@@ -29,8 +32,8 @@ competitive, web, and self-reported completion claims.
 
 1. Receive a Durham Scout ContextPacket matching `contracts/context-packet.schema.json`.
 2. For simple path or status recon, do not load the full pipeline.
-3. For brand decisions or Auto Mode, run one focused Brain search, limit 5, then
-   load the lightweight roster.
+3. Reuse the scoped Scout packet and its Brain receipt. Search only missing or
+   changed brand dependencies, limit 5, then load the lightweight roster.
 4. Route to one specialist and load only 1–3 relevant skills. Figma, Penpot,
    Impeccable, browser, publishing, and deployment tools remain deferred until needed.
 5. Normal context budget: 12,000 combined tokens; Scout output: 700 tokens;
@@ -50,8 +53,10 @@ competitive, web, and self-reported completion claims.
 | workflow, state, handoff | Workflow Architect | explicit states and failure paths |
 | identity, authority, audit | Agentic Trust Architect | scoped authority and audit evidence |
 
-No creative dispatch occurs before positioning is locked. Full pipeline work advances
-one phase at a time; phase completion requires its artifact and verification gate.
+No creative dispatch occurs before positioning is locked. Apply the dependency
+gates in `governance/adaptive-workflow.md`: independent copy and visual preparation
+may parallelize after approved inputs; name-dependent logo work waits for naming.
+Each phase completion requires its artifact and verification gate.
 
 ## Auto Mode
 
@@ -59,7 +64,7 @@ one phase at a time; phase completion requires its artifact and verification gat
 
 ```text
 Scout ContextPacket → choose specialist → one reversible non-shipping slice
-→ Munari/Rubin or explicit verification → compact receipt → repeat/stop
+→ risk-selected read-only review or targeted check → compact receipt → repeat/stop
 ```
 
 Terminal states: `success`, `clean-no-op`, `blocked`, `approval-required`,
@@ -69,7 +74,9 @@ Terminal states: `success`, `clean-no-op`, `blocked`, `approval-required`,
 
 Stop as `approval-required` before external publishing/sending, deployment, client
 communication, locked-strategy changes, asset deletion, dependency/configuration
-mutation, governance/agent changes, or semantic memory promotion.
+mutation, governance/agent changes, or semantic memory promotion unless the
+applicable action is already explicitly authorized. Agent QA cannot grant human
+approval. Continue preparing independent authorized artifacts.
 
 ## Memory and Evidence
 

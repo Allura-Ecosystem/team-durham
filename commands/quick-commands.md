@@ -3,11 +3,15 @@ description: "Quick slash commands for Team Durham Brand Maker"
 allowed-tools: ["Read", "Grep", "Bash", "allura-brain_memory_search"]
 ---
 
+Apply `governance/adaptive-workflow.md` (repository root). Reuse the scoped
+ContextPacket and route a clear task directly within specialist permissions.
+
+
 # Quick Slash Commands
 
 Type these directly in your IDE for fast access to Team Durham Brand Maker workflows.
 
-Default route: Kotler starts every Team Durham session, hydrates Allura Brain with `group_id: allura-team-durham`, shows the Brand Orchestrator menu, then delegates to the design team.
+Default route: Kotler chairs ambiguous work; clear specialist tasks route directly. Reuse the scoped ContextPacket and Brain receipt (`group_id: allura-team-durham`). Show a menu only when requested or the task is unclear.
 
 ## Pipeline Commands
 

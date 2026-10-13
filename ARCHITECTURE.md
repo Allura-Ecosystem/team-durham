@@ -102,3 +102,19 @@ Optional integrations fail closed for claims:
 - No integration failure may be hidden behind a success response.
 
 See [docs/DEGRADED-BEHAVIOR.md](docs/DEGRADED-BEHAVIOR.md).
+
+## Adaptive workflow (0.4.0)
+
+See [the shared operating policy](governance/adaptive-workflow.md). Choose a
+quick, standard, or sensitive route; retain one accountable producer and select
+review by risk. Canonical agents inherit the configured model. Overrides require
+actual availability and capability checks, not a fixed persona/model pairing.
+ContextPacket v1.1 adds tenant/project, timestamp, revisions, authority references,
+and Brain status. Older packets must be refreshed to this scoped contract before
+reuse. Independent work may parallelize after approved inputs; locked strategy,
+name-dependent logos, human promotion/shipping approval, and read-only QA remain.
+
+`python3 scripts/validate_repository.py` includes offline prompt-contract routing
+fixtures. These checks do not establish live latency, cost, or model quality.
+Pilot representative tasks and compare elapsed time, handoffs, review rounds,
+first-pass acceptance, and cost per accepted result before claiming improvement.

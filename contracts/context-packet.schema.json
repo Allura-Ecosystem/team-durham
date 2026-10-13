@@ -13,23 +13,49 @@
     "risks",
     "recommended_route",
     "validation_commands",
-    "token_usage"
+    "token_usage",
+    "group_id",
+    "project_id",
+    "hydrated_at",
+    "source_revision",
+    "brain_status",
+    "authority_refs",
+    "dependencies"
   ],
   "properties": {
-    "version": { "const": "1.0" },
-    "goal": { "type": "string", "minLength": 1 },
-    "summary": { "type": "string", "minLength": 1 },
+    "version": {
+      "const": "1.1"
+    },
+    "goal": {
+      "type": "string",
+      "minLength": 1
+    },
+    "summary": {
+      "type": "string",
+      "minLength": 1
+    },
     "files": {
       "type": "array",
       "maxItems": 12,
       "items": {
         "type": "object",
         "additionalProperties": false,
-        "required": ["path", "reason"],
+        "required": [
+          "path",
+          "reason"
+        ],
         "properties": {
-          "path": { "type": "string", "minLength": 1 },
-          "reason": { "type": "string", "minLength": 1 },
-          "lines": { "type": "string" }
+          "path": {
+            "type": "string",
+            "minLength": 1
+          },
+          "reason": {
+            "type": "string",
+            "minLength": 1
+          },
+          "lines": {
+            "type": "string"
+          }
         }
       }
     },
@@ -39,29 +65,115 @@
       "items": {
         "type": "object",
         "additionalProperties": false,
-        "required": ["summary"],
+        "required": [
+          "summary"
+        ],
         "properties": {
-          "id": { "type": "string" },
-          "summary": { "type": "string", "minLength": 1 },
-          "relevance": { "type": "number", "minimum": 0, "maximum": 1 }
+          "id": {
+            "type": "string"
+          },
+          "summary": {
+            "type": "string",
+            "minLength": 1
+          },
+          "relevance": {
+            "type": "number",
+            "minimum": 0,
+            "maximum": 1
+          }
         }
       }
     },
-    "risks": { "type": "array", "maxItems": 8, "items": { "type": "string" } },
-    "recommended_route": { "type": "string", "minLength": 1 },
+    "risks": {
+      "type": "array",
+      "maxItems": 8,
+      "items": {
+        "type": "string"
+      }
+    },
+    "recommended_route": {
+      "type": "string",
+      "minLength": 1
+    },
     "validation_commands": {
       "type": "array",
       "maxItems": 5,
-      "items": { "type": "string" }
+      "items": {
+        "type": "string"
+      }
     },
     "token_usage": {
       "type": "object",
       "additionalProperties": false,
-      "required": ["input", "output", "budget"],
+      "required": [
+        "input",
+        "output",
+        "budget"
+      ],
       "properties": {
-        "input": { "type": "integer", "minimum": 0 },
-        "output": { "type": "integer", "minimum": 0 },
-        "budget": { "type": "integer", "minimum": 1 }
+        "input": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "output": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "budget": {
+          "type": "integer",
+          "minimum": 1
+        }
+      }
+    },
+    "group_id": {
+      "const": "allura-team-durham"
+    },
+    "project_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "hydrated_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "source_revision": {
+      "type": "string",
+      "minLength": 1
+    },
+    "brain_status": {
+      "enum": [
+        "available",
+        "unavailable",
+        "failed",
+        "skipped-path-lookup"
+      ]
+    },
+    "authority_refs": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "dependencies": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "path",
+          "revision"
+        ],
+        "properties": {
+          "path": {
+            "type": "string",
+            "minLength": 1
+          },
+          "revision": {
+            "type": "string",
+            "minLength": 1
+          }
+        }
       }
     }
   }

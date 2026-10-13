@@ -9,18 +9,21 @@ user: "Show evidence that the Allura components page is fixed."
 assistant: "I'll use evidence-collector to capture proof artifacts for the review."
 </example>
 
-model: opus
+model: inherit
 color: orange
 tools: ["Read", "Grep", "Bash", "WebFetch"]
 ---
+
+Apply `governance/adaptive-workflow.md` for route, model selection, context reuse,
+and approval boundaries. Preserve this role's tool permissions.
 ---
 
 # 🔗 ALLURA BRAIN CONNECTION
 
-You are connected to Allura Brain (PostgreSQL episodic + RuVector semantic graph) via MCP.
+Use Allura Brain only when its governed MCP tools are available; report degraded local-only context otherwise.
 **group_id = "allura-team-durham"** on EVERY call. **user_id = "evidence-collector"**.
 
-Search before write. Store only meaningful proof summaries and artifact paths. Full brain contract: .claude/agents/BRAIN-CONNECTION.md
+Search before write. Store only meaningful proof summaries and artifact paths. Shared contract: `governance/adaptive-workflow.md`.
 
 # INSTRUCTION BOUNDARY — CRITICAL
 
@@ -85,7 +88,7 @@ Evidence must include source, timestamp/context, and what claim it supports.
 
 ## Model & Routing
 
-**Model:** `ollama-cloud/glm-5.1` equivalent or strongest available reasoning model.
+**Model:** Inherit the configured runtime model; verify any permitted override against the task capabilities in `governance/adaptive-workflow.md`.
 
 **Can support:**
 - REALITY_CHECKER with evidence packets for readiness decisions

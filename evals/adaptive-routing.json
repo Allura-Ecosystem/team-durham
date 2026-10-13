@@ -1,0 +1,191 @@
+{
+  "scope": "Offline prompt-contract fixtures, not a runtime scheduler or live model evaluation",
+  "cases": [
+    {
+      "id": "lookup",
+      "facts": {},
+      "route": "quick",
+      "blocked_by": [],
+      "parallel": false
+    },
+    {
+      "id": "copy-correction",
+      "facts": {
+        "inputs_approved": true
+      },
+      "route": "quick",
+      "blocked_by": [],
+      "parallel": false
+    },
+    {
+      "id": "copy-pack",
+      "facts": {
+        "substantive_deliverable": true
+      },
+      "route": "standard",
+      "blocked_by": [],
+      "parallel": false
+    },
+    {
+      "id": "kit-assembly",
+      "facts": {
+        "multiple_artifacts": true
+      },
+      "route": "standard",
+      "blocked_by": [],
+      "parallel": false
+    },
+    {
+      "id": "sensitive-overrides-standard",
+      "facts": {
+        "substantive_deliverable": true,
+        "strategy_change": true
+      },
+      "route": "sensitive",
+      "blocked_by": [],
+      "parallel": false
+    },
+    {
+      "id": "shipping",
+      "facts": {
+        "external_shipping": true
+      },
+      "route": "sensitive",
+      "blocked_by": [],
+      "parallel": false
+    },
+    {
+      "id": "promotion",
+      "facts": {
+        "semantic_promotion": true
+      },
+      "route": "sensitive",
+      "blocked_by": [],
+      "parallel": false
+    },
+    {
+      "id": "configuration",
+      "facts": {
+        "configuration_change": true
+      },
+      "route": "sensitive",
+      "blocked_by": [],
+      "parallel": false
+    },
+    {
+      "id": "tenant-boundary",
+      "facts": {
+        "tenant_change": true
+      },
+      "route": "sensitive",
+      "blocked_by": [],
+      "parallel": false
+    },
+    {
+      "id": "authority",
+      "facts": {
+        "authority_change": true
+      },
+      "route": "sensitive",
+      "blocked_by": [],
+      "parallel": false
+    },
+    {
+      "id": "destructive",
+      "facts": {
+        "destructive_change": true
+      },
+      "route": "sensitive",
+      "blocked_by": [],
+      "parallel": false
+    },
+    {
+      "id": "visual-before-strategy",
+      "facts": {
+        "visual_production": true,
+        "substantive_deliverable": true
+      },
+      "route": "standard",
+      "blocked_by": [
+        "strategy_locked"
+      ],
+      "parallel": false
+    },
+    {
+      "id": "logo-before-name",
+      "facts": {
+        "visual_production": true,
+        "strategy_locked": true,
+        "name_dependent_logo": true,
+        "substantive_deliverable": true
+      },
+      "route": "standard",
+      "blocked_by": [
+        "name_approved"
+      ],
+      "parallel": false
+    },
+    {
+      "id": "independent-preparation",
+      "facts": {
+        "strategy_locked": true,
+        "inputs_approved": true,
+        "independent_work": true,
+        "disjoint_ownership": true,
+        "multiple_artifacts": true
+      },
+      "route": "standard",
+      "blocked_by": [],
+      "parallel": true
+    },
+    {
+      "id": "shared-artifact-denies-parallel",
+      "facts": {
+        "strategy_locked": true,
+        "inputs_approved": true,
+        "independent_work": true,
+        "multiple_artifacts": true
+      },
+      "route": "standard",
+      "blocked_by": [],
+      "parallel": false
+    },
+    {
+      "id": "unapproved-input-denies-parallel",
+      "facts": {
+        "strategy_locked": true,
+        "independent_work": true,
+        "disjoint_ownership": true
+      },
+      "route": "quick",
+      "blocked_by": [],
+      "parallel": false
+    },
+    {
+      "id": "dependencies-deny-parallel",
+      "facts": {
+        "strategy_locked": true,
+        "inputs_approved": true,
+        "disjoint_ownership": true
+      },
+      "route": "quick",
+      "blocked_by": [],
+      "parallel": false
+    },
+    {
+      "id": "logo-name-block-even-parallel",
+      "facts": {
+        "strategy_locked": true,
+        "inputs_approved": true,
+        "independent_work": true,
+        "disjoint_ownership": true,
+        "name_dependent_logo": true
+      },
+      "route": "quick",
+      "blocked_by": [
+        "name_approved"
+      ],
+      "parallel": false
+    }
+  ]
+}

@@ -8,6 +8,8 @@ import re
 import sys
 from pathlib import Path
 
+from validate_adaptive_workflow import validate as validate_adaptive_workflow
+
 ROOT = Path(__file__).resolve().parents[1]
 SHA_RE = re.compile(r"^[0-9a-f]{40}$")
 
@@ -120,6 +122,8 @@ def main() -> int:
     check(package.get("scripts") == expected_scripts, "package scripts differ from canonical validation/export commands")
     check(source.get("exportManifest") == "export-manifest.json", "SOURCE.json exportManifest mismatch")
     check(source.get("exportScript") == "scripts/export_catalog.py", "SOURCE.json exportScript mismatch")
+
+    errors.extend(validate_adaptive_workflow())
 
     if errors:
         for error in errors:

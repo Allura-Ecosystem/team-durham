@@ -3,6 +3,10 @@ name: "source-command-quick-commands"
 description: "Quick slash commands for Team Durham Brand Maker"
 ---
 
+Apply `governance/adaptive-workflow.md` (repository root). Reuse the scoped
+ContextPacket and route a clear task directly within specialist permissions.
+
+
 # source-command-quick-commands
 
 Use this skill when the user asks to run the migrated source command `quick-commands`.

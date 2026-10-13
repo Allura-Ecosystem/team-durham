@@ -1,0 +1,45 @@
+{
+  "version": "1.0",
+  "precedence": [
+    "sensitive",
+    "standard",
+    "quick"
+  ],
+  "routes": {
+    "sensitive": {
+      "any": [
+        "strategy_change",
+        "authority_change",
+        "tenant_change",
+        "external_shipping",
+        "semantic_promotion",
+        "destructive_change",
+        "configuration_change"
+      ],
+      "review": "independent-and-human-authority"
+    },
+    "standard": {
+      "any": [
+        "substantive_deliverable",
+        "multiple_artifacts"
+      ],
+      "review": "independent"
+    },
+    "quick": {
+      "any": [],
+      "review": "targeted-check"
+    }
+  },
+  "dependency_gates": {
+    "visual_production": "strategy_locked",
+    "name_dependent_logo": "name_approved"
+  },
+  "model_default": "inherit",
+  "parallel_requires": [
+    "strategy_locked",
+    "inputs_approved",
+    "independent_work",
+    "disjoint_ownership"
+  ],
+  "group_id": "allura-team-durham"
+}

@@ -3,134 +3,64 @@ name: brand-loop
 description: "Run bounded autonomous Team Durham brand work."
 ---
 
-# Brand-Loop Skill
+# Brand-loop
 
-Brand-loop is Team Durham's bounded autonomous execution mode. It follows the
-**same feedback-cycle contract as loopy** (observe → choose → act → verify →
-record → stop) but uses Durham brand agents instead of RAM engineering agents.
+Apply `../../governance/adaptive-workflow.md` and
+`../../contracts/adaptive-routing.json`. This is the single bounded Durham loop,
+not another runtime. Keep one accountable producer across related slices.
 
-## Why a Durham-Native Loop (Not loopy-the-skill)
+## Observe → choose → act → verify → record → repeat/stop
 
-Loopy-the-skill is engineering-coded: its examples are CI, tests, refactors,
-and code review. Brand work has different agents, different evidence (visual
-QA, taste gates, brand compliance), and a different HITL boundary (Munari/Rubin
-must approve before anything ships). Brand-loop adopts loopy's **contract** —
-the feedback cycle, terminal states, and bounded persistence — without
-importing loopy's engineering domain.
+1. **Observe:** Obtain or reuse Scout's ContextPacket v1.1 and scoped Brain
+   receipt. Before brand planning, search the declared `allura-team-durham`
+   tenant for relevant strategy and decisions. Report Brain unavailable/failed.
+   Compare dependencies and authority each iteration; refresh only changes.
+2. **Choose:** Classify quick/standard/sensitive, name owner and acceptance
+   evidence, and load only that role plus 1–3 relevant skills. Use `model: inherit`
+   by default. Override only with permitted, verified available capabilities.
+3. **Act:** Produce one bounded, reversible artifact within authorized scope.
+   Preserve STP and locked strategy before visuals. Independent copy and visual
+   preparation can parallelize after approved inputs with disjoint ownership;
+   name-dependent logos wait for approved naming. Avoid unnecessary redispatch.
+4. **Verify:** Quick work uses a targeted acceptance check; standard and sensitive
+   work use independent read-only review selected by risk. Munari checks brand
+   consistency; actual visual artifacts must be inspected for visual QA. A reviewer
+   returns findings to the producer. Cite the rubric or acceptance criterion.
+   If none exists, establish it with the user before dependent production.
+5. **Record:** After a material verified result, write an append-only outcome trace
+   using available governed Brain tools and `group_id: allura-team-durham`.
+   Include owner, route, artifacts, checks, and terminal state; read back writes
+   before claiming persistence. Consolidate related slices; no lookup-only noise.
+6. **Repeat/stop:** Retain owner and packet while measurable progress remains
+   within both budgets. Reclassify if scope/risk changes. Do not ask to continue
+   at routine checkpoints already covered by user authority.
 
-## Layering
+## Budget and terminal states
 
-```
-brand-loop (META)    → finds or crafts the right brand loop
-  ↓ hands off a bounded brand task
-Durham agents         → execute the brand work, return evidence
-  ↓ writes outcome
-Allura Brain          → canonical memory (group_id="allura-team-durham")
-```
-
-Brand-loop is the orchestrator, not a second execution engine. It delegates to
-Durham agents for execution and Allura Brain for memory.
-
-## The Contract — 6-Step Feedback Cycle
-
-1. **Observe** — Scout-recon (Durham) hydrates context + `allura-brain_memory_search`
-   with `group_id: "allura-team-durham"` for prior brand decisions, locked
-   strategy, and brand-kit state.
-2. **Choose** — Brand-orchestrator routes to the specialist: Aaker (strategy),
-   Kotler (positioning), Glaser (visual direction), Ogilvy (copy), Rand
-   (identity), Munari (QA), Rubin (taste gate).
-3. **Act** — The routed specialist executes **one bounded brand slice** — the
-   smallest reversible brand change (a copy pack, a visual direction, a QA
-   report).
-4. **Verify** — Run an **explicit brand check**: Munari QA gate (brand
-   compliance), Rubin taste gate (editorial taste), or a brand-kit consistency
-   check. "Looks good" is not acceptable — cite the rule or rubric.
-5. **Record** — `allura-brain_memory_add` writes an outcome trace with
-   `group_id: "allura-team-durham"`, `user_id: "brand-auto"`,
-   `agent_id: "brand-orchestrator"`.
-6. **Repeat or Stop** — Continue only while progress is measurable and the
-   iteration budget remains. Otherwise enter a named terminal state.
-
-## Loading and Token Budget
-
-- Scout ContextPacket: maximum 700 output tokens.
-- Default run: 12,000 combined input/output tokens and 5 iterations.
-- Hard iteration maximum: 8.
-- Route using the lightweight roster, then lazy-load one specialist plus 1–3
-  relevant skills. Do not hydrate the complete Durham package.
-- Full Figma/Penpot references and Impeccable scripts load only when the routed
-  task explicitly needs them.
-- Token or iteration exhaustion is terminal state `exhausted`, not success.
-
-## Terminal States
-
-Every brand-loop ends in exactly one. **Never report an error or exhausted
-budget as success.**
+Scout packet: maximum 700 output tokens; normal run: 12,000 combined tokens,
+5 iterations, hard maximum 8. Lazy-load tools and skills only when needed.
+Record actual metrics when available; never invent usage or speed improvements.
 
 | State | Meaning |
-|-------|---------|
-| **success** | Brand goal achieved, QA + taste gates passed |
-| **clean no-op** | Inspected brand state, nothing needed, no change made |
-| **blocked** | Hard blocker — missing brief, locked strategy unavailable, missing asset |
-| **approval-required** | Next action ships brand externally and needs HITL |
-| **exhausted** | Iteration budget consumed without convergence |
-| **stagnated** | No measurable progress across N iterations |
+|---|---|
+| success | Requested goal and applicable acceptance/review gates evidenced |
+| clean-no-op | Inspected state; no change needed |
+| blocked | Missing required input, capability, or unresolved dependency |
+| approval-required | The next affected action lacks required human authority |
+| exhausted | Either budget exhausted before acceptance |
+| stagnated | Repeated iterations produce no measurable progress |
 
-## Hard Stops (Brand-Loop Halts Immediately)
+## Authority and honest degradation
 
-1. **Max iterations exceeded** — default 8 (brand work is iterative but bounded)
-2. **Governance violation** — any brand-policy or Allura governance gate failure
-3. **Missing authority** — action requires permissions the agent does not have
-4. **Ship-without-approval** — publishing brand externally, deploying brand kit,
-   or sending client-facing material requires explicit HITL approval
+Agent QA is read-only and cannot grant human approval. Human approval is required
+for external publishing, deployment, client sending, locked strategy changes,
+and semantic promotion. Destructive, configuration, governance, or permission
+changes require explicit scoped authority. Existing authorization counts; prepare
+reviewable artifacts and continue independent authorized work while a boundary
+is pending. No automatic semantic promotion, direct database fallback, or role
+tool expansion. Kotler coordinates; producers create; reviewers report findings.
 
-## HITL Taste Gate (Non-Negotiable)
-
-Brand-loop **writes traces only** and **does not ship brand without approval**.
-Munari (QA) and Rubin (taste) are the HITL gates. Auto-mode does not:
-- Publish brand kits externally
-- Send client-facing material
-- Promote brand decisions to semantic memory (HITL curator only)
-- Override locked brand strategy without human approval
-
-Brand-loop is bounded autonomy: it never stops without proof, escalation, or
-a governance blocker — but it never crosses a taste gate without a human.
-
-## Brain Protocol
-
-**Before (Observe):**
-```
-allura-brain_memory_search({
-  query: "<task> brand strategy locked decisions brand-kit",
-  group_id: "allura-team-durham",
-  limit: 10
-})
-```
-
-**After (Record):**
-```
-allura-brain_memory_add({
-  group_id: "allura-team-durham",
-  user_id: "brand-auto",
-  content: "BRAND_LOOP_OUTCOME: <task>. Terminal state: <state>. Specialist: <agent>. Evidence: <QA/taste result>",
-  metadata: { agent_id: "brand-orchestrator", source: "conversation" }
-})
-```
-
-## Validation Requirement
-
-Every brand-loop run must pass an **explicit brand check** before declaring
-success. Acceptable forms:
-- Munari QA gate (brand compliance rubric)
-- Rubin taste gate (editorial taste review)
-- Brand-kit consistency check (tokens, voice, visual rules)
-- A user-supplied brand acceptance criterion
-
-If no check is known, **ask the user**. Do not proceed on assumption. Brand
-work that "looks good" without a rubric is a material weakness.
-
-## Graceful Degradation
-
-If Allura Brain is unavailable, brand-loop continues with local context only
-and logs to console. It does not pretend hydration happened. Every Brain call
-is wrapped in a try/catch that reports degradation, not silence.
+Brain failure does not prove absence of prior decisions. Continue only with
+adequate local evidence and disclose degraded hydration or writeback. Never claim
+a failed memory write succeeded. Outcome traces are distinct from human-curated
+semantic brand truth.

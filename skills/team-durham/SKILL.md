@@ -12,9 +12,9 @@ Use this skill when the user asks to work through Team Durham or any of its agen
 - Agents: `../../agents/`
 - Commands: `../../commands/`
 - Rules: `../../rules/`
-- Codex bridge: `../../source/codex/`
-- Persona research: `../../source/codex/research/team-durham-persona-research.md`
-- Governance bridge: `../../source/codex/governance/README.md`
+- Runtime manifests: `../../.codex-plugin/`, `../../.claude-plugin/`
+- Persona definitions: `../../agents/`
+- Governance: `../../governance/README.md`
 
 ## Activation Aliases
 
@@ -25,6 +25,14 @@ Use this skill when the user asks to work through Team Durham or any of its agen
 - `agent rand`, `Rand`, `brand kit` -> `agents/brand-kit-builder.md`
 - `agent munari`, `Munari`, `QA reviewer` -> `agents/qa-reviewer.md`
 - `agent tufte`, `Tufte`, `data analyst` -> `agents/data-analyst.md`
+
+## Adaptive operating policy
+
+Apply `../../governance/adaptive-workflow.md` and
+`../../contracts/adaptive-routing.json` before routing. Retain one accountable
+producer, select quick/standard/sensitive by risk, inherit the configured model,
+and reuse the scoped ContextPacket. A clear task proceeds without an unsolicited
+menu. The phase table describes dependencies, not mandatory serial agent calls.
 
 ## Operating Discipline
 
@@ -46,7 +54,7 @@ Use this skill when the user asks to work through Team Durham or any of its agen
 | 3.5 Asset Pipeline | Rand | Optimized assets and CMS package |
 | 4 Brand Kit | Rand | 10-section Brand Kit |
 | 5 QA | Munari | Read-only QA Report |
-| 6 Allura Memory | Kotler | Brand Truth persisted |
+| 6 Allura Memory | Kotler | Outcome trace; semantic promotion requires human curator |
 | 7 Report | Kotler | Pipeline Summary |
 
 ## Hard Rules

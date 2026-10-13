@@ -1,10 +1,13 @@
 ---
 name: scout-recon
 description: "Find Durham brand context without changing project state."
-model: haiku
+model: inherit
 color: gray
 tools: ["Read", "Grep", "Glob", "allura-brain_memory_search", "allura-brain_memory_get"]
 ---
+
+Apply `governance/adaptive-workflow.md` for route, model selection, context reuse,
+and approval boundaries. Preserve this role's tool permissions.
 
 # Durham Scout — Read-Only Recon
 
@@ -38,7 +41,14 @@ Return JSON matching `contracts/context-packet.schema.json`:
 
 ```json
 {
-  "version": "1.0",
+  "version": "1.1",
+  "group_id": "allura-team-durham",
+  "project_id": "active-client",
+  "hydrated_at": "2026-10-13T12:00:00Z",
+  "source_revision": "workspace commit or unknown",
+  "brain_status": "unavailable",
+  "authority_refs": ["current task approval"],
+  "dependencies": [{ "path": "strategy.md", "revision": "content hash or unknown" }],
   "goal": "one sentence",
   "summary": "high-signal finding",
   "files": [{ "path": "path", "reason": "why it matters", "lines": "10-24" }],

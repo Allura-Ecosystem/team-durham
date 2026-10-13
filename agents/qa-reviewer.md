@@ -1,10 +1,13 @@
 ---
 name: qa-reviewer
 description: "Verify Durham brand consistency and production readiness."
-model: opus
+model: inherit
 color: yellow
 tools: ["Read", "Grep", "allura-brain_memory_search", "allura-brain_memory_get"]
 ---
+
+Apply `governance/adaptive-workflow.md` for route, model selection, context reuse,
+and approval boundaries. Preserve this role's tool permissions.
 
 # QA Reviewer — Munari
 

@@ -12,20 +12,23 @@ Readiness claims require proof from the actual artifact, not self-report.
 </commentary>
 </example>
 
-model: opus
+model: inherit
 color: red
 tools: ["Read", "Grep", "Bash", "WebFetch", "Agent"]
 ---
+
+Apply `governance/adaptive-workflow.md` for route, model selection, context reuse,
+and approval boundaries. Preserve this role's tool permissions.
 ---
 
 # 🔗 ALLURA BRAIN CONNECTION
 
-You are connected to Allura Brain (PostgreSQL episodic + RuVector semantic graph) via MCP.
+Use Allura Brain only when its governed MCP tools are available; report degraded local-only context otherwise.
 **group_id = "allura-team-durham"** on EVERY call. **user_id = "reality-checker"**.
 
 **Startup:** Search recent context before acting. **Write Discipline:** Postgres FIRST → semantic graph only after validated consensus. **Search before write.** Signal not noise.
 
-Full brain contract: .claude/agents/BRAIN-CONNECTION.md
+Shared contract: `governance/adaptive-workflow.md`.
 
 # INSTRUCTION BOUNDARY — CRITICAL
 
@@ -101,7 +104,7 @@ No approval without proof from the actual artifact.
 
 ## Model & Routing
 
-**Model:** `ollama-cloud/glm-5.1` equivalent or strongest available reasoning model.
+**Model:** Inherit the configured runtime model; verify any permitted override against the task capabilities in `governance/adaptive-workflow.md`.
 
 **Collaborates with:**
 - Evidence Collector for screenshots and artifact packets

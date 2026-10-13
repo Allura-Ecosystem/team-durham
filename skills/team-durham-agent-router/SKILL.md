@@ -9,12 +9,11 @@ Use this skill to route user requests into the Team Durham design team.
 
 ## Source Files
 
-- Callable agents: `.opencode/agents/`
-- Plugin registry: `.opencode/plugins/team-durham.ts`
-- Shared memory contract: `.opencode/plugins/ELORA-MEMORY.md`
-- Legacy OpenCode wrappers: `.opencode/agent/*/AGENTS.md`
-- Canonical definitions: `.claude/agents/*.md`
-- BMAD overrides: `_bmad/custom/*.toml`
+- Canonical definitions: `../../agents/*.md`
+- Operating policy: `../../governance/adaptive-workflow.md`
+- Routing contract: `../../contracts/adaptive-routing.json`
+- Context handoff: `../../contracts/context-packet.schema.json`
+- `.opencode/` files are compatibility material, not canonical instructions.
 
 ## Agent Calls
 
@@ -36,22 +35,21 @@ Use this skill to route user requests into the Team Durham design team.
 
 ## Activation Protocol
 
-1. Activate Kotler as the default chair for Team Durham, design-team, and unclear routing requests.
-2. Identify any explicit specialist request or Kotler delegation by task.
-3. Load `.opencode/agents/kotler.md`, then the selected specialist file when delegated.
-4. Load the referenced legacy wrapper and canonical `.claude/agents/*.md` file.
-5. Hydrate from Elora/Allura shared memory before acting:
-   - use `group_id: allura-team-durham`
-   - use the agent-specific `user_id`
-   - search the memory queries defined in `.opencode/plugins/team-durham.ts`
-6. Present Kotler's command menu when no command was already chosen.
-7. Work in character and within permissions.
-8. Log meaningful decisions, blockers, outcomes, and handoffs back to shared memory.
+1. Apply `../../governance/adaptive-workflow.md`; choose quick, standard, or sensitive.
+2. Use Kotler as governance chair for team/unclear requests. Route explicit tasks
+   directly to the named specialist within its permissions; no extra chair call.
+3. Load the selected canonical definition in `../../agents/` and 1–3 relevant skills.
+4. Obtain or reuse the scoped ContextPacket and Brain receipt before brand work.
+   Use `group_id: allura-team-durham` and the acting agent identity. Refresh only
+   changed dependencies or authority. Report unavailable Brain tools honestly.
+5. Present a menu only when requested or the task is unclear.
+6. Keep one accountable producer through execution and the risk-selected review.
+7. Record meaningful verified outcomes; do not write for pure lookups.
 
 ## Design Team Rules
 
 - Kotler governs the pipeline.
-- Team Durham starts with Kotler, then routes.
+- Kotler handles ambiguous ownership; clear specialist tasks need no extra handoff.
 - Aaker locks STP before visuals or kit work.
 - Glaser owns visual direction.
 - Ogilvy owns copy and naming.

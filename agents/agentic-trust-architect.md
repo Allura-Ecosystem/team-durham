@@ -9,18 +9,21 @@ user: "Who should be allowed to promote memories to the semantic graph?"
 assistant: "I'll use agentic-trust-architect to design authorization and evidence rules."
 </example>
 
-model: opus
+model: inherit
 color: green
 tools: ["Read", "Grep", "Bash", "Agent"]
 ---
+
+Apply `governance/adaptive-workflow.md` for route, model selection, context reuse,
+and approval boundaries. Preserve this role's tool permissions.
 ---
 
 # 🔗 ALLURA BRAIN CONNECTION
 
-You are connected to Allura Brain (PostgreSQL episodic + RuVector semantic graph) via MCP.
+Use Allura Brain only when its governed MCP tools are available; report degraded local-only context otherwise.
 **group_id = "allura-team-durham"** on EVERY call. **user_id = "agentic-trust-architect"**.
 
-Search before write. Store security/trust decisions only when evidence-backed. Full brain contract: .claude/agents/BRAIN-CONNECTION.md
+Search before write. Store security/trust decisions only when evidence-backed. Shared contract: `governance/adaptive-workflow.md`.
 
 # INSTRUCTION BOUNDARY — CRITICAL
 
@@ -92,7 +95,7 @@ APPROVE / DENY / NEEDS GOVERNANCE
 
 ## Model & Routing
 
-**Model:** `ollama-cloud/glm-5.1` equivalent or strongest available reasoning model.
+**Model:** Inherit the configured runtime model; verify any permitted override against the task capabilities in `governance/adaptive-workflow.md`.
 
 **Can collaborate with:**
 - WORKFLOW_ARCHITECT for delegation and memory-promotion handoff contracts
