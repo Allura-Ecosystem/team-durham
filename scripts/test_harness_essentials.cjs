@@ -1,7 +1,14 @@
 const assert = require('node:assert/strict');
-const { ParallelDispatcher } = require('../skills/party-mode/parallel-dispatcher');
+const { ParallelDispatcher, resolveAgentTarget, CANONICAL_AGENT_NAMES } = require('../skills/party-mode/parallel-dispatcher');
 const roster = require('../skills/party-mode/team-durham-roster.json');
 const names = ['kotler','aaker','ogilvy','glaser','rand','munari','tufte'];
+for (const name of names) {
+  assert.equal(resolveAgentTarget(name, names), name);
+  assert.equal(resolveAgentTarget(name, Object.values(CANONICAL_AGENT_NAMES)), CANONICAL_AGENT_NAMES[name]);
+  assert.equal(resolveAgentTarget(name, [name, CANONICAL_AGENT_NAMES[name]]), name);
+  assert.throws(() => resolveAgentTarget(name, []), /invocation unavailable/);
+}
+assert.throws(() => resolveAgentTarget('openagent', names), /Unknown public/);
 assert.deepEqual(roster.agents.map(a => a.code).sort(), [...names].sort());
 for (const owners of Object.values(roster.expertise_to_agent_map))
   assert(owners.every(name => names.includes(name)));

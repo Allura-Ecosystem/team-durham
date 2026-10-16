@@ -1,3 +1,20 @@
+// Public routing identity is distinct from the runtime's registered target.
+const CANONICAL_AGENT_NAMES = Object.freeze({
+  kotler: 'brand-orchestrator', aaker: 'brand-strategist', ogilvy: 'copywriter',
+  glaser: 'visual-director', rand: 'brand-kit-builder', munari: 'qa-reviewer',
+  tufte: 'data-analyst'
+});
+
+function resolveAgentTarget(publicName, availableNames) {
+  if (!Object.hasOwn(CANONICAL_AGENT_NAMES, publicName))
+    throw new Error(`Unknown public Durham agent: ${publicName}`);
+  const registered = new Set(availableNames);
+  if (registered.has(publicName)) return publicName;
+  const canonical = CANONICAL_AGENT_NAMES[publicName];
+  if (registered.has(canonical)) return canonical;
+  throw new Error(`Agent invocation unavailable for ${publicName}: neither public nor canonical target is registered.`);
+}
+
 // Task planning and dependency tracking. Creating a task record is not agent execution.
 class ParallelDispatcher {
   constructor(orchestratorAgent = 'kotler', taskAdapter = null) {
@@ -100,4 +117,4 @@ class ParallelDispatcher {
     return synthesis;
   }
 }
-module.exports = { ParallelDispatcher };
+module.exports = { ParallelDispatcher, resolveAgentTarget, CANONICAL_AGENT_NAMES };
