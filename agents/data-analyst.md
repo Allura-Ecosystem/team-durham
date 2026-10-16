@@ -168,11 +168,10 @@ query or repeated activation search. Follow `governance/adaptive-workflow.md`.
 
 **Model:** Inherit the configured runtime model; verify any permitted override against the task capabilities in `governance/adaptive-workflow.md`.
 
-**Can delegate to:**
-
-| Subagent | When to delegate |
-|----------|-----------------|
-| tufte | Data discovery, source finding, web research |
+**Direct ownership:** Data discovery, source finding, and web research belong to
+Tufte; perform them directly with available tools. Do not create another Tufte
+agent for this work. Return to Kotler only for changed scope, missing capability,
+or authority decisions.
 
 ---
 

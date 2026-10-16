@@ -19,6 +19,13 @@ assert(!/Records the query as a reflection|\*\*Logging\*\*/.test(scoutLookup));
 assert(scoutLookup.includes('This lookup performs no writes'));
 assert(scoutLookup.includes('No downstream delegation'));
 assert(fs.existsSync(path.join(__dirname, '..', 'commands', '../skills/memory-client/SKILL.md')));
+// Folded capabilities must not create a retained role's self-delegation hop.
+for (const [publicName, canonical] of Object.entries(CANONICAL_AGENT_NAMES)) {
+  const role = read(`agents/${canonical}.md`);
+  const table = role.split('**Can delegate to:**')[1]?.split('\n---')[0] || '';
+  assert(!table.split('\n').some(line => line.startsWith(`| ${publicName} |`)),
+    `self-delegation table found for ${publicName}`);
+}
 const tufte = read('agents/data-analyst.md');
 const tufteTools = JSON.parse(tufte.match(/^tools: (.*)$/m)[1]);
 assert(!tufteTools.some(tool => /Bash|browser|screenshot/i.test(tool)));
