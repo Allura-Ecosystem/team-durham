@@ -25,7 +25,7 @@ Use this skill to route user requests into the Team Durham design team.
 | Glaser; logo, visuals, visual direction | `glaser` | `visual-director` |
 | Rand; brand kit, tokens, system, UX artifacts | `rand` | `brand-kit-builder` |
 | Munari; independent QA, readiness, trust-boundary review | `munari` | `qa-reviewer` |
-| Tufte; research, recon, evidence, screenshots | `tufte` | `data-analyst` |
+| Tufte; research, recon, evidence requirements and provenance | `tufte` | `data-analyst` |
 
 Resolve the public identity against the current runtime's actual registered agent
 names before invoking. Prefer its public target when registered (the named Codex
@@ -64,7 +64,7 @@ agent invocation. A task record is not an invocation receipt.
 - Rand assembles production-ready brand systems.
 - Munari reviews only; fixes go back to producers.
 - Tufte validates evidence and research.
-- Tufte captures evidence; Kotler owns workflow and trust accountability; Munari independently reviews readiness and trust boundaries.
+- Tufte owns evidence requirements and provenance; live capture requires an observed permitted capture tool and actual executor receipt, otherwise remains unconfirmed; Kotler owns workflow and trust accountability; Munari independently reviews readiness and trust boundaries.
 
 ## Memory Rule
 

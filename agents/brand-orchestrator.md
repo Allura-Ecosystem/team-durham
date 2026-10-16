@@ -65,7 +65,7 @@ competitive, web, and self-reported completion claims.
 | brand-kit assembly and specification | Brand Kit Builder (Rand) | complete source packs |
 | consistency, accessibility, readiness | QA Reviewer (Munari) | rubric score + cited findings |
 | market/competitive evidence | Data Analyst (Tufte) | source-backed findings |
-| live proof and screenshots | Tufte / Munari | artifact paths or live receipts |
+| live proof and screenshots | Tufte specifies evidence; a capture-capable authorized executor supplies it; Munari reviews | observed capture tool + permitted target + actual artifact/receipt; otherwise unconfirmed |
 | workflow, state, handoff | Kotler | explicit states and failure paths |
 | identity, authority, audit | Kotler | scoped authority and audit evidence |
 

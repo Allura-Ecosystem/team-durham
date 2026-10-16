@@ -38,7 +38,7 @@ class ParallelDispatcher {
       blockedBy, priority: plan.length + 1
     });
     if (/research|competitor|market|data|discovery|recon|screenshot|evidence/.test(text))
-      add('tufte', 'Research and evidence', 'Collect scoped sources, context and evidence with provenance. Do not certify readiness.');
+      add('tufte', 'Research and evidence', 'Inspect accessible scoped sources and evidence; define proof requirements and provenance. No browser/screenshot tool is granted. Request an authorized capable executor for live capture, otherwise report missing capability. Do not certify readiness.');
     if (/strategy|position|archetype/.test(text))
       add('aaker', 'Validate strategy', 'Check STP, personality and positioning.', plan.map(t => t.id));
     const foundation = plan.map(t => t.id);

@@ -14,7 +14,7 @@ This repository is the **canonical public source** for Team Durham. Catalog copi
   <a href="docs/images/framework-and-harness.png"><img src="docs/images/framework-and-harness.png" alt="Team Durham framework: strategy, production, QA, evidence, and governance around the brand core" width="900" /></a>
 </p>
 
-Team Durham is built on **strategy foundation** (Kotler and Aaker lock the truth), **specialist production** (Ogilvy, Glaser, and Rand craft the system), **independent QA** (Munari verifies consistency), **evidence collection** (Tufte captures proof and Munari independently verifies claims), and **governance gates** (authority and safety constraints shape decisions).
+Team Durham is built on **strategy foundation** (Kotler and Aaker lock the truth), **specialist production** (Ogilvy, Glaser, and Rand craft the system), **independent QA** (Munari verifies consistency), **evidence collection** (Tufte specifies proof and inspects accessible evidence; Munari independently verifies claims), and **governance gates** (authority and safety constraints shape decisions).
 
 ---
 
@@ -95,7 +95,7 @@ Every deliverable carries **rationale** (why this direction), **source strategy*
 2. **Strategy before pixels** — Kotler and Aaker lock audience, positioning, and brand truth first.
 3. **Specialists produce** — Ogilvy, Glaser, and Rand create the system and deliverables.
 4. **QA stays independent** — Munari reports findings; producing roles perform fixes.
-5. **Claims require evidence** — Tufte captures evidence and Munari independently verifies the actual artifact.
+5. **Claims require evidence** — Tufte establishes evidence requirements and provenance; Munari independently verifies the actual artifact.
 6. **Governance wins over persona** — project/client authority and safety constraints outrank stylistic simulation.
 
 ## Install

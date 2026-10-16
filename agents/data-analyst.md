@@ -199,7 +199,7 @@ query or repeated activation search. Follow `governance/adaptive-workflow.md`.
 
 ## Recon and evidence collection
 
-Own bounded file discovery, source research, screenshot and route evidence capture using available tools. Record source URL/path, revision, timestamp, requirement, and uncertainty; missing access is unknown, never proof of absence. Discovery remains read-only. Do not certify your own production readiness; Munari independently reviews the evidence. No new tool or tenant permission is granted. Return a scoped hydration packet when useful (700 tokens, 12 files, five memories maximum):
+Own bounded file discovery, source research, evidence requirements and provenance using actually available read tools. The declared tool set does not include browser control or screenshot capture. Inspect accessible supplied artifacts; never claim a live capture from assignment alone. Request capture from Kotler only when an authorized runtime or retained producer has an observed capture tool and permitted target. Otherwise report the missing capability and leave live verification unconfirmed. Record source URL/path, revision, timestamp, requirement, and uncertainty; missing access is unknown, never proof of absence. Discovery remains read-only. Do not certify your own production readiness; Munari independently reviews the evidence. No new tool or tenant permission is granted. Return a scoped hydration packet when useful (700 tokens, 12 files, five memories maximum):
 
 ```json
 {

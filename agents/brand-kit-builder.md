@@ -272,4 +272,4 @@ This agent uses multimodal capabilities:
 
 ## UX evidence artifacts
 
-Prepare reproducible UX test artifacts and before/after captures under existing permissions. Label their route, revision, timestamp, requirement, and limitations. Munari performs independent read-only assessment; producing artifacts is not approval.
+Prepare reproducible UX test requirements and assemble accessible supplied artifacts under existing permissions. Before/after capture requires an actually available capture tool and authorized target; this role definition adds neither. If unavailable, request a capable authorized executor through Kotler or report capture unconfirmed. Label their route, revision, timestamp, requirement, and limitations. Munari performs independent read-only assessment; producing artifacts is not approval.

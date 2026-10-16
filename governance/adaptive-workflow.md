@@ -20,7 +20,7 @@ invocation for every slice. Show a menu only when requested or the task is uncle
 | sensitive | Strategy, authority, tenancy, publishing, promotion, destructive or configuration change | Relevant specialist, independent review, and human authority before the affected action |
 
 A quick route never waives a project-required review. Munari covers brand
-consistency, live proof, and authority boundaries; Tufte supplies evidence and Kotler owns workflow and authority accountability. A read-only reviewer reports findings; the
+consistency, live proof, and authority boundaries; Tufte establishes evidence requirements/provenance and inspects accessible artifacts; live capture requires an observed authorized tool and executor receipt. Kotler owns workflow and authority accountability. A read-only reviewer reports findings; the
 producer fixes them. Kotler routes and verifies receipts, without acquiring craft
 tools. Existing explicit authorization counts; do not ask again for the same
 scope. Missing authorization blocks only the affected action; prepare reviewable

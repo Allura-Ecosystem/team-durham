@@ -1,7 +1,23 @@
 const assert = require('node:assert/strict');
+const fs = require('node:fs');
+const path = require('node:path');
 const { ParallelDispatcher, resolveAgentTarget, CANONICAL_AGENT_NAMES } = require('../skills/party-mode/parallel-dispatcher');
 const roster = require('../skills/party-mode/team-durham-roster.json');
 const names = ['kotler','aaker','ogilvy','glaser','rand','munari','tufte'];
+const read = relative => fs.readFileSync(path.join(__dirname, '..', relative), 'utf8');
+const party = read('skills/party-mode/SKILL.md');
+assert(!/mock chat|log to Brain automatically|subagent_type: .Explore|silent dispatch/.test(party));
+for (const required of ['actual available delegation mechanism', 'observedAvailableNames',
+  'does not\ninvoke agents', 'authenticated\nprincipal as `user_id`', 'metadata.agent_id',
+  'read-back receipt', 'do not supply browser control or screenshot capture'])
+  assert(party.includes(required), `party contract missing: ${required}`);
+const tufte = read('agents/data-analyst.md');
+const tufteTools = JSON.parse(tufte.match(/^tools: (.*)$/m)[1]);
+assert(!tufteTools.some(tool => /Bash|browser|screenshot/i.test(tool)));
+assert(tufte.includes('does not include browser control or screenshot capture'));
+assert(tufte.includes('leave live verification unconfirmed'));
+assert(read('skills/party-mode/parallel-dispatcher.js').includes('No browser/screenshot tool is granted'));
+
 for (const name of names) {
   assert.equal(resolveAgentTarget(name, names), name);
   assert.equal(resolveAgentTarget(name, Object.values(CANONICAL_AGENT_NAMES)), CANONICAL_AGENT_NAMES[name]);
