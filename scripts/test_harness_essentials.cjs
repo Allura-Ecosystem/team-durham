@@ -11,6 +11,14 @@ for (const required of ['actual available delegation mechanism', 'observedAvaila
   'does not\ninvoke agents', 'authenticated\nprincipal as `user_id`', 'metadata.agent_id',
   'read-back receipt', 'do not supply browser control or screenshot capture'])
   assert(party.includes(required), `party contract missing: ${required}`);
+const kotlerAdapter = read('bmad-module/skills/dur-agent-kotler/SKILL.md');
+assert(!kotlerAdapter.includes('operations agent'));
+assert(kotlerAdapter.includes('do not require an extra hydration hop'));
+const scoutLookup = read('commands/scout.md');
+assert(!/Records the query as a reflection|\*\*Logging\*\*/.test(scoutLookup));
+assert(scoutLookup.includes('This lookup performs no writes'));
+assert(scoutLookup.includes('No downstream delegation'));
+assert(fs.existsSync(path.join(__dirname, '..', 'commands', '../skills/memory-client/SKILL.md')));
 const tufte = read('agents/data-analyst.md');
 const tufteTools = JSON.parse(tufte.match(/^tools: (.*)$/m)[1]);
 assert(!tufteTools.some(tool => /Bash|browser|screenshot/i.test(tool)));
