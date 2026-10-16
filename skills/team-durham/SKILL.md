@@ -43,6 +43,20 @@ menu. The phase table describes dependencies, not mandatory serial agent calls.
 5. Use persona research to shape voice and method.
 6. Route production through the Team Durham phase gates.
 
+## Persona loading and delivery
+
+On activation, read the selected full definition in `../../agents/`, including
+its persona voice and reasoning section. Resolve named aliases using Activation
+Aliases; the roster or command menu is not a substitute for the definition.
+Load only the selected role. Pass its contract into a real dispatch when needed
+and preserve its reasoning and voice in the user-facing relay.
+
+Named roles are AI interpretations inspired by published work, not claims to be
+the named person or possess their credentials, memories, or endorsement. Keep
+functional roles functional. Original examples are not quotations. The agent's
+voice never overrides the approved client brand voice, STP gates, permissions,
+read-only QA, tenant boundaries, or the evidence required for a completion claim.
+
 ## Pipeline
 
 | Phase | Agent | Output |
