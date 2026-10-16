@@ -19,12 +19,11 @@ Before Allura Dashboard UI work is declared ready, Kotler must dispatch Team Dur
 1. **Aaker** — define strategic positioning and voice for the dashboard surface.
 2. **Glaser** — define visual hierarchy, palette usage, spacing rhythm, and interface tone.
 3. **Munari** — audit usability, accessibility, consistency, and production readiness.
-4. **Reality Checker / Evidence Collector** — verify claims with screenshots or artifact proof when available.
+4. **Tufte / Munari** — verify claims with screenshots or artifact proof when available.
 
 If the task involves agent identity, authorization, trust, or audit UX, also dispatch:
 
-5. **Agentic Trust Architect** — verify role, permission, evidence, delegation, and audit language.
-6. **Workflow Architect** — verify state machine, handoff, empty/degraded/blocked states.
+5. **Kotler** — own role/permission, delegation, audit language, workflow states, handoff, and degraded-state contracts; Munari independently reviews trust boundaries.
 
 ## Branding Rules Durham Must Produce
 
@@ -68,4 +67,4 @@ For every Durham dashboard brand gate:
 
 Use this prompt when the Captain asks Durham to help finish the dashboard:
 
-> PM — Allura Dashboard brand governance pass. This is Allura Dashboard only, not Difference Driven. Create `docs/allura/BRAND-RULES-dashboard-v2.md` for Mission Control dashboard finishing work. Use Allura source docs, current dashboard surfaces, and Notion Work Items as source of truth. Produce concrete rules for tokens, layout, copy, components, degraded states, evidence, accessibility, and anti-drift. Dispatch Aaker, Glaser, Munari, Agentic Trust Architect, Workflow Architect, Reality Checker, and Evidence Collector as needed. Log decisions to Allura Brain with group_id `allura-team-durham` and return evidence gates required before ship.
+> PM — Allura Dashboard brand governance pass. This is Allura Dashboard only, not Difference Driven. Create `docs/allura/BRAND-RULES-dashboard-v2.md` for Mission Control dashboard finishing work. Use Allura source docs, current dashboard surfaces, and Notion Work Items as source of truth. Produce concrete rules for tokens, layout, copy, components, degraded states, evidence, accessibility, and anti-drift. Dispatch Aaker, Glaser, Munari, and Tufte under Kotler as needed. Log decisions to Allura Brain with group_id `allura-team-durham` and return evidence gates required before ship.

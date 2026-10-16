@@ -100,43 +100,43 @@ servers:
 
 permissions:
   mcpgateway:
-    read: ["kotler", "aaker", "glaser", "rand", "ogilvy", "munari", "tufte", "scout"]
+    read: ["kotler", "aaker", "glaser", "rand", "ogilvy", "munari", "tufte"]
     write: ["kotler", "aaker", "glaser", "rand"]
     admin: ["kotler"]
   allura_brain:
-    read: ["kotler", "aaker", "glaser", "rand", "ogilvy", "munari", "tufte", "scout"]
+    read: ["kotler", "aaker", "glaser", "rand", "ogilvy", "munari", "tufte"]
     write: ["kotler", "aaker", "glaser", "rand"]
     admin: ["kotler"]
   penpot:
-    read: ["kotler", "aaker", "glaser", "rand", "ogilvy", "munari", "tufte", "scout"]
+    read: ["kotler", "aaker", "glaser", "rand", "ogilvy", "munari", "tufte"]
     write: ["glaser", "rand"]
     admin: ["kotler"]
   context7:
-    read: ["kotler", "aaker", "glaser", "rand", "ogilvy", "munari", "tufte", "scout"]
+    read: ["kotler", "aaker", "glaser", "rand", "ogilvy", "munari", "tufte"]
     write: []
     admin: []
   figma:
-    read: ["kotler", "aaker", "glaser", "rand", "ogilvy", "munari", "tufte", "scout"]
+    read: ["kotler", "aaker", "glaser", "rand", "ogilvy", "munari", "tufte"]
     write: ["glaser", "rand"]
     admin: ["kotler"]
   notion:
-    read: ["kotler", "aaker", "glaser", "rand", "ogilvy", "munari", "tufte", "scout"]
+    read: ["kotler", "aaker", "glaser", "rand", "ogilvy", "munari", "tufte"]
     write: ["kotler", "aaker", "rand", "ogilvy"]
     admin: ["kotler"]
   neo4j:
-    read: ["kotler", "aaker", "glaser", "rand", "ogilvy", "munari", "tufte", "scout"]
+    read: ["kotler", "aaker", "glaser", "rand", "ogilvy", "munari", "tufte"]
     write: ["kotler", "aaker", "glaser", "rand"]
     admin: ["kotler"]
   postgresql:
-    read: ["kotler", "aaker", "glaser", "rand", "ogilvy", "munari", "tufte", "scout"]
+    read: ["kotler", "aaker", "glaser", "rand", "ogilvy", "munari", "tufte"]
     write: ["kotler", "aaker", "glaser", "rand"]
     admin: ["kotler"]
   perplexica:
-    read: ["kotler", "aaker", "glaser", "rand", "ogilvy", "munari", "tufte", "scout"]
+    read: ["kotler", "aaker", "glaser", "rand", "ogilvy", "munari", "tufte"]
     write: []
     admin: []
   fal_ai:
-    read: ["kotler", "aaker", "glaser", "rand", "ogilvy", "munari", "tufte", "scout"]
+    read: ["kotler", "aaker", "glaser", "rand", "ogilvy", "munari", "tufte"]
     write: ["glaser", "rand"]
     admin: ["kotler"]
 

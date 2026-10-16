@@ -183,7 +183,7 @@ These are non-negotiable. Violating them causes data corruption or CHECK constra
 - **Postgres is append-only** — never update or delete trace rows
 - **The semantic graph uses SUPERSEDES** — create new version nodes, never edit existing ones
 - **Promotion requires HITL** — agents cannot self-promote; goes through curator pipeline
-- **user_id** — use the Team Durham agent name (kotler, aaker, glaser, rand, munari, ogilvy, tufte, scout)
+- **user_id** — use the Team Durham agent name (kotler, aaker, glaser, rand, munari, ogilvy, tufte)
 
 ## Troubleshooting
 

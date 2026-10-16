@@ -254,7 +254,7 @@ Every memory must carry:
 | Field | Required | Description |
 |-------|----------|-------------|
 | `group_id` | ✅ Always | `allura-team-durham` (pattern: `^allura-[a-z0-9-]+$`) |
-| `user_id` | ✅ Always | Team Durham agent name (kotler, aaker, glaser, rand, munari, ogilvy, tufte, scout) |
+| `user_id` | ✅ Always | Team Durham agent name (kotler, aaker, glaser, rand, munari, ogilvy, tufte) |
 | `content` | ✅ Always | The actual memory text |
 | `source` | ✅ Always | `conversation` or `manual` |
 | `agent_id` | Recommended | Which agent produced this |
@@ -335,10 +335,9 @@ Not every agent can write everywhere. Respect these boundaries:
 | Ogilvy | ❌ | ❌ | ✅ Request |
 | Munari | ❌ (read-only) | ❌ (read-only) | ❌ |
 | Tufte | ❌ | ❌ | ✅ Request |
-| Scout | ❌ (read-only) | ❌ (read-only) | ❌ |
 
 **Key rules:**
-- Munari and Scout are **read-only** — they flag issues but never fix directly
+- Munari remains **read-only**; Tufte discovery does not mutate inspected sources. Existing store-specific Tufte permissions above remain unchanged
 - Only Kotler can write to the semantic graph, and only via SUPERSEDES (never in-place edit)
 - Any agent can *request* promotion, but approval requires HITL
 

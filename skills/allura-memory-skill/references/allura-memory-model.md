@@ -162,7 +162,7 @@ All valid event types that can be logged as raw traces:
 | `SKILL_APPROVED` | Skill proposal approved | Kotler |
 | `CLIENT_FEEDBACK` | Client feedback routed | Kotler |
 | `BRAND_GUARDIAN_AUDIT` | Post-delivery compliance check | Munari |
-| `TRADEMARK_SCREENED` | Name availability screening | Scout |
+| `TRADEMARK_SCREENED` | Name availability screening | Tufte |
 | `TASK_COMPLETE` | Task finished successfully | Any |
 | `TASK_FAILED` | Task failed | Any |
 | `BLOCKED` | Progress blocked | Any |

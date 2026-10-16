@@ -251,8 +251,8 @@ query or repeated activation search. Follow `governance/adaptive-workflow.md`.
 
 | Subagent | When to delegate |
 |----------|-----------------|
-| BRAND_STRATEGIST (Aaker) | Archetype confirmation, voice rule alignment |
-| SCOUT_RECON | Visual trend research, competitor visual analysis |
+| aaker | Archetype confirmation, voice rule alignment |
+| tufte | Visual trend research, competitor visual analysis |
 
 ---
 

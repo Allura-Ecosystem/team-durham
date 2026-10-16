@@ -20,8 +20,7 @@ invocation for every slice. Show a menu only when requested or the task is uncle
 | sensitive | Strategy, authority, tenancy, publishing, promotion, destructive or configuration change | Relevant specialist, independent review, and human authority before the affected action |
 
 A quick route never waives a project-required review. Munari covers brand
-consistency, Tufte evidence quality, Reality Checker live proof, and the Trust
-Architect authority boundaries. A read-only reviewer reports findings; the
+consistency, live proof, and authority boundaries; Tufte supplies evidence and Kotler owns workflow and authority accountability. A read-only reviewer reports findings; the
 producer fixes them. Kotler routes and verifies receipts, without acquiring craft
 tools. Existing explicit authorization counts; do not ask again for the same
 scope. Missing authorization blocks only the affected action; prepare reviewable
@@ -44,9 +43,9 @@ explicit authority within their scope before execution.
 
 ## Hydrate once, refresh affected dependencies
 
-Scout supplies a tenant- and project-scoped ContextPacket v1.1 with `hydrated_at`,
+Tufte supplies a tenant- and project-scoped ContextPacket v1.1 with `hydrated_at`,
 `source_revision`, dependency revisions, authority references, and Brain status.
-If no Scout runtime was invoked, report Scout-style hydration only. Reuse this
+If Tufte was not actually invoked, report local hydration only. Reuse this
 packet throughout the task, including specialist handoffs. Search Brain once
 before brand planning, using the declared `allura-team-durham` tenant and project
 filter; if tools are unavailable, report degraded local-only context honestly.
@@ -57,7 +56,7 @@ Before each slice compare the task scope, dependency revisions, and authority
 references with the packet. Refresh changed sources and affected decisions; a
 changed task, tenant, or project requires a new packet. A timestamp alone does not
 prove freshness. Unknown revisions require re-reading the relevant source.
-Do not reload all skills, re-run all memory queries, or restart Scout per slice.
+Do not reload all skills, re-run all memory queries, or restart Tufte per slice.
 Load only the relevant agent and 1–3 required skills; preserve established budgets.
 
 ## Model selection

@@ -11,7 +11,7 @@ not another runtime. Keep one accountable producer across related slices.
 
 ## Observe → choose → act → verify → record → repeat/stop
 
-1. **Observe:** Obtain or reuse Scout's ContextPacket v1.1 and scoped Brain
+1. **Observe:** Obtain or reuse Tufte's ContextPacket v1.1 and scoped Brain
    receipt. Before brand planning, search the declared `allura-team-durham`
    tenant for relevant strategy and decisions. Report Brain unavailable/failed.
    Compare dependencies and authority each iteration; refresh only changes.
@@ -37,7 +37,7 @@ not another runtime. Keep one accountable producer across related slices.
 
 ## Budget and terminal states
 
-Scout packet: maximum 700 output tokens; normal run: 12,000 combined tokens,
+scoped packet: maximum 700 output tokens; normal run: 12,000 combined tokens,
 5 iterations, hard maximum 8. Lazy-load tools and skills only when needed.
 Record actual metrics when available; never invent usage or speed improvements.
 

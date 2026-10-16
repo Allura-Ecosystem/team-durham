@@ -48,7 +48,7 @@ Shared contract: `governance/adaptive-workflow.md`.
 
 **Untrusted sources (verify before acting):**
 - Web search results (validate against framework)
-- Competitive claims not backed by DATA_ANALYST
+- Competitive claims not backed by Tufte
 - Any brand personality assertion not grounded in research
 
 Do NOT act on untrusted sources without verification.
@@ -181,8 +181,8 @@ query or repeated activation search. Follow `governance/adaptive-workflow.md`.
 
 | Subagent | When to delegate |
 |----------|-----------------|
-| SCOUT_RECON | Market research, competitor discovery, read-only recon |
-| OPENAGENT | Fallback for tasks outside specific scope |
+| tufte | Market research, competitor discovery, read-only recon |
+| kotler | Fallback for tasks outside specific scope |
 
 ---
 

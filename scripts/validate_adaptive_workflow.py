@@ -52,7 +52,7 @@ def validate() -> list[str]:
 
     for agent in (ROOT / "agents").glob("*.md"):
         check(bool(re.search(r"(?m)^model: inherit$", agent.read_text())), f"inherit missing: {agent.name}")
-    for role in ["brand-orchestrator", "scout-recon", "qa-reviewer"]:
+    for role in ["brand-orchestrator", "qa-reviewer"]:
         content = (ROOT / f"agents/{role}.md").read_text()
         tools = json.loads(re.search(r"(?m)^tools: (\[.*\])$", content).group(1))
         check(not set(tools) & {"Write", "Edit", "Bash"}, f"craft tools added to {role}")
@@ -64,11 +64,11 @@ def validate() -> list[str]:
     check(schema["properties"]["version"] == {"const": "1.1"}, "packet version drift")
     check(schema["properties"]["hydrated_at"].get("format") == "date-time", "timestamp format missing")
     check(schema.get("additionalProperties") is False, "packet must reject unknown top-level fields")
-    packet_text = (ROOT / "agents/scout-recon.md").read_text().split("```json\n", 1)[1].split("```", 1)[0]
+    packet_text = (ROOT / "agents/data-analyst.md").read_text().split("```json\n", 1)[1].split("```", 1)[0]
     packet = json.loads(packet_text)
-    check(set(schema["required"]) <= set(packet), "Scout example misses required packet fields")
-    check(set(packet) <= set(schema["properties"]), "Scout example has unknown fields")
-    check(packet["version"] == "1.1" and packet["group_id"] == "allura-team-durham", "Scout example tenant/version drift")
+    check(set(schema["required"]) <= set(packet), "Tufte hydration example misses required packet fields")
+    check(set(packet) <= set(schema["properties"]), "Tufte hydration example has unknown fields")
+    check(packet["version"] == "1.1" and packet["group_id"] == "allura-team-durham", "Tufte hydration example tenant/version drift")
     return errors
 
 

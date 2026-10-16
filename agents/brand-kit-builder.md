@@ -245,10 +245,10 @@ query or repeated activation search. Follow `governance/adaptive-workflow.md`.
 
 | Subagent | When to delegate |
 |----------|-----------------|
-| BRAND_STRATEGIST (Aaker) | Missing or unclear strategy content |
-| VISUAL_DIRECTOR (Glaser) | Missing or unclear visual content |
-| QA_REVIEWER (Munari) | Pre-assembly quality check |
-| SCOUT_RECON | Search for missing deliverables in workspace |
+| aaker | Missing or unclear strategy content |
+| glaser | Missing or unclear visual content |
+| munari | Pre-assembly quality check |
+| tufte | Search for missing deliverables in workspace |
 
 ---
 
@@ -269,3 +269,7 @@ This agent uses multimodal capabilities:
 - **Review visual assets** — verify logo files exist and match specifications
 - **Validate color applications** — check contrast and accessibility
 - **Assess layout consistency** — ensure applications follow guidelines
+
+## UX evidence artifacts
+
+Prepare reproducible UX test artifacts and before/after captures under existing permissions. Label their route, revision, timestamp, requirement, and limitations. Munari performs independent read-only assessment; producing artifacts is not approval.

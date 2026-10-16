@@ -61,7 +61,6 @@ The registry maps every capability to its runtime type (`local`, `remote`, `api`
 | Rand | ✓ | ✓ brand kit pages | ✓ |
 | Ogilvy | ✓ | ✓ copy pages | ✓ |
 | Munari | ✓ | — | ✓ QA notes only |
-| Scout | ✓ | — | — |
 | Tufte | ✓ | — | — |
 
 ### Web Research (Perplexica — NOT for Notion)

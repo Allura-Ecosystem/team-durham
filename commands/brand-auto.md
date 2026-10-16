@@ -22,7 +22,7 @@ Apply `governance/adaptive-workflow.md` and execute the single
 Parse `$ARGUMENTS`; preserve `--budget` and `--max`. Defaults are 12,000 combined
 tokens and 5 iterations, hard maximum 8. Budgets never excuse missing verification.
 
-Obtain or reuse the scoped Scout ContextPacket before production; refresh only
+Obtain or reuse the scoped scoped ContextPacket before production; refresh only
 changed dependencies/authority. Classify quick/standard/sensitive and retain one
 accountable producer with risk-selected review. Use configured model inheritance.
 Do not display a menu for a clear task. STP and locked strategy precede visuals;

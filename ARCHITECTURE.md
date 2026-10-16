@@ -17,16 +17,11 @@ Highest authority appears first:
 
 Generated exports and adapters may not silently override their source.
 
-## Role model: 12 + 1
+## Role model: seven named owners
 
-There are **13 agent definition files** and **12 canonical roles**.
+There are **seven canonical roles and seven loadable definitions**.
 
-- The 12 canonical roles are listed in `SOURCE.json` and represent Team Durham's product roster.
-- `agents/openagent.md` is a persona-free fallback definition retained for runtime compatibility.
-- Plugin manifests load all 13 definitions because the fallback must remain usable.
-- Product language must say either “12 canonical roles” or “13 loadable agent definitions”; it must not call both numbers the same thing.
-
-This resolves the earlier ambiguity without deleting a supported definition or inventing a thirteenth specialist.
+`SOURCE.json` and the plugin manifest list exactly the retained roles. Canonical source filenames are stable; native dispatch uses Kotler, Aaker, Ogilvy, Glaser, Rand, Munari, and Tufte. Recon and evidence belong to Tufte, workflow/trust accountability to Kotler, independent readiness/trust QA to Munari, and UX artifacts to Rand. No generic fallback or extra operations-agent registration is required. Existing tenant, STP, and read-only QA boundaries remain unchanged.
 
 ## Workflow
 

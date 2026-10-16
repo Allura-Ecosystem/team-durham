@@ -20,7 +20,7 @@ native plugin is unavailable, adapters fail closed instead of fabricating specia
 ## Capability map
 
 - `dur-agent-kotler` — brand architecture and routing
-- `dur-agent-scout` — read-only brand ContextPacket
+- `dur-agent-scout` — compatibility discovery skill using Tufte; not an additional agent
 - `dur-agent-munari` — QA and readiness
 - `dur-brand-delivery` — one governed non-shipping brand slice
 - `dur-brand-auto` — bounded Brand Auto Mode

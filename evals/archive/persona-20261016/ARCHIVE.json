@@ -1,0 +1,91 @@
+{
+  "status": "historical-not-current-not-executable",
+  "source_revision": "679470cd6f9672e37c7f0344c2df26db9e6f93d8",
+  "files": [
+    {
+      "original_path": "evals/candidate-adaptive-workflow.json",
+      "archived_path": "evals/archive/persona-20261016/candidate-adaptive-workflow.json",
+      "sha256": "f7443377e8ee9234ec6388e13d85589e6de9e80969d4df5f2d12b5d6fbe5bf63"
+    },
+    {
+      "original_path": "evals/candidate-after-core-prompt-cleanup.json",
+      "archived_path": "evals/archive/persona-20261016/candidate-after-core-prompt-cleanup.json",
+      "sha256": "2ba65b787014144afdfd9c2da6ad8c0bfb68daaad0bb0ed7c350fa3c36d232df"
+    },
+    {
+      "original_path": "evals/current.json",
+      "archived_path": "evals/archive/persona-20261016/current.json",
+      "sha256": "6071592153674ee3872809a99cbd543ca7ffc2499f2aa6478c4dbc1e6579c197"
+    },
+    {
+      "original_path": "evals/final.json",
+      "archived_path": "evals/archive/persona-20261016/final.json",
+      "sha256": "2ba65b787014144afdfd9c2da6ad8c0bfb68daaad0bb0ed7c350fa3c36d232df"
+    },
+    {
+      "original_path": "agents/agentic-trust-architect.md",
+      "archived_path": "evals/archive/persona-20261016/inputs/agents/agentic-trust-architect.md",
+      "sha256": "c74cebbf7bb890308fd5e5630225aadee7ac8df57d17cee6a8d7a5f593b79912"
+    },
+    {
+      "original_path": "agents/brand-kit-builder.md",
+      "archived_path": "evals/archive/persona-20261016/inputs/agents/brand-kit-builder.md",
+      "sha256": "8bbe068a11293385631123c95faf73bc049e6b6c165d639c63a89b92685f61d0"
+    },
+    {
+      "original_path": "agents/brand-orchestrator.md",
+      "archived_path": "evals/archive/persona-20261016/inputs/agents/brand-orchestrator.md",
+      "sha256": "b34cd46dec52c0f479345e0c9338bbb88f70f93f737127f787b6cd5ebabcab15"
+    },
+    {
+      "original_path": "agents/brand-strategist.md",
+      "archived_path": "evals/archive/persona-20261016/inputs/agents/brand-strategist.md",
+      "sha256": "d5c91ed7b63686ff2ede2d4cad8c2879056d9d66616dad3efd24344bd5348513"
+    },
+    {
+      "original_path": "agents/copywriter.md",
+      "archived_path": "evals/archive/persona-20261016/inputs/agents/copywriter.md",
+      "sha256": "492ec635e027a55369ed9897f9b546489c8ffc76671ac52c8d70410f13e62e48"
+    },
+    {
+      "original_path": "agents/data-analyst.md",
+      "archived_path": "evals/archive/persona-20261016/inputs/agents/data-analyst.md",
+      "sha256": "e7bd3c389625baefd0e0569c342e13e604f559574d88602e24a9e7a791e2af49"
+    },
+    {
+      "original_path": "agents/evidence-collector.md",
+      "archived_path": "evals/archive/persona-20261016/inputs/agents/evidence-collector.md",
+      "sha256": "d0605df5bbdf57eb5a9bb2ce048a987351c4fe9356b55d8595ded58bd8ffd48a"
+    },
+    {
+      "original_path": "agents/openagent.md",
+      "archived_path": "evals/archive/persona-20261016/inputs/agents/openagent.md",
+      "sha256": "5e5cac9bf14305cb1213022e6bf8fd4a77345393f5242f1443b043c7bd418c43"
+    },
+    {
+      "original_path": "agents/qa-reviewer.md",
+      "archived_path": "evals/archive/persona-20261016/inputs/agents/qa-reviewer.md",
+      "sha256": "3f8dbec6c36d4591732cd096a669fdf61ce1f6bdb85507c2a5bc6f6112d0577d"
+    },
+    {
+      "original_path": "agents/reality-checker.md",
+      "archived_path": "evals/archive/persona-20261016/inputs/agents/reality-checker.md",
+      "sha256": "ec0710875dcd05a9aa06d043c84d64396cbd32009de1d29449a8c8285c0c173e"
+    },
+    {
+      "original_path": "agents/scout-recon.md",
+      "archived_path": "evals/archive/persona-20261016/inputs/agents/scout-recon.md",
+      "sha256": "6e1b0ea22f90ffbe1441f246658c9a45286bd76c7a0ad7b3ff2ce0f1828f418a"
+    },
+    {
+      "original_path": "agents/visual-director.md",
+      "archived_path": "evals/archive/persona-20261016/inputs/agents/visual-director.md",
+      "sha256": "ea6c3ae2956a0d2beb11648446dd227ee364b174af2f2f325d37598796deaf5a"
+    },
+    {
+      "original_path": "agents/workflow-architect.md",
+      "archived_path": "evals/archive/persona-20261016/inputs/agents/workflow-architect.md",
+      "sha256": "05116b51af9e76ff34a9d049126983f32857d0fa4030d12da78fa648ab809d38"
+    }
+  ]
+}

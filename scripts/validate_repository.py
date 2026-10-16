@@ -4,6 +4,7 @@
 from __future__ import annotations
 
 import json
+import hashlib
 import re
 import sys
 from pathlib import Path
@@ -58,15 +59,15 @@ def main() -> int:
     expected_names = set(canonical + compatibility)
     agent_files = sorted((ROOT / "agents").glob("*.md"))
     actual_names = {name for path in agent_files if (name := agent_name(path))}
-    check(len(canonical) == 12, f"expected 12 canonical roles, found {len(canonical)}")
-    check(compatibility == ["openagent"], f"compatibility definition must be openagent, found {compatibility}")
-    check(len(agent_files) == 13, f"expected 13 loadable agent files, found {len(agent_files)}")
+    check(len(canonical) == 7, f"expected 7 canonical roles, found {len(canonical)}")
+    check(compatibility == [], f"compatibility definitions must be empty, found {compatibility}")
+    check(len(agent_files) == 7, f"expected 7 loadable agent files, found {len(agent_files)}")
     check(actual_names == expected_names, f"agent names differ: expected {sorted(expected_names)}, found {sorted(actual_names)}")
-    check(source.get("roleCount") == {"canonical": 12, "loadableDefinitions": 13}, "SOURCE.json roleCount is inconsistent")
+    check(source.get("roleCount") == {"canonical": 7, "loadableDefinitions": 7}, "SOURCE.json roleCount is inconsistent")
     check(source.get("revision") is None or bool(SHA_RE.fullmatch(source["revision"])), "SOURCE.json revision must be null or a 40-character SHA")
 
     claude_agents = {Path(rel_ref(ref)).stem for ref in claude.get("agents", [])}
-    check(claude_agents == expected_names, "Claude manifest must load all 12 roles plus openagent")
+    check(claude_agents == expected_names, "Claude manifest must load exactly seven canonical roles")
     for ref in claude.get("agents", []):
         check((ROOT / rel_ref(ref)).is_file(), f"missing Claude agent reference: {ref}")
 
@@ -108,6 +109,13 @@ def main() -> int:
         for prompt in payload.get("prompts", []):
             ref = prompt.get("path", "")
             check(bool(ref) and (ROOT / ref).is_file(), f"{path.name} references missing prompt: {ref}")
+
+    archive = load_json(ROOT / "evals/archive/persona-20261016/ARCHIVE.json")
+    check(archive["status"] == "historical-not-current-not-executable", "archive status drift")
+    for item in archive["files"]:
+        archived = ROOT / item["archived_path"]
+        check(archived.is_file() and hashlib.sha256(archived.read_bytes()).hexdigest() == item["sha256"],
+              f"historical archive digest mismatch: {item['original_path']}")
 
     includes = export.get("include", [])
     excluded = set(export.get("excludedWorkspaceRoots", []))

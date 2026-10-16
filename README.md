@@ -14,7 +14,7 @@ This repository is the **canonical public source** for Team Durham. Catalog copi
   <a href="docs/images/framework-and-harness.png"><img src="docs/images/framework-and-harness.png" alt="Team Durham framework: strategy, production, QA, evidence, and governance around the brand core" width="900" /></a>
 </p>
 
-Team Durham is built on **strategy foundation** (Kotler and Aaker lock the truth), **specialist production** (Ogilvy, Glaser, and Rand craft the system), **independent QA** (Munari verifies consistency), **evidence collection** (Reality Checker and Evidence Collector prove claims), and **governance gates** (authority and safety constraints shape decisions).
+Team Durham is built on **strategy foundation** (Kotler and Aaker lock the truth), **specialist production** (Ogilvy, Glaser, and Rand craft the system), **independent QA** (Munari verifies consistency), **evidence collection** (Tufte captures proof and Munari independently verifies claims), and **governance gates** (authority and safety constraints shape decisions).
 
 ---
 
@@ -24,7 +24,7 @@ Team Durham is built on **strategy foundation** (Kotler and Aaker lock the truth
   <a href="docs/images/agent-runtime-request-flow.png"><img src="docs/images/agent-runtime-request-flow.png" alt="Brand workflow: from brief through discovery, strategy, production, QA, and evidence, all governed by policy" width="900" /></a>
 </p>
 
-**Brief** → **Scout discovers context** → **Kotler and Aaker lock strategy** → **Ogilvy, Glaser, Rand produce** → **QA and reality-check** → **Evidence collected** → **Delivered with proof**. Every step is documented and reversible.
+**Brief** → **Tufte or Kotler hydrates context** → **Kotler and Aaker lock strategy** → **Ogilvy, Glaser, Rand produce** → **QA and reality-check** → **Evidence collected** → **Delivered with proof**. Every step is documented and reversible.
 
 ---
 
@@ -70,13 +70,12 @@ Every deliverable carries **rationale** (why this direction), **source strategy*
 
 ## What is included
 
-- **12 canonical roles** for strategy, creative production, QA, evidence, workflow, and trust
-- **1 compatibility fallback definition** (`openagent`) for runtimes that require a generic catch-all
+- **7 named canonical roles and 7 loadable definitions**; evidence, recon, workflow, and trust are responsibilities of retained roles
 - **77 skills** and **22 commands**
 - Contracts, governance rules, prompt evaluations, Claude/Codex manifests, and a BMAD adapter
 - A deterministic catalog export contract with source-revision provenance
 
-> **Why 13 files but 12 roles?** `agents/` contains 13 loadable definitions. Twelve represent Team Durham's canonical role model. `openagent.md` is a runtime compatibility fallback with no persona and is deliberately not counted as a canonical role. See [Architecture](ARCHITECTURE.md#role-model-12--1).
+> Supporting registrations and the generic fallback were retired on 2026-10-16. Capability ownership is explicit in the retained roles; Git history preserves prior definitions. See [agent routes](docs/ALIASES.md).
 
 ## Canonical roles
 
@@ -89,19 +88,14 @@ Every deliverable carries **rationale** (why this direction), **source strategy*
 | `brand-kit-builder` | Paul Rand | Brand kit and design-system assembly |
 | `qa-reviewer` | Bruno Munari | Read-only consistency and readiness QA |
 | `data-analyst` | Edward Tufte | Research and evidence-based analysis |
-| `scout-recon` | Utility role | Fast, read-only discovery |
-| `reality-checker` | Operations role | Proof-based completion gate |
-| `evidence-collector` | Operations role | Screenshots and artifact evidence |
-| `workflow-architect` | Operations role | Handoffs, states, and recovery paths |
-| `agentic-trust-architect` | Operations role | Identity, authorization, audit, and provenance |
 
 ## Operating model
 
-1. **Discover before changing** — Scout locates authoritative context and risks.
+1. **Discover before changing** — Tufte locates authoritative context and risks.
 2. **Strategy before pixels** — Kotler and Aaker lock audience, positioning, and brand truth first.
 3. **Specialists produce** — Ogilvy, Glaser, and Rand create the system and deliverables.
 4. **QA stays independent** — Munari reports findings; producing roles perform fixes.
-5. **Claims require evidence** — Reality Checker and Evidence Collector verify the actual artifact.
+5. **Claims require evidence** — Tufte captures evidence and Munari independently verifies the actual artifact.
 6. **Governance wins over persona** — project/client authority and safety constraints outrank stylistic simulation.
 
 ## Install
@@ -140,7 +134,7 @@ Never commit credentials. Full details: [Configuration](docs/CONFIGURATION.md) a
 ## Repository map
 
 ```text
-agents/             canonical role definitions (+ openagent compatibility fallback)
+agents/             seven canonical role definitions
 commands/           canonical user-facing workflows
 skills/             canonical reusable procedures
 contracts/          machine-readable handoff contracts

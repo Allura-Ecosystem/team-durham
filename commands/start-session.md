@@ -6,7 +6,7 @@ allowed-tools: ["allura-brain_memory_search", "allura-brain_memory_add", "MCP_DO
 # Session start
 
 Apply `governance/adaptive-workflow.md`. Identify the active client/project and
-obtain or reuse its ContextPacket v1.1. Scout checks local strategy, artifacts,
+obtain or reuse its ContextPacket v1.1. The current owner, or Tufte when useful, checks local strategy, artifacts,
 and authority; one focused Brain search covers relevant decisions and blockers
 with `group_id: allura-team-durham`. Use the exact available tool name and inspect
 the receipt before claiming hydration. Pure path lookup may skip Brain.

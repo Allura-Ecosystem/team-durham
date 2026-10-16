@@ -145,12 +145,12 @@ Launch ALL independent agents in a **single message** using the Task tool:
 
 ```
 // Example: "Build brand kit for new wellness startup"
-// Independent subtasks — launch all at once:
+// Gather evidence and lock strategy first; then dispatch only independent approved slices:
 
-Task(subagent_type: "SCOUT_RECON", prompt: "Find all existing brand assets...")
-Task(subagent_type: "DATA_ANALYST", prompt: "Research competitive landscape...")
-Task(subagent_type: "VISUAL_DIRECTOR", prompt: "Define visual direction...")
-Task(subagent_type: "COPYWRITER", prompt: "Draft brand voice guidelines...")
+Task(subagent_type: "tufte", prompt: "Find existing assets and research competitive evidence...")
+// Await evidence, then Aaker locks strategy before dependent creative work.
+Task(subagent_type: "glaser", prompt: "Define visual direction...")
+Task(subagent_type: "ogilvy", prompt: "Draft brand voice guidelines...")
 ```
 
 #### Phase 3: Collect & Validate
@@ -170,14 +170,13 @@ Kotler synthesizes all results, resolves conflicts, and commits.
 
 | Agent | Subagent Type | Role | Roundtable? | Dispatch? |
 |-------|--------------|------|------------|-----------|
-| **Kotler** | `BRAND_ORCHESTRATOR` | Orchestrator/facilitator | ✅ Always | ✅ Decompose |
-| **Aaker** | `BRAND_STRATEGIST` | Strategy anchor | ✅ Positioning | ✅ Strategy gate |
-| **Ogilvy** | `COPYWRITER` | Voice + messaging | ✅ Copy debates | ✅ Write content |
-| **Glaser** | `VISUAL_DIRECTOR` | Visual authority | ✅ Direction debates | ✅ Visual direction |
-| **Rand** | `BRAND_KIT_BUILDER` | Assembly reality check | ✅ Spec debates | ✅ Build deliverables |
-| **Munari** | `QA_REVIEWER` | Quality critic | ✅ Flags issues | ✅ QA review |
-| **Tufte** | `DATA_ANALYST` | Evidence anchor | ✅ Data debates | ✅ Research |
-| **Scout** | `SCOUT_RECON` | Recon | ❌ No debating | ✅ File discovery |
+| **Kotler** | `kotler` | Orchestrator/facilitator | ✅ Always | ✅ Decompose |
+| **Aaker** | `aaker` | Strategy anchor | ✅ Positioning | ✅ Strategy gate |
+| **Ogilvy** | `ogilvy` | Voice + messaging | ✅ Copy debates | ✅ Write content |
+| **Glaser** | `glaser` | Visual authority | ✅ Direction debates | ✅ Visual direction |
+| **Rand** | `rand` | Assembly reality check | ✅ Spec debates | ✅ Build deliverables |
+| **Munari** | `munari` | Quality critic | ✅ Flags issues | ✅ QA review |
+| **Tufte** | `tufte` | Evidence anchor | ✅ Data debates | ✅ Research |
 
 ---
 
@@ -208,3 +207,7 @@ Kotler synthesizes all results, resolves conflicts, and commits.
 ---
 
 **Invoke with:** `/party <topic or task>`
+
+## Execution evidence and bounded routing
+
+`parallel-dispatcher.js` is a task planner/tracker. It accepts an explicit task-record adapter; creating or completing a task record alone does not invoke an agent. Use the runtime's actual available delegation mechanism with the selected full canonical role loaded; report missing invocation capability explicitly. No mandatory recon hop: reuse fresh scoped context or let the current owner hydrate locally. Dispatch Tufte only for useful research/evidence. Strategy and approved-input dependencies precede visual work, and Munari reviews all producer outputs including Tufte evidence independently. Brain reads/writes use available authenticated tools and verified receipts; automatic logging is not implied by planning.

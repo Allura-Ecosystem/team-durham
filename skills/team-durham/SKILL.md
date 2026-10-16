@@ -1,6 +1,6 @@
 ---
 name: team-durham
-description: "Use Team Durham, a multi-agent brand production team for Codex. Trigger when activating Kotler, Aaker, Glaser, Ogilvy, Rand, Munari, Tufte, Scout, or the Team Durham brand pipeline; when creating or validating a client brand; when using STP before pixels; or when routing work through brand strategy, naming, visual direction, brand kit, QA, memory, and final reporting."
+description: "Use Team Durham, a multi-agent brand production team for Codex. Trigger when activating Kotler, Aaker, Glaser, Ogilvy, Rand, Munari, Tufte, Tufte, or the Team Durham brand pipeline; when creating or validating a client brand; when using STP before pixels; or when routing work through brand strategy, naming, visual direction, brand kit, QA, memory, and final reporting."
 ---
 
 # Team Durham

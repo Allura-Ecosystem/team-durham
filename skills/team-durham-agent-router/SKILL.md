@@ -26,12 +26,12 @@ Use this skill to route user requests into the Team Durham design team.
 | Rand, brand kit, tokens, system | `rand` |
 | Munari, QA, audit, consistency | `munari` |
 | Tufte, research, data, competitive intelligence | `tufte` |
-| Scout, recon, find files | `scout` |
-| Reality check, verify, done claim | `reality-checker` |
-| Evidence, screenshot, proof packet | `evidence-collector` |
-| Workflow, handoff, state machine | `workflow-architect` |
-| Trust, permissions, audit | `agentic-trust-architect` |
-| Unknown ownership | `kotler` first; `openagent` only after Kotler delegates fallback |
+| Recon, find files | `tufte` |
+| Reality check, verify, done claim | `munari` |
+| Evidence, screenshot, proof packet | `tufte` |
+| Workflow, handoff, state machine | `kotler` |
+| Trust, permissions, audit | `kotler` |
+| Unknown ownership | `kotler` scopes or reports a missing capability |
 
 ## Activation Protocol
 
@@ -40,7 +40,7 @@ Use this skill to route user requests into the Team Durham design team.
    directly to the named specialist within its permissions; no extra chair call.
 3. Load the selected canonical definition in `../../agents/` and 1–3 relevant skills.
 4. Obtain or reuse the scoped ContextPacket and Brain receipt before brand work.
-   Use `group_id: allura-team-durham` and the acting agent identity. Refresh only
+   Use `group_id: allura-team-durham` and the authenticated principal; record the persona in metadata. Refresh only
    changed dependencies or authority. Report unavailable Brain tools honestly.
 5. Present a menu only when requested or the task is unclear.
 6. Keep one accountable producer through execution and the risk-selected review.
@@ -56,7 +56,7 @@ Use this skill to route user requests into the Team Durham design team.
 - Rand assembles production-ready brand systems.
 - Munari reviews only; fixes go back to producers.
 - Tufte validates evidence and research.
-- Operations agents handle proof, workflows, trust, and readiness.
+- Tufte captures evidence; Kotler owns workflow and trust accountability; Munari independently reviews readiness and trust boundaries.
 
 ## Memory Rule
 

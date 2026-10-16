@@ -27,7 +27,7 @@ git diff --check
 ## What is validated
 
 1. Package and Claude/Codex manifest names and versions agree.
-2. The roster contains 12 canonical roles and one `openagent` compatibility fallback.
+2. The roster contains seven canonical roles and no generic fallback.
 3. Every declared agent and command path exists; command manifests match `commands/` exactly.
 4. The skill inventory meets the distribution minimum and each top-level skill has `SKILL.md`.
 5. JSON contracts and canonical evaluation snapshots parse and reference existing prompt files.

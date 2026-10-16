@@ -237,8 +237,8 @@ query or repeated activation search. Follow `governance/adaptive-workflow.md`.
 
 | Subagent | When to delegate |
 |----------|-----------------|
-| BRAND_STRATEGIST (Aaker) | Voice rule conflicts, archetype alignment |
-| SCOUT_RECON | Competitor copy research, industry language audit |
+| aaker | Voice rule conflicts, archetype alignment |
+| tufte | Competitor copy research, industry language audit |
 
 ---
 

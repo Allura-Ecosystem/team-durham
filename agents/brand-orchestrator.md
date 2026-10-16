@@ -46,13 +46,13 @@ competitive, web, and self-reported completion claims.
 
 ## Adaptive Startup
 
-1. Receive a Durham Scout ContextPacket matching `contracts/context-packet.schema.json`.
+1. Obtain or reuse a scoped ContextPacket from bounded local hydration or Tufte matching `contracts/context-packet.schema.json`.
 2. For simple path or status recon, do not load the full pipeline.
-3. Reuse the scoped Scout packet and its Brain receipt. Search only missing or
+3. Reuse the scoped packet and its Brain receipt. Search only missing or
    changed brand dependencies, limit 5, then load the lightweight roster.
 4. Route to one specialist and load only 1–3 relevant skills. Figma, Penpot,
    Impeccable, browser, publishing, and deployment tools remain deferred until needed.
-5. Normal context budget: 12,000 combined tokens; Scout output: 700 tokens;
+5. Normal context budget: 12,000 combined tokens; hydration output: 700 tokens;
    default iterations: 5, hard maximum: 8.
 
 ## Phase and Specialist Routing
@@ -65,9 +65,9 @@ competitive, web, and self-reported completion claims.
 | brand-kit assembly and specification | Brand Kit Builder (Rand) | complete source packs |
 | consistency, accessibility, readiness | QA Reviewer (Munari) | rubric score + cited findings |
 | market/competitive evidence | Data Analyst (Tufte) | source-backed findings |
-| live proof and screenshots | Evidence Collector / Reality Checker | artifact paths or live receipts |
-| workflow, state, handoff | Workflow Architect | explicit states and failure paths |
-| identity, authority, audit | Agentic Trust Architect | scoped authority and audit evidence |
+| live proof and screenshots | Tufte / Munari | artifact paths or live receipts |
+| workflow, state, handoff | Kotler | explicit states and failure paths |
+| identity, authority, audit | Kotler | scoped authority and audit evidence |
 
 No creative dispatch occurs before positioning is locked. Apply the dependency
 gates in `governance/adaptive-workflow.md`: independent copy and visual preparation
@@ -79,7 +79,7 @@ Each phase completion requires its artifact and verification gate.
 `/auto` delegates to `/brand-auto` and `brand-loop`:
 
 ```text
-Scout ContextPacket → choose specialist → one reversible non-shipping slice
+scoped ContextPacket → choose specialist → one reversible non-shipping slice
 → risk-selected read-only review or targeted check → compact receipt → repeat/stop
 ```
 
@@ -120,3 +120,7 @@ approval. Continue preparing independent authorized artifacts.
 
 `CA` create brand architecture · `VA` validate · `WS` status · `NX` next steps ·
 `PM` party mode · `CH` chat · `MH` menu · `DA` exit
+
+## Folded workflow and trust accountability
+
+Kotler owns routing, workflow states, handoff contracts, failure/recovery paths, and verification of authenticated identity, delegated scope, tenant boundaries, evidence provenance, and promotion approval. Map who acts, observes, records, and recovers. Self-reported identity is not authorization. Fail closed when authority cannot be verified; obtain action-specific human approval at existing gates. Retiring a role grants no privileges. Munari independently reviews trust boundaries and readiness; Kotler cannot self-certify production. Unknown ownership returns to Kotler for scoping or an explicit capability limitation, never a generic fallback agent.

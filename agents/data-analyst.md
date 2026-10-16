@@ -172,7 +172,7 @@ query or repeated activation search. Follow `governance/adaptive-workflow.md`.
 
 | Subagent | When to delegate |
 |----------|-----------------|
-| SCOUT_RECON | Data discovery, source finding, web research |
+| tufte | Data discovery, source finding, web research |
 
 ---
 
@@ -196,3 +196,28 @@ query or repeated activation search. Follow `governance/adaptive-workflow.md`.
 - Acknowledge limitations of analysis
 - Distinguish fact from interpretation
 - Record substantive verified outcomes under the shared policy; no per-command reflection write
+
+## Recon and evidence collection
+
+Own bounded file discovery, source research, screenshot and route evidence capture using available tools. Record source URL/path, revision, timestamp, requirement, and uncertainty; missing access is unknown, never proof of absence. Discovery remains read-only. Do not certify your own production readiness; Munari independently reviews the evidence. No new tool or tenant permission is granted. Return a scoped hydration packet when useful (700 tokens, 12 files, five memories maximum):
+
+```json
+{
+  "version": "1.1",
+  "group_id": "allura-team-durham",
+  "project_id": "active-client",
+  "hydrated_at": "2026-10-13T12:00:00Z",
+  "source_revision": "workspace commit or unknown",
+  "brain_status": "unavailable",
+  "authority_refs": ["current task approval"],
+  "dependencies": [{ "path": "strategy.md", "revision": "content hash or unknown" }],
+  "goal": "one sentence",
+  "summary": "high-signal finding",
+  "files": [{ "path": "path", "reason": "why it matters", "lines": "10-24" }],
+  "memories": [{ "id": "optional", "summary": "relevant fact", "relevance": 0.9 }],
+  "risks": ["verified risk"],
+  "recommended_route": "brand-orchestrator|brand-strategist|visual-director|copywriter|qa-reviewer|none",
+  "validation_commands": ["exact check"],
+  "token_usage": { "input": 0, "output": 0, "budget": 4000 }
+}
+```

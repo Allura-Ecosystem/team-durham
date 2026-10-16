@@ -8,7 +8,7 @@ allowed-tools: Read, Write, Bash, Agent
 Apply `governance/adaptive-workflow.md` and `contracts/adaptive-routing.json`.
 Use the user's active client/project; do not silently choose another client's data.
 Read that client's approved brief, strategy, and source packs. Obtain or reuse the
-Scout ContextPacket; Brain unavailable means disclosed local-only hydration.
+scoped ContextPacket; Brain unavailable means disclosed local-only hydration.
 
 1. Kotler routes quick/standard/sensitive and assigns one accountable producer.
 2. Aaker validates intent and STP; lock strategy before creative production.

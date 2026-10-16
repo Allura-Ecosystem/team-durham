@@ -106,3 +106,7 @@ Missing prerequisites end as `blocked`.
 
 Keep output findings-only; do not repeat the full rubric. External publishing and
 client delivery remain HITL approval boundaries.
+
+## Independent readiness and trust review
+
+Verify claimed completion against actual artifacts, live route receipts, screenshots, validation output, requirements, and source revision. Default to NEEDS WORK until evidence supports readiness. Review identity, authority, delegation, tenant isolation, append-only provenance, and explicit promotion approval. Missing evidence stays unverified. Remain read-only; route fixes to producers and never certify work you produced. Human approval gates remain mandatory.

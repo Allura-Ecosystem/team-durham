@@ -142,12 +142,12 @@ MCP_DOCKER_add_observations({
 
 **Symptom:** Agent writes to a store it shouldn't have access to.
 
-**Cause:** Ogilvy/Munari/Tufte/Scout attempting writes outside their permission scope.
+**Cause:** Ogilvy/Munari/Tufte attempting writes outside their permission scope.
 
 **Fix:**
 1. Check the write permissions matrix in SKILL.md
 2. Only Kotler can write to the semantic graph (via SUPERSEDES)
-3. Munari and Scout are read-only everywhere
+3. Munari is read-only everywhere; Tufte discovery remains read-only and existing store permissions still apply
 4. Log the violation: `memory_add({ content: "Permission violation: agent X attempted write to Y" })`
 
 ---

@@ -1,6 +1,6 @@
 ---
 name: party-mode
-description: Multi-agent brand roundtable with hybrid execution modes. Debate mode (chat) for strategic decisions, Parallel mode (silent dispatch) for task execution. Both modes log to Brain automatically.
+description: Multi-agent brand roundtable with hybrid execution modes. Debate mode (chat) for strategic decisions, Parallel mode (silent dispatch) for task execution. Both modes require honest scoped Brain receipts when logging is permitted.
 ---
 
 # Skill: party-mode
@@ -159,7 +159,6 @@ function detectMode(userInput) {
 | rand | Paul Rand | Parallel | Brand kit builder | Assembly, documentation |
 | munari | Bruno Munari | Both | QA reviewer | Consistency checks, validation |
 | tufte | Edward Tufte | Both | Data analyst | Competitive research, insights |
-| scout | Scout | Parallel | Recon | Discovery, file search, read |
 
 ---
 
@@ -179,7 +178,7 @@ Dependency Graph
     └─ Dependent tasks → Queue for later
     ↓
 Task Tool Launch
-    ├─ Agent 1 (Scout: Discovery)
+    ├─ Agent 1 (Tufte: Discovery)
     ├─ Agent 2 (Aaker: Strategy validation)
     ├─ Agent 3 (Glaser: Color system)
     └─ Agent 4 (Ogilvy: Copy)
@@ -260,10 +259,10 @@ memory_add({
 
 ## Sub-Agent Task Definitions
 
-### Task: Scout Discovery
+### Task: Tufte Discovery
 ```javascript
 {
-  agent: "scout",
+  agent: "tufte",
   description: "Discovery for [client]",
   prompt: "Search codebase for: client files, existing deliverables, brand strategy. Report: file paths, current status, blockers.",
   subagent_type: "Explore"
@@ -363,3 +362,7 @@ memory_add({
 - **Kotler orchestrates** — All modes routed through Kotler
 - **Max 4 parallel** — Context window management
 - **Dependency tracking** — Tasks declare blockedBy for sequencing
+
+## Execution evidence and bounded routing
+
+`parallel-dispatcher.js` is a task planner/tracker. It accepts an explicit task-record adapter; creating or completing a task record alone does not invoke an agent. Use the runtime's actual available delegation mechanism with the selected full canonical role loaded; report missing invocation capability explicitly. No mandatory recon hop: reuse fresh scoped context or let the current owner hydrate locally. Dispatch Tufte only for useful research/evidence. Strategy and approved-input dependencies precede visual work, and Munari reviews all producer outputs including Tufte evidence independently. Brain reads/writes use available authenticated tools and verified receipts; automatic logging is not implied by planning.
