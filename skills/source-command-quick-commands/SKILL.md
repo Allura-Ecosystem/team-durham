@@ -1,65 +1,102 @@
 ---
-name: "source-command-quick-commands"
-description: "Quick slash commands for Team Durham Brand Maker"
+name: source-command-quick-commands
+description: Show Allura chat choices and Team Durham domain workflows on activation or a menu request.
 ---
 
 Apply `governance/adaptive-workflow.md` (repository root). Reuse the scoped
-ContextPacket and route a clear task directly within specialist permissions.
+ContextPacket and route clear tasks directly within specialist permissions.
 
+# Team Durham conversation
 
-# source-command-quick-commands
+Help the user move from their current situation to a useful result. Ordinary
+language is sufficient. Preserve current intent, selected owner, permissions,
+authenticated project scope, and the configured runtime.
 
-Use this skill when the user asks to run the migrated source command `quick-commands`.
+## Public chat menu
 
-## Command Template
+Show this menu on activation or an explicit menu/help/MH request:
 
-# Quick Slash Commands
+- Next steps — recommend the next useful action and why.
+- Help with a prompt — create or improve ready-to-use instructions.
+- Council — examine one decision with relevant RAM and Durham specialists.
+- Work — carry out the selected task and check the result.
+- Loop — repeat work, check, and improve within agreed bounds.
+- Validate — compare actual evidence with the requested result.
+- More — research, memory, skill creation, Party, Setup, and Doctor when available.
 
-Type these directly in your IDE for fast access to Team Durham Brand Maker workflows.
+These are conversational choices, not promises of registered slash commands.
+NX, GO, VA, PM, SK, and MH retain their familiar intent where supported by the
+host. Legacy R/S conversion choices are offered in context, not treated as a
+verified Ralph executable or prerequisite. Never invent a missing command.
 
-## Pipeline Commands
+## Interaction
 
-| Command | Action |
-|---------|--------|
-| `/orchestrate` | Run brand production pipeline |
-| `/status` | Check pipeline and infrastructure status |
-| `/validate` | Run QA validation on deliverables |
-| `/sync-governance` | Sync rules from Notion Agent OS |
+For an unclear idea, recommend a small next step. Ask only for missing facts
+that materially change the task; use information already supplied. Give one to
+three prioritized actions when useful, with reasons and proposed ownership.
+Offer a relevant continuation: shape a prompt or task, work, loop, or Council.
+Do not force the user through every choice or ask for authorization already given.
 
-## Session Commands
+For a clear authorized task, do the task directly. Prompt creation, Next steps,
+and Council are optional. Give the actual result and proportionate verification.
+Offer another action only if it advances an unfinished goal. Do not repeat the
+full menu during ordinary work.
 
-| Command | Action |
-|---------|--------|
-| `/start-session` | Initialize session and verify health |
-| `/end-session` | Finalize and log session |
-| `/party <task>` | Launch agents in parallel |
+Prompt help preserves intent, constraints, sources, deliverable, and success
+criteria. Return a copyable prompt. Run it only when execution is requested;
+"make a prompt and run it" authorizes both within the task's existing boundaries.
 
-## Memory & Search Commands
+## Council and Party
 
-| Command | Action |
-|---------|--------|
-| `/query <term>` | Search Allura Brain |
-| `/scout <term>` | Fast discovery search |
+Council discusses one bounded decision. Select two to four actually available
+specialists for distinct useful contributions, using both RAM and Durham when
+the decision spans delivery and experience. Load their actual roles and invoke
+them through available tools. Preserve actual contributions and disagreements;
+the lead owns the resulting recommendation and next step. If delegation is
+unavailable, disclose that and provide a proposed council brief rather than
+inventing participants, dialogue, consensus, or validation.
 
-## Agent Personas
+Party performs independent authorized tasks with clear artifact ownership.
+It does not imply dispatching every agent. Neither Council agreement nor Party
+completion is evidence that an artifact passed validation.
 
-| Command | Persona | Focus |
-|---------|---------|-------|
-| `/architect` | Kotler | Brand architecture |
-| `/analyst` | Tufte | Data insights |
-| `/scribe` | Rand/Ogilvy | Documentation |
+## Work, Loop, and Validate
 
-## Makefile Targets
+Before a loop starts, establish its goal, permitted actions, useful completion
+evidence, and iteration or other explicit bound. Reuse supplied bounds and
+criteria. After each meaningful pass, check evidence and choose whether to
+continue, finish, or stop. Report completed work and remaining uncertainty.
+Stop on a required missing input, denied authority, unavailable essential tool,
+stagnation, or exhausted bounds. A blocker does not authorize wider access,
+another tenant or credential, or indefinite retries. Exhaustion is not success.
+Use an available verified loop mechanism or the current conversation; do not
+claim background execution, Ralph, or another runtime ran without invocation.
 
-| Target | Action |
-|--------|--------|
-| `make session-start` | Start a session |
-| `make session-end` | End a session gracefully |
-| `make session-status` | Show pipeline status |
-| `make session-verify` | Verify checkpoint health |
-| `make db-status` | Check DB connections |
-| `make db-events` | Show recent events |
+Validation compares a concrete result with its acceptance criteria and records
+observed evidence and gaps. A draft, model confidence, proposed check, or council
+agreement is insufficient for a claimed pass. Distinguish scenario checks from
+live runtime checks and human review from agent review.
 
----
+## Durham routes and shortcuts
 
-**All commands work with Allura Brain integration.**
+Kotler owns ambiguous brand work and cross-team synthesis; a clear specialist
+request proceeds directly. Reuse authorized project context with
+`group_id: allura-team-durham`. STP and locked strategy precede pixels; Munari's
+QA is read-only and fixes return to their producer. RAM participation grants no
+additional tenant access.
+
+Next steps and prompt help work in this conversation. Council uses the installed
+`party-mode` discussion path with two to four real available specialists; use
+both teams for delivery/experience decisions and preserve disagreements. If no
+delegation tool exists, disclose that and provide a proposed Council brief.
+Work uses the relevant workflow from `team-durham`; Loop uses `brand-loop` when
+brand work fits its contract, or the bounded conversation protocol above.
+Validate uses `brand-consistency-review` or the applicable requested evidence
+check; approval and validation remain separate.
+
+Under More, retain the installed domain workflows: orchestrate, status, task,
+query, scout, party, start-session, end-session and validate. On Claude, use a
+namespaced slash command only if the host actually registers it. Codex and
+Hermes skill discovery does not create slash commands. Setup/Doctor, research,
+memory and skill creation are offered only when their tools/skills are available.
+Do not claim unavailable MCP, shell, agents or live service health.

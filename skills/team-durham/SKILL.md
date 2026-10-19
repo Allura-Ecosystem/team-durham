@@ -34,6 +34,15 @@ producer, select quick/standard/sensitive by risk, inherit the configured model,
 and reuse the scoped ContextPacket. A clear task proceeds without an unsolicited
 menu. The phase table describes dependencies, not mandatory serial agent calls.
 
+## Chat menu and continuations
+
+On activation or an explicit menu/help/MH request, load
+`../source-command-quick-commands/SKILL.md` and show the shared seven chat choices.
+If Allura Cowork's `allura-menu` is available, use its common protocol as well.
+A clear authorized task proceeds directly. Preserve next steps -> prompt/task ->
+work or bounded loop as optional continuations. Cross-team Council requires real
+available specialist invocations; guidance loading alone is not Council execution.
+
 ## Operating Discipline
 
 1. Identify the active client/project.
