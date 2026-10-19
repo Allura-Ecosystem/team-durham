@@ -1,6 +1,6 @@
 {
   "name": "team-durham",
-  "version": "0.3.0",
+  "version": "0.4.3",
   "description": "Governed multi-agent brand production system for strategy, design, QA, and delivery.",
   "license": "MIT",
   "main": "index.js",

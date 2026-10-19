@@ -40,8 +40,8 @@
     "opencode.jsonc"
   ],
   "minimums": {
-    "canonicalRoles": 12,
-    "loadableAgentDefinitions": 13,
+    "canonicalRoles": 7,
+    "loadableAgentDefinitions": 7,
     "commands": 20,
     "skills": 70
   }

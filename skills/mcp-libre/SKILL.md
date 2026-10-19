@@ -146,7 +146,7 @@ curl -X POST http://localhost:8765/tools/find_text_live \
 | Kotler (Orchestrator) | create, save, export |
 | Ogilvy (Copywriter) | text insert/format, search/replace |
 | Munari (QA Reviewer) | document read, content, comments (read-only) |
-| Scout | document info, content (read-only) |
+| Tufte | document info, content (read-only) |
 
 ---
 

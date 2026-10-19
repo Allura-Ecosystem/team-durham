@@ -12,7 +12,7 @@ This repository is the canonical source for Team Durham, a governed multi-agent 
 
 ## Role count
 
-Team Durham has 12 canonical roles and 13 loadable definitions. `agents/openagent.md` is the persona-free compatibility fallback and is not a canonical specialist role. Keep this distinction explicit.
+Team Durham has seven canonical roles and seven loadable definitions. Supporting capabilities belong to these seven roles; no generic fallback agent is registered.
 
 ## Invariants
 

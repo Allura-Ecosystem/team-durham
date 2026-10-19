@@ -248,7 +248,7 @@ await figma.updateComponent(node_id, previousVersion.metadata.properties);
 ## Integration with Party Mode
 
 When `/party` includes Figma work:
-1. Scout discovers existing Figma components (via Brain search)
+1. Tufte discovers existing Figma components (via Brain search)
 2. Glaser creates/modifies components in Figma
 3. Sync engine automatically logs to Brain
 4. Munari validates all components are logged

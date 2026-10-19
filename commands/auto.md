@@ -1,5 +1,5 @@
 ---
-description: "Team Durham auto-mode — bounded autonomous brand execution with Scout-first loading, lazy specialist routing, token/iteration budgets, verification, Brain receipts, and ship/governance hard stops."
+description: "Team Durham auto-mode — bounded autonomous brand execution with bounded context loading, lazy specialist routing, token/iteration budgets, verification, Brain receipts, and ship/governance hard stops."
 argument-hint: "[--budget <tokens>] [--max <iterations>] <brand task description>"
 allowed-tools:
   - Read
@@ -15,40 +15,26 @@ allowed-tools:
   - allura-brain__memory_add
 ---
 
-# /auto — Team Durham Bounded Auto Mode
+# /auto — Bounded Durham execution
 
-`/auto` is the common Team Durham front door. It delegates to `/brand-auto` and
-the `brand-loop` skill; it is an alias and policy adapter, not a second engine.
+Apply `governance/adaptive-workflow.md` and execute the single
+`skills/brand-loop/SKILL.md` contract. `/auto` aliases `/brand-auto`.
+Parse `$ARGUMENTS`; preserve `--budget` and `--max`. Defaults are 12,000 combined
+tokens and 5 iterations, hard maximum 8. Budgets never excuse missing verification.
 
-## Contract
+Obtain or reuse the scoped scoped ContextPacket before production; refresh only
+changed dependencies/authority. Classify quick/standard/sensitive and retain one
+accountable producer with risk-selected review. Use configured model inheritance.
+Do not display a menu for a clear task. STP and locked strategy precede visuals;
+parallelize only independent approved work with disjoint artifact ownership.
+Name-dependent logos wait for approved naming.
 
-1. **Observe** — run Durham Scout read-only and return a compact ContextPacket.
-2. **Choose** — load only the routed specialist and required skill.
-3. **Act** — produce one reversible, non-shipping brand slice.
-4. **Verify** — run Munari QA, Rubin taste, or an explicit acceptance check.
-5. **Record** — write a trace to `group_id="allura-team-durham"`.
-6. **Repeat/Stop** — continue only with measurable progress inside both budgets.
+Human shipping/promotion/strategy approval remains required; existing explicit
+authority counts. Agent QA cannot supply human approval. Respect role tool limits.
+Brain uses `group_id: allura-team-durham`; report unavailable tools or failed writes,
+never substitute direct database mutation. Log only material verified outcomes.
 
-## Loading and Token Budget
-
-- Scout ContextPacket: maximum 700 output tokens.
-- Default run budget: 12,000 combined input/output tokens.
-- Default iterations: 5; hard maximum: 8.
-- Load the lightweight Durham roster first. Never eagerly load all agents, all
-  skills, Figma API references, Impeccable scripts, or unrelated design packs.
-- Load one specialist plus 1–3 task skills after routing.
-- Reaching either budget ends as `exhausted`; never truncate verification and
-  claim success.
-
-## Hard Stops
-
-Stop as `approval-required` for external publishing/sending, locked-strategy
-changes, asset deletion, dependency/configuration mutation, governance changes,
-or any action outside the current client/project boundary.
-
-## Execution
-
-Parse `$ARGUMENTS`, apply `--budget` and `--max`, then execute the existing
-`/brand-auto` protocol. Preserve its terminal states and Brain namespace. Report:
-terminal state, specialist, iterations, tokens in/out, artifact paths, and exact
-verification evidence.
+Return terminal state, route, owner/reviewer, iterations, measured token usage
+(or unknown), artifacts, exact acceptance evidence, and remaining next action.
+Terminal states: success, clean-no-op, blocked, approval-required, exhausted,
+stagnated. Budget exhaustion and missing evidence never become success.

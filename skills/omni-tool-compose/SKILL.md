@@ -133,7 +133,7 @@ improve_prompt("Write a Stripe subscription integration guide based on: [docs] [
 
 // Step 5: Log (MCP Docker)
 insert_data("events", "event_type, group_id, agent_id, status, metadata",
-  "'OMNI_TOOL_COMPOSE', 'allura-team-durham', 'openagent', 'completed', '{...}'")
+  "'OMNI_TOOL_COMPOSE', 'allura-team-durham', 'kotler', 'completed', '{...}'")
 ```
 
 ---

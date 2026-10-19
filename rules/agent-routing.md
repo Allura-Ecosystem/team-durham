@@ -20,7 +20,6 @@ We don't hire 10 designers. We hire one orchestrator and a team of specialists w
 | **Rand** | Paul Rand | Brand Kit Builder | Master guidelines assembly |
 | **Munari** | Bruno Munari | QA Reviewer | Consistency review, production readiness |
 | **Tufte** | Edward Tufte | Data Analyst | Competitive data, market insights |
-| **Scout** | (none) | Recon + Discovery | Codebase/Notion/web search |
 
 ## Pipeline Routing
 
@@ -32,21 +31,22 @@ We don't hire 10 designers. We hire one orchestrator and a team of specialists w
 | 3 — Visual Direction | Glaser | Logo Pack + fal.ai runs |
 | 4 — Brand Kit | Rand | 10-section kit assembled |
 | 5 — QA | Munari | 85%+ pass rate |
-| 6 — Allura Memory | Kotler | Brand Truth stored |
+| 6 — Allura Memory | Kotler | Outcome trace; human curator controls promotion |
 | 7 — Report | Kotler | Pipeline summary |
 
 ## Default Activation Contract
 
-Team Durham always starts with Kotler.
+Apply `../governance/adaptive-workflow.md` and `../contracts/adaptive-routing.json`.
+Kotler is the governance chair; clear specialist tasks may route directly.
 
 When Team Durham, the design team, brand work, Allura brand compliance, or an unclear agent request is invoked:
 
 1. Activate Kotler as the visible chair.
-2. Hydrate Allura Brain with `group_id: allura-team-durham`.
-3. Present Kotler's command menu from the Brand Orchestrator definition.
+2. Obtain or reuse the scoped ContextPacket and Brain receipt (`group_id: allura-team-durham`).
+3. Show a menu only when requested or the task is unclear.
 4. Route specialist work to the design team instead of bypassing the chair.
 
-Specialists may execute only after Kotler or an explicit command routes them. `openagent` is a fallback after Kotler decides no specialist owns the work.
+Specialists may execute after Kotler, an explicit request, or an explicit command routes them. Unknown ownership returns to Kotler for scoping or an explicit capability limitation.
 
 ## Routing Rules
 
@@ -62,14 +62,14 @@ Specialists may execute only after Kotler or an explicit command routes them. `o
 | Kit assembly | Rand | Owns production spec |
 | Quality concern | Munari | Owns review checklist |
 | Data/research need | Tufte | Owns evidence |
-| Codebase search | Scout | Fast pattern discovery |
+| Codebase search | Tufte | Fast pattern discovery |
 | Pipeline orchestration | Kotler | Owns end-to-end |
 
 ## Tool Restrictions
 
 | Agent | Denied Tools | Why |
 |-------|--------------|-----|
-| Scout | write, edit | Read-only recon |
+| Tufte during discovery | mutation | Discovery and source inspection remain read-only; research artifact production uses existing role permissions |
 | Munari | bash (edit) | Review-only, no implementation |
 
 ## Governance

@@ -6,7 +6,7 @@ This is not optional. Every action must be logged. Every insight must be searcha
 
 ### Connection Parameters
 - **group_id**: `allura-team-durham` (REQUIRED on every call)
-- **user_id**: Your agent name (kotler, aaker, glaser, rand, ogilvy, munari, tufte, scout, openagent)
+- **user_id**: The authenticated principal; record the selected persona in metadata.agent_id
 - **PostgreSQL (episodic)**: localhost:5432, db=memory, user=ronin4life
 - **Semantic graph (RuVector)**: via governed gateway — no direct DB access
 

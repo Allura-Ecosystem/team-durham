@@ -4,9 +4,13 @@
 from __future__ import annotations
 
 import json
+import hashlib
 import re
 import sys
 from pathlib import Path
+
+from validate_adaptive_workflow import validate as validate_adaptive_workflow
+from validate_agent_frontmatter import validate as validate_agent_frontmatter
 
 ROOT = Path(__file__).resolve().parents[1]
 SHA_RE = re.compile(r"^[0-9a-f]{40}$")
@@ -55,24 +59,31 @@ def main() -> int:
     expected_names = set(canonical + compatibility)
     agent_files = sorted((ROOT / "agents").glob("*.md"))
     actual_names = {name for path in agent_files if (name := agent_name(path))}
-    check(len(canonical) == 12, f"expected 12 canonical roles, found {len(canonical)}")
-    check(compatibility == ["openagent"], f"compatibility definition must be openagent, found {compatibility}")
-    check(len(agent_files) == 13, f"expected 13 loadable agent files, found {len(agent_files)}")
+    check(len(canonical) == 7, f"expected 7 canonical roles, found {len(canonical)}")
+    check(compatibility == [], f"compatibility definitions must be empty, found {compatibility}")
+    check(len(agent_files) == 7, f"expected 7 loadable agent files, found {len(agent_files)}")
     check(actual_names == expected_names, f"agent names differ: expected {sorted(expected_names)}, found {sorted(actual_names)}")
-    check(source.get("roleCount") == {"canonical": 12, "loadableDefinitions": 13}, "SOURCE.json roleCount is inconsistent")
+    check(source.get("roleCount") == {"canonical": 7, "loadableDefinitions": 7}, "SOURCE.json roleCount is inconsistent")
     check(source.get("revision") is None or bool(SHA_RE.fullmatch(source["revision"])), "SOURCE.json revision must be null or a 40-character SHA")
 
     claude_agents = {Path(rel_ref(ref)).stem for ref in claude.get("agents", [])}
-    check(claude_agents == expected_names, "Claude manifest must load all 12 roles plus openagent")
+    check(claude_agents == expected_names, "Claude manifest must load exactly seven canonical roles")
     for ref in claude.get("agents", []):
         check((ROOT / rel_ref(ref)).is_file(), f"missing Claude agent reference: {ref}")
 
     command_files = {str(path.relative_to(ROOT)) for path in (ROOT / "commands").glob("*.md")}
-    for label, manifest in (("Claude", claude), ("Codex", codex)):
+    for label, manifest in (("Claude", claude),):
         refs = {rel_ref(ref) for ref in manifest.get("commands", [])}
         check(refs == command_files, f"{label} command manifest differs from commands/: missing={sorted(command_files-refs)}, extra={sorted(refs-command_files)}")
         for ref in refs:
             check((ROOT / ref).is_file(), f"missing {label} command reference: {ref}")
+
+    check("commands" not in codex and "agents" not in codex,
+          "Codex manifest must expose skills, not unsupported commands/agents fields")
+    entry_skill = (ROOT / "skills/team-durham/SKILL.md").read_text(encoding="utf-8")
+    indexed_commands = {"commands/" + name for name in re.findall(r"\(\.\./\.\./commands/([^\s)]+)\)", entry_skill)}
+    check(indexed_commands == command_files,
+          "Codex entry skill must link every bundled command runbook")
 
     skill_files = sorted((ROOT / "skills").glob("*/SKILL.md"))
     minimums = export.get("minimums", {})
@@ -99,6 +110,13 @@ def main() -> int:
             ref = prompt.get("path", "")
             check(bool(ref) and (ROOT / ref).is_file(), f"{path.name} references missing prompt: {ref}")
 
+    archive = load_json(ROOT / "evals/archive/persona-20261016/ARCHIVE.json")
+    check(archive["status"] == "historical-not-current-not-executable", "archive status drift")
+    for item in archive["files"]:
+        archived = ROOT / item["archived_path"]
+        check(archived.is_file() and hashlib.sha256(archived.read_bytes()).hexdigest() == item["sha256"],
+              f"historical archive digest mismatch: {item['original_path']}")
+
     includes = export.get("include", [])
     excluded = set(export.get("excludedWorkspaceRoots", []))
     check(len(includes) == len(set(includes)), "export include list contains duplicates")
@@ -120,6 +138,9 @@ def main() -> int:
     check(package.get("scripts") == expected_scripts, "package scripts differ from canonical validation/export commands")
     check(source.get("exportManifest") == "export-manifest.json", "SOURCE.json exportManifest mismatch")
     check(source.get("exportScript") == "scripts/export_catalog.py", "SOURCE.json exportScript mismatch")
+
+    errors.extend(validate_agent_frontmatter(ROOT))
+    errors.extend(validate_adaptive_workflow())
 
     if errors:
         for error in errors:

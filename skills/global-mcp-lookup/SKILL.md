@@ -133,7 +133,6 @@ Which agents can use which MCP servers:
 | Ogilvy | ❌ Read | ✅ Write | — | — | — | ✅ | ✅ |
 | Munari | ❌ Read | ❌ Comment | ✅ Read | ✅ Read | — | ✅ | ✅ |
 | Tufte | ❌ Read | ❌ Read | — | — | — | ✅ | ✅ |
-| Scout | ❌ Read | ❌ Read | ✅ Read | ✅ Read | — | ✅ | ✅ |
 
 ---
 

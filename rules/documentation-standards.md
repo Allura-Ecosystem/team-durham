@@ -28,4 +28,4 @@ See `guidelines/AI-GUIDELINES.md` for the full standard.
 - **Aaker (Strategist)**: Cross-references positioning decisions in Risks & Decisions
 - **Rand (Kit Builder)**: Follows naming conventions, includes cross-references
 - **Munari (QA)**: Validates completeness checklist before approving deliverables
-- **Scout**: Flags stale docs (>90 days old with active code changes)
+- **Tufte**: Flags stale docs (>90 days old with active code changes)

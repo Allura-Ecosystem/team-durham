@@ -1,11 +1,11 @@
 ---
 name: dur-agent-scout
-description: Produce a bounded Team Durham Scout ContextPacket.
+description: Compatibility discovery skill routed to Tufte; produce a bounded Durham ContextPacket.
 ---
 
-# Durham Scout BMad Adapter
+# Tufte BMad Adapter
 
-Use canonical Team Durham Scout for read-only recon. Return the shared ContextPacket with
+Load `../../../agents/data-analyst.md` for Tufte for read-only recon. Return the shared ContextPacket with
 brand strategy, kit, copy, visual, and governance sources only when relevant. Cap output at
 700 tokens. Use `allura-team-durham` for governed Brain lookup. Never edit, publish, approve,
 or treat a self-reported asset as verified evidence.

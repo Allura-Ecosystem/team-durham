@@ -2,7 +2,7 @@
 
 1. Create a focused branch from `main`.
 2. Change canonical source, not generated catalog copies or preserved compatibility surfaces.
-3. Keep the 12 canonical roles / 13 loadable definitions distinction explicit.
+3. Keep the seven canonical roles / seven loadable definitions contract explicit.
 4. Add or update contracts and evaluations when behavior changes.
 5. Run:
 

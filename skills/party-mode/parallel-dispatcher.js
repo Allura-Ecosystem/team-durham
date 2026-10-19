@@ -1,220 +1,120 @@
-// Party Mode — Parallel Task Dispatcher
-// Dispatches sub-agents in parallel with dependency tracking
+// Public routing identity is distinct from the runtime's registered target.
+const CANONICAL_AGENT_NAMES = Object.freeze({
+  kotler: 'brand-orchestrator', aaker: 'brand-strategist', ogilvy: 'copywriter',
+  glaser: 'visual-director', rand: 'brand-kit-builder', munari: 'qa-reviewer',
+  tufte: 'data-analyst'
+});
 
-const { TaskCreate, TaskGet, TaskList, TaskUpdate } = require('./task-utils');
+function resolveAgentTarget(publicName, availableNames) {
+  if (!Object.hasOwn(CANONICAL_AGENT_NAMES, publicName))
+    throw new Error(`Unknown public Durham agent: ${publicName}`);
+  const registered = new Set(availableNames);
+  if (registered.has(publicName)) return publicName;
+  const canonical = CANONICAL_AGENT_NAMES[publicName];
+  if (registered.has(canonical)) return canonical;
+  throw new Error(`Agent invocation unavailable for ${publicName}: neither public nor canonical target is registered.`);
+}
 
+// Task planning and dependency tracking. Creating a task record is not agent execution.
 class ParallelDispatcher {
-  constructor(orchestratorAgent = 'kotler') {
+  constructor(orchestratorAgent = 'kotler', taskAdapter = null) {
     this.orchestrator = orchestratorAgent;
+    this.adapter = taskAdapter;
     this.tasks = new Map();
     this.results = new Map();
     this.group_id = 'allura-team-durham';
+    this.sequence = 0;
   }
 
-  // Decompose a request into parallel subtasks
+  // Kotler supplies fresh scoped context; no mandatory discovery-agent hop.
+  // This plan does not waive STP, approved-input, authority, or independence gates.
   decompose(request, clientSlug) {
-    const tasks = [];
-
-    // Scout always runs first (discovery)
-    tasks.push({
-      id: `scout-${Date.now()}`,
-      agent: 'scout',
-      description: `Discovery for ${clientSlug}`,
-      prompt: `Search codebase for client "${clientSlug}". Find: deliverables directory, existing files, current phase, blockers. Report file paths and status.`,
-      subagent_type: 'Explore',
-      blockedBy: [],
-      priority: 1
+    const text = request.toLowerCase();
+    const plan = [];
+    const run = ++this.sequence;
+    const add = (agent, description, prompt, blockedBy = []) => plan.push({
+      id: `${run}-${agent}`, agent, subagent_type: agent, description,
+      prompt: `${prompt} Client: ${clientSlug}. Use only authenticated team scope.`,
+      blockedBy, priority: plan.length + 1
     });
-
-    // Analyze request to determine which agents needed
-    const request_lower = request.toLowerCase();
-
-    // Strategy validation needed?
-    if (request_lower.includes('strategy') ||
-        request_lower.includes('position') ||
-        request_lower.includes('archetype')) {
-      tasks.push({
-        id: `aaker-${Date.now()}`,
-        agent: 'aaker',
-        description: 'Validate strategy alignment',
-        prompt: `Validate brand strategy for ${clientSlug}. Check archetype, positioning, personality alignment.`,
-        subagent_type: 'brand-strategist',
-        blockedBy: [`scout-${Date.now()}`],
-        priority: 2
-      });
-    }
-
-    // Visual work needed?
-    if (request_lower.includes('visual') ||
-        request_lower.includes('color') ||
-        request_lower.includes('logo') ||
-        request_lower.includes('design')) {
-      tasks.push({
-        id: `glaser-${Date.now()}`,
-        agent: 'glaser',
-        description: 'Create visual system',
-        prompt: `Create visual direction for ${clientSlug}. Use asset-first-design skill if logos needed. Generate color system, typography.`,
-        subagent_type: 'visual-director',
-        blockedBy: [`scout-${Date.now()}`],
-        priority: 2
-      });
-    }
-
-    // Copy work needed?
-    if (request_lower.includes('copy') ||
-        request_lower.includes('messaging') ||
-        request_lower.includes('voice') ||
-        request_lower.includes('naming')) {
-      tasks.push({
-        id: `ogilvy-${Date.now()}`,
-        agent: 'ogilvy',
-        description: 'Write copy guidelines',
-        prompt: `Create messaging framework for ${clientSlug}. Voice/tone, sample copy, naming if needed.`,
-        subagent_type: 'copywriter',
-        blockedBy: [`scout-${Date.now()}`],
-        priority: 2
-      });
-    }
-
-    // Brand kit assembly needed?
-    if (request_lower.includes('brand kit') ||
-        request_lower.includes('kit') ||
-        request_lower.includes('assembly') ||
-        request_lower.includes('guidelines')) {
-      // Get all non-scout task IDs for dependencies
-      const nonScoutTasks = tasks.filter(t => t.agent !== 'scout').map(t => t.id);
-
-      tasks.push({
-        id: `rand-${Date.now()}`,
-        agent: 'rand',
-        description: 'Assemble brand kit',
-        prompt: `Compile 10-section brand kit for ${clientSlug}. Coordinate with other agents for outputs.`,
-        subagent_type: 'brand-kit-builder',
-        blockedBy: nonScoutTasks.length > 0 ? nonScoutTasks : [`scout-${Date.now()}`],
-        priority: 3
-      });
-    }
-
-    // QA needed?
-    if (request_lower.includes('audit') ||
-        request_lower.includes('qa') ||
-        request_lower.includes('review') ||
-        request_lower.includes('validate')) {
-      const allOtherTasks = tasks.filter(t => !t.id.startsWith('munari')).map(t => t.id);
-
-      tasks.push({
-        id: `munari-${Date.now()}`,
-        agent: 'munari',
-        description: 'QA validation',
-        prompt: `Review all deliverables for ${clientSlug} against QA checklist. Report score and issues.`,
-        subagent_type: 'qa-reviewer',
-        blockedBy: allOtherTasks.length > 0 ? allOtherTasks : [],
-        priority: 4
-      });
-    }
-
-    // Data/research needed?
-    if (request_lower.includes('research') ||
-        request_lower.includes('competitor') ||
-        request_lower.includes('market') ||
-        request_lower.includes('data')) {
-      tasks.push({
-        id: `tufte-${Date.now()}`,
-        agent: 'tufte',
-        description: 'Competitive research',
-        prompt: `Research competitive landscape for ${clientSlug}. Find market data, competitor positioning, insights.`,
-        subagent_type: 'data-analyst',
-        blockedBy: [`scout-${Date.now()}`],
-        priority: 2
-      });
-    }
-
-    return tasks;
+    if (/research|competitor|market|data|discovery|recon|screenshot|evidence/.test(text))
+      add('tufte', 'Research and evidence', 'Inspect accessible scoped sources and evidence; define proof requirements and provenance. No browser/screenshot tool is granted. Request an authorized capable executor for live capture, otherwise report missing capability. Do not certify readiness.');
+    if (/strategy|position|archetype/.test(text))
+      add('aaker', 'Validate strategy', 'Check STP, personality and positioning.', plan.map(t => t.id));
+    const foundation = plan.map(t => t.id);
+    if (/visual|color|logo|design/.test(text))
+      add('glaser', 'Create visual system', 'Require locked strategy and approved inputs before visual production.', foundation);
+    if (/copy|messaging|voice|naming/.test(text))
+      add('ogilvy', 'Write messaging', 'Use approved strategy and voice; respect naming dependencies.', foundation);
+    if (/brand kit|kit|assembly|guidelines/.test(text))
+      add('rand', 'Assemble brand kit', 'Assemble approved source artifacts and UX evidence.', plan.map(t => t.id));
+    if (/audit|qa|review|validate|readiness/.test(text))
+      add('munari', 'Independent QA', 'Read-only review of completed producer artifacts, evidence, and trust boundaries. Route fixes to producers.', plan.map(t => t.id));
+    if (!plan.length)
+      add('kotler', 'Scope request', 'Determine the accountable retained owner and required authority; report missing capability explicitly.');
+    return plan;
   }
 
-  // Dispatch all tasks that have no unmet dependencies
   async dispatch(tasks) {
-    const readyTasks = tasks.filter(t => {
-      // Task is ready if all its blockedBy dependencies are completed
-      if (!t.blockedBy || t.blockedBy.length === 0) return true;
-      return t.blockedBy.every(depId => {
-        const depTask = this.tasks.get(depId);
-        return depTask && depTask.status === 'completed';
-      });
-    });
-
+    if (!this.adapter || typeof this.adapter.TaskCreate !== 'function')
+      throw new Error('Task adapter unavailable: plan only; no task or agent was invoked.');
+    for (const task of tasks) {
+      if (!this.tasks.has(task.id)) this.tasks.set(task.id, { ...task, status: 'queued' });
+    }
     const createdTasks = [];
-
-    for (const task of readyTasks) {
-      const created = await TaskCreate({
-        subject: task.description,
-        description: task.prompt,
-        activeForm: `Executing: ${task.description}`
-      });
-
-      this.tasks.set(task.id, { ...task, taskId: created.id, status: 'in_progress' });
+    for (const task of this.tasks.values()) {
+      if (task.status !== 'queued') continue;
+      if (!task.blockedBy.every(id => this.tasks.get(id)?.status === 'completed')) continue;
+      // Records work for an external authorized executor; does not invoke a runtime.
+      const created = await this.adapter.TaskCreate({ subject: task.description,
+        description: task.prompt, activeForm: `Awaiting executor: ${task.description}`,
+        agent: task.agent, subagent_type: task.subagent_type });
+      task.taskId = created.id;
+      task.status = 'in_progress';
       createdTasks.push(created);
     }
-
     return createdTasks;
   }
 
-  // Collect results from completed tasks
-  async collect(timeout = 300000) { // 5 minute default timeout
-    const startTime = Date.now();
+  async collect(timeout = 300000) {
+    if (!this.adapter || typeof this.adapter.TaskGet !== 'function')
+      throw new Error('Task adapter unavailable: completion is unconfirmed.');
+    const start = Date.now();
     const results = [];
-
-    while (Date.now() - startTime < timeout) {
-      const pendingTasks = Array.from(this.tasks.values())
-        .filter(t => t.status !== 'completed' && t.status !== 'failed');
-
-      if (pendingTasks.length === 0) break;
-
-      for (const task of pendingTasks) {
-        const status = await TaskGet({ taskId: task.taskId });
-
+    while (Date.now() - start < timeout) {
+      const active = [...this.tasks.values()].filter(t => t.status === 'in_progress');
+      if (!active.length) break;
+      for (const task of active) {
+        const status = await this.adapter.TaskGet({ taskId: task.taskId });
         if (status.status === 'completed') {
-          this.tasks.get(task.id).status = 'completed';
-          this.results.set(task.agent, status.result);
+          task.status = 'completed'; this.results.set(task.agent, status.result);
           results.push({ agent: task.agent, result: status.result });
         } else if (status.status === 'failed') {
-          this.tasks.get(task.id).status = 'failed';
-          this.tasks.get(task.id).error = status.error;
+          task.status = 'failed'; task.error = status.error;
         }
       }
-
-      // Check for newly unblocked tasks
-      await this.dispatch(Array.from(this.tasks.values()));
-
-      // Wait before next poll
-      await new Promise(resolve => setTimeout(resolve, 1000));
+      for (const task of this.tasks.values()) {
+        if (task.status === 'queued' && task.blockedBy.some(id =>
+          ['failed', 'blocked'].includes(this.tasks.get(id)?.status))) task.status = 'blocked';
+      }
+      await this.dispatch([]);
+      if ([...this.tasks.values()].some(t => t.status === 'in_progress'))
+        await new Promise(resolve => setTimeout(resolve, 1000));
     }
-
     return results;
   }
 
-  // Synthesize results from all agents
-  synthesize(results) {
-    const synthesis = {
-      completed: [],
-      failed: [],
-      deliverables: [],
-      summary: ''
-    };
-
-    for (const [agent, result] of this.results) {
-      if (result) {
-        synthesis.completed.push(agent);
-        synthesis.deliverables.push({ agent, output: result });
-      } else {
-        synthesis.failed.push(agent);
-      }
+  synthesize() {
+    const synthesis = { completed: [], failed: [], pending: [], deliverables: [], summary: '' };
+    for (const task of this.tasks.values()) {
+      if (task.status === 'completed') {
+        synthesis.completed.push(task.agent);
+        synthesis.deliverables.push({ agent: task.agent, output: this.results.get(task.agent) });
+      } else if (['failed', 'blocked'].includes(task.status)) synthesis.failed.push(task.agent);
+      else synthesis.pending.push(task.agent);
     }
-
-    synthesis.summary = `Parallel execution complete: ${synthesis.completed.length} agents succeeded, ${synthesis.failed.length} failed.`;
-
+    synthesis.summary = `Task receipts: ${synthesis.completed.length} completed, ${synthesis.failed.length} failed/blocked, ${synthesis.pending.length} pending. Task records alone do not prove agent invocation or readiness.`;
     return synthesis;
   }
 }
-
-module.exports = { ParallelDispatcher };
+module.exports = { ParallelDispatcher, resolveAgentTarget, CANONICAL_AGENT_NAMES };

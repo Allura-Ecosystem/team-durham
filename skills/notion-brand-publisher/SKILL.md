@@ -236,4 +236,4 @@ Key syntax differences from standard Markdown:
 After successful publishing:
 1. **Notion page URL** — shared with client for review
 2. **URL recorded** in `clients/{client-slug}/presentation-artifacts/notion-page-url.txt`
-3. **Event logged** to PostgreSQL `events` table with `agent_id = 'openagent'` and page URL
+3. **Event logged** to PostgreSQL `events` table with `agent_id = 'kotler'` and page URL

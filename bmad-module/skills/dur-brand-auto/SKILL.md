@@ -8,7 +8,7 @@ description: Run bounded Team Durham BMad brand auto mode.
 Run the existing `/auto` and `/brand-auto` contract:
 
 ```text
-Scout ContextPacket → select specialist → one reversible non-shipping slice
+scoped ContextPacket → select specialist → one reversible non-shipping slice
 → explicit brand verification → compaction receipt → terminal state
 ```
 

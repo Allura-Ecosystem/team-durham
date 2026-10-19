@@ -11,7 +11,7 @@ SKILLS_ROOT = MODULE_ROOT / "skills"
 CANONICAL_ROOT = MODULE_ROOT.parent / "agents"
 ADAPTERS = {
     "dur-agent-kotler": "brand-orchestrator.md",
-    "dur-agent-scout": "scout-recon.md",
+    "dur-agent-scout": "data-analyst.md",
     "dur-agent-munari": "qa-reviewer.md",
 }
 REQUIRED_SKILLS = {"dur-brand-delivery", "dur-brand-auto", "dur-setup"}

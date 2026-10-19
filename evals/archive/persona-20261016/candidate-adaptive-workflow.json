@@ -1,0 +1,97 @@
+{
+  "version": "0.4.1",
+  "status": "offline-contract-checked; runtime-quality-unmeasured",
+  "prompts": [
+    {
+      "id": "agentic-trust-architect",
+      "path": "agents/agentic-trust-architect.md",
+      "chars": 4147,
+      "lines": 107,
+      "approximate_tokens": 1037
+    },
+    {
+      "id": "brand-kit-builder",
+      "path": "agents/brand-kit-builder.md",
+      "chars": 9822,
+      "lines": 255,
+      "approximate_tokens": 2456
+    },
+    {
+      "id": "brand-orchestrator",
+      "path": "agents/brand-orchestrator.md",
+      "chars": 4794,
+      "lines": 106,
+      "approximate_tokens": 1199
+    },
+    {
+      "id": "brand-strategist",
+      "path": "agents/brand-strategist.md",
+      "chars": 7834,
+      "lines": 190,
+      "approximate_tokens": 1959
+    },
+    {
+      "id": "copywriter",
+      "path": "agents/copywriter.md",
+      "chars": 7684,
+      "lines": 248,
+      "approximate_tokens": 1921
+    },
+    {
+      "id": "data-analyst",
+      "path": "agents/data-analyst.md",
+      "chars": 6325,
+      "lines": 182,
+      "approximate_tokens": 1582
+    },
+    {
+      "id": "evidence-collector",
+      "path": "agents/evidence-collector.md",
+      "chars": 3738,
+      "lines": 100,
+      "approximate_tokens": 935
+    },
+    {
+      "id": "openagent",
+      "path": "agents/openagent.md",
+      "chars": 4889,
+      "lines": 110,
+      "approximate_tokens": 1223
+    },
+    {
+      "id": "qa-reviewer",
+      "path": "agents/qa-reviewer.md",
+      "chars": 3096,
+      "lines": 92,
+      "approximate_tokens": 774
+    },
+    {
+      "id": "reality-checker",
+      "path": "agents/reality-checker.md",
+      "chars": 4489,
+      "lines": 114,
+      "approximate_tokens": 1123
+    },
+    {
+      "id": "scout-recon",
+      "path": "agents/scout-recon.md",
+      "chars": 2715,
+      "lines": 69,
+      "approximate_tokens": 679
+    },
+    {
+      "id": "visual-director",
+      "path": "agents/visual-director.md",
+      "chars": 8943,
+      "lines": 260,
+      "approximate_tokens": 2236
+    },
+    {
+      "id": "workflow-architect",
+      "path": "agents/workflow-architect.md",
+      "chars": 4019,
+      "lines": 116,
+      "approximate_tokens": 1005
+    }
+  ]
+}

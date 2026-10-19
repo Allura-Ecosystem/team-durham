@@ -9,24 +9,17 @@
   "exportScript": "scripts/export_catalog.py",
   "catalogConsumer": "https://github.com/Allura-Ecosystem/allura-plugins/tree/main/team-durham",
   "canonicalRoles": [
-    "agentic-trust-architect",
     "brand-kit-builder",
     "brand-orchestrator",
     "brand-strategist",
     "copywriter",
     "data-analyst",
-    "evidence-collector",
     "qa-reviewer",
-    "reality-checker",
-    "scout-recon",
-    "visual-director",
-    "workflow-architect"
+    "visual-director"
   ],
-  "compatibilityDefinitions": [
-    "openagent"
-  ],
+  "compatibilityDefinitions": [],
   "roleCount": {
-    "canonical": 12,
-    "loadableDefinitions": 13
+    "canonical": 7,
+    "loadableDefinitions": 7
   }
 }

@@ -1,13 +1,13 @@
 ---
 name: trademark-screening
-description: "Trademark conflict screening and linguistic analysis for brand names. Trigger when screening trademarks, checking name availability, or evaluating legal risks. Use when agent_id=scout runs TS (Trademark Screening) command."
+description: "Trademark conflict screening and linguistic analysis for brand names. Trigger when screening trademarks, checking name availability, or evaluating legal risks. Use when agent_id=tufte runs TS (Trademark Screening) command."
 globs: ["clients/**", ".claude/**"]
 ---
 
 # Skill: Trademark Screening
 
 > **Phase:** 2 (Naming)
-> **Executor:** @Scout (recon) with @Tufte validation
+> **Executor:** @Tufte (recon) with independent @Munari evidence review
 > **group_id:** `allura-team-durham`
 
 ---
@@ -98,7 +98,7 @@ This screening provides preliminary risk assessment only. It does not constitute
 ## Invariants
 
 - `group_id = 'allura-team-durham'`
-- Scout performs searches; Tufte validates findings
+- Tufte performs searches; Munari independently reviews evidence and limits of claims
 - **NOT legal advice** — always include disclaimer
 - Screen early (Phase 2) before visual investment (Phase 3)
 - Log results to PostgreSQL as `TRADEMARK_SCREENED`

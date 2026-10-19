@@ -7,6 +7,38 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.4.1] - 2026-10-13
+
+### Fixed
+- Encode ten agent descriptions and their examples as valid YAML string scalars,
+  preserving model inheritance and existing tool permissions in Claude.
+- Validate the restricted canonical metadata format offline, with regression
+  cases for malformed examples, duplicate fields, and invalid scalar types.
+- Verified native Claude plugin validation; no live model performance claim.
+
+## [0.4.0] - 2026-10-13
+
+### Changed
+- Added one adaptive operating policy with quick/standard/sensitive routes,
+  accountable producers, risk-selected independent review, and dependency gates.
+- Canonical agents inherit the runtime model; overrides require availability and
+  task capability checks. Tool permissions are unchanged.
+- Entry skills, router, orchestration and auto commands reuse scoped context and
+  skip menus for clear tasks. Migrated orchestration delegates to the canonical command.
+- ContextPacket v1.1 records tenant/project, freshness, source/dependency revisions,
+  authority and Brain status; refresh old packets before reuse.
+- Independent approved copy/visual preparation may run concurrently. STP, naming
+  dependencies, read-only QA, and human shipping/promotion authority are preserved.
+- Removed direct database fallback from orchestration; missing Brain is reported
+  as degraded. Outcome traces do not autonomously promote brand truth.
+
+- Codex manifest exposes supported skills only; the main skill indexes all bundled
+  command runbooks without claiming native command or agent registration.
+
+### Validation
+- Added deterministic offline risk/dependency fixtures and entry-policy contract
+  checks. No live performance or model-quality improvement is claimed.
+
 ## [0.1.1] - 2026-07-16
 
 ### Added

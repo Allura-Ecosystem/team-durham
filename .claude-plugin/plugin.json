@@ -1,6 +1,6 @@
 {
   "name": "team-durham",
-  "version": "0.3.0",
+  "version": "0.4.3",
   "description": "Team Durham brand production team for Claude Code and Codex: agents, skills, commands, governance, and persona research.",
   "author": {
     "name": "Team Durham"
@@ -14,13 +14,7 @@
     "./agents/copywriter.md",
     "./agents/visual-director.md",
     "./agents/qa-reviewer.md",
-    "./agents/reality-checker.md",
-    "./agents/evidence-collector.md",
-    "./agents/data-analyst.md",
-    "./agents/agentic-trust-architect.md",
-    "./agents/workflow-architect.md",
-    "./agents/openagent.md",
-    "./agents/scout-recon.md"
+    "./agents/data-analyst.md"
   ],
   "commands": [
     "./commands/start-session.md",
@@ -49,7 +43,7 @@
   "interface": {
     "displayName": "Team Durham",
     "shortDescription": "A multi-agent brand production team for Claude Code and Codex.",
-    "longDescription": "Team Durham packages a complete design-team harness for brand production: Kotler, Aaker, Glaser, Ogilvy, Rand, Munari, Tufte, operations agents, shared skills, orchestration commands, governance rules, and persona research. Use it to take client briefs through strategy, naming, visual direction, brand kit assembly, QA, memory, and delivery. Now with brand-loop auto-mode for bounded autonomous brand work.",
+    "longDescription": "Team Durham packages a complete design-team harness for brand production: Kotler, Aaker, Glaser, Ogilvy, Rand, Munari, Tufte, seven named agents with folded evidence and governance responsibilities, shared skills, orchestration commands, governance rules, and persona research. Use it to take client briefs through strategy, naming, visual direction, brand kit assembly, QA, memory, and delivery. Now with brand-loop auto-mode for bounded autonomous brand work.",
     "developerName": "Team Durham",
     "category": "Design",
     "capabilities": [

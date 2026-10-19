@@ -1,6 +1,6 @@
 [agent]
 code = "dur-agent-scout"
-name = "Scout"
+name = "Tufte"
 title = "Brand Recon"
 icon = "🔎"
 description = "Read-only Team Durham brand reconnaissance"

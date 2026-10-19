@@ -1,0 +1,51 @@
+{
+  "version": "1.0",
+  "status": "structural-contract-only-not-behavioral-grade",
+  "source": "SOURCE.json",
+  "expected_public_names": [
+    "kotler",
+    "aaker",
+    "ogilvy",
+    "glaser",
+    "rand",
+    "munari",
+    "tufte"
+  ],
+  "prompts": [
+    {
+      "id": "brand-kit-builder",
+      "path": "agents/brand-kit-builder.md"
+    },
+    {
+      "id": "brand-orchestrator",
+      "path": "agents/brand-orchestrator.md"
+    },
+    {
+      "id": "brand-strategist",
+      "path": "agents/brand-strategist.md"
+    },
+    {
+      "id": "copywriter",
+      "path": "agents/copywriter.md"
+    },
+    {
+      "id": "data-analyst",
+      "path": "agents/data-analyst.md"
+    },
+    {
+      "id": "qa-reviewer",
+      "path": "agents/qa-reviewer.md"
+    },
+    {
+      "id": "visual-director",
+      "path": "agents/visual-director.md"
+    }
+  ],
+  "checks": [
+    "seven unique definitions",
+    "retained capability ownership",
+    "independent QA",
+    "public runtime dispatch routes",
+    "tenant authority unchanged"
+  ]
+}

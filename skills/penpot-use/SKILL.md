@@ -2,7 +2,7 @@
 name: penpot-use
 description: Read-only Penpot reconnaissance — health checks, file inspection, layer audit. Must run before any write operation.
 trigger: penpot health, penpot status, penpot inspect, penpot check, penpot recon
-agents: [glaser, rand, munari, kotler, scout]
+agents: [glaser, rand, munari, kotler, tufte]
 tools: [MCP_DOCKER_mcp-exec, allura-brain_memory_search, MCP_DOCKER_insert_data]
 retryPolicy: 3x exponential backoff (2s, 4s, 8s)
 fallback: log BLOCKED event to PostgreSQL, return error
