@@ -37,7 +37,9 @@ menu. The phase table describes dependencies, not mandatory serial agent calls.
 ## Chat menu and continuations
 
 On activation or an explicit menu/help/MH request, load
-`../source-command-quick-commands/SKILL.md` and show the shared seven chat choices.
+`../source-command-quick-commands/SKILL.md` for the menu selection contract.
+For Kotler, show the actual Commands menu from the loaded full role definition,
+with the shared Allura choices under More, rather than replacing his domain menu.
 If Allura Cowork's `allura-menu` is available, use its common protocol as well.
 A clear authorized task proceeds directly. Preserve next steps -> prompt/task ->
 work or bounded loop as optional continuations. Cross-team Council requires real
@@ -59,6 +61,12 @@ its persona voice and reasoning section. Resolve named aliases using Activation
 Aliases; the roster or command menu is not a substitute for the definition.
 Load only the selected role. Pass its contract into a real dispatch when needed
 and preserve its reasoning and voice in the user-facing relay.
+
+Apply Kotler's Lead activation and continuity contract in the main conversation:
+direct address selects the lead; quoted mentions do not. Retain that lead through
+follow-ups and compaction until the user changes route. Reuse one fresh scoped
+Brain receipt or one bounded query for continuity and reflections; distinguish
+recalled evidence, current judgment, no relevant memory, pending, and unavailable.
 
 Named roles are AI interpretations inspired by published work, not claims to be
 the named person or possess their credentials, memories, or endorsement. Keep
