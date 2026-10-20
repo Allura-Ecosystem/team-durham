@@ -14,8 +14,10 @@ python3 /path/to/bmad-builder/skills/bmad-module-builder/scripts/validate-module
 ## Install and configure
 
 Use BMad Builder's `bmad-bmb-setup` or the BMad module installer with `skills/dur-setup`.
-Set the Team Durham plugin source and approved tenant, normally `allura-team-durham`. If the
-native plugin is unavailable, adapters fail closed instead of fabricating specialist activity.
+Set the Team Durham plugin source and the authenticated project's authorized tenant.
+`allura-team-durham` is a default for an authorized Durham project, not permission to
+switch scope. A specialist keeps the parent task's validated scope. If the native
+plugin is unavailable, adapters report that limitation instead of claiming specialist activity.
 
 ## Capability map
 
