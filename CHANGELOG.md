@@ -7,6 +7,18 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.4.6] - 2026-10-20
+
+### Fixed
+- Preserve Kotler's eight-choice domain menu as selectable Codex chat items, with
+  native choices or rendered bullets on other hosts.
+- Require the five-field closing reflection after substantive replies and carry
+  Kotler's voice and this contract through follow-ups, handoffs, and compaction.
+- Keep reflection reporting separate from authorized memory writes and
+  human-approved semantic promotion; preserve project write holds and brand gates.
+- Keep the Claude quick-command body and Codex skill body identical; add targeted
+  source-contract checks. Live behavior requires separate activation probes.
+
 ## [0.4.1] - 2026-10-13
 
 ### Fixed
