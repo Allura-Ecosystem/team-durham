@@ -1,72 +1,32 @@
 # Team Durham
 
-Team Durham is a portable, governed multi-agent system for turning a client brief into brand strategy, naming, visual direction, a production-ready brand kit, and evidence-backed QA.
+Turn an approved brief into clear brand strategy, copy, visual direction, and a reviewed brand kit.
 
-This repository is the **canonical public source** for Team Durham. Catalog copies are generated exports; they are not edited independently.
+Team Durham supplies seven specialist roles for Claude Code and Codex. Kotler coordinates the work, Aaker anchors the strategy, production specialists create the assets, and Munari reviews them independently. The host supplies tools and execution; optional integrations add design, publishing, and memory capabilities.
 
----
+Use the [Allura plugin catalog](https://github.com/Allura-Ecosystem/allura-plugins#installation) for installation, or this repository for canonical source and local development. Catalog copies are generated from a pinned source commit.
+
+## Start with the task
+
+Give a clear request, such as:
+
+> Review our README against the approved Allura voice. Make the first step clear, preserve technical accuracy, and identify claims that need evidence.
+
+For broader brand work, supply the audience, objective, approved strategy, and source assets. Ask for **Menu** or **Help** to get next steps, prompt help, Council, work, a bounded loop, validation, or more specialist workflows. A clear correction proceeds without a full intake ceremony.
 
 ## How Team Durham operates
 
-### 1. One framework, five pillars
+```text
+Brief and relevant context
+  → Approved audience, positioning, and brand truth
+  → Specialist production
+  → Independent QA and producer corrections
+  → Authorized delivery with evidence and remaining limits
+```
 
-<p align="center">
-  <a href="docs/images/framework-and-harness.png"><img src="docs/images/framework-and-harness.png" alt="Team Durham framework: strategy, production, QA, evidence, and governance around the brand core" width="900" /></a>
-</p>
+This describes a full brand-production route. Smaller tasks reuse approved inputs and use checks suited to their risk. Strategy precedes visual production; QA reports findings without changing the artifact. Protected actions, external delivery, and semantic memory promotion retain human approval requirements.
 
-Team Durham is built on **strategy foundation** (Kotler and Aaker lock the truth), **specialist production** (Ogilvy, Glaser, and Rand craft the system), **independent QA** (Munari verifies consistency), **evidence collection** (Tufte specifies proof and inspects accessible evidence; Munari independently verifies claims), and **governance gates** (authority and safety constraints shape decisions).
-
----
-
-### 2. Every request follows a controlled path
-
-<p align="center">
-  <a href="docs/images/agent-runtime-request-flow.png"><img src="docs/images/agent-runtime-request-flow.png" alt="Brand workflow: from brief through discovery, strategy, production, QA, and evidence, all governed by policy" width="900" /></a>
-</p>
-
-**Brief** → **Tufte or Kotler hydrates context** → **Kotler and Aaker lock strategy** → **Ogilvy, Glaser, Rand produce** → **QA and reality-check** → **Evidence collected** → **Delivered with proof**. Every step is documented and reversible.
-
----
-
-### 3. Validation before every release
-
-<p align="center">
-  <a href="docs/images/test-before-release.png"><img src="docs/images/test-before-release.png" alt="Brand validation: scenario setup, production execution, QA verification, and confident handoff" width="900" /></a>
-</p>
-
-No brand ships without proof. The system runs declared QA checks, collects evidence (screenshots, artifacts, measurements), and blocks release if validation fails. You decide what constitutes brand-ready; the system enforces it.
-
----
-
-### 4. Humans approve before truth is written
-
-<p align="center">
-  <a href="docs/images/people-review-important-changes.png"><img src="docs/images/people-review-important-changes.png" alt="Human review gate: proposal passes policy check, then a person reviews before approval" width="900" /></a>
-</p>
-
-Brand decisions require human review. **Proposal** → **policy check** → **human decision** → **approved or queued**. This is not optional; it protects the brand and your authority.
-
----
-
-### 5. Everything stays traceable forever
-
-<p align="center">
-  <a href="docs/images/memory-keeps-its-history.png"><img src="docs/images/memory-keeps-its-history.png" alt="Append-only audit trail: new versions supersede old ones while evidence remains intact and traceable" width="900" /></a>
-</p>
-
-Brand decisions are versioned, not overwritten. Version 1 is preserved. Version 2 records what changed and why. Version 3 is current but built on verified history. Audit trails and immutable versioning mean every creative decision is auditable.
-
----
-
-### 6. An answer can show its work
-
-<p align="center">
-  <a href="docs/images/an-answer-can-show-its-work.png"><img src="docs/images/an-answer-can-show-its-work.png" alt="Evidence-backed delivery: design carries rationale, source strategy, and review trail" width="900" /></a>
-</p>
-
-Every deliverable carries **rationale** (why this direction), **source strategy** (which brand truth it expresses), and a **review trail** (who approved it and when). Transparency builds stakeholder confidence.
-
----
+Optional Allura Brain access adds scoped context and outcome retention. Its availability and any successful write must be reported from actual receipts. Neither a role definition nor a diagram establishes that agents ran or that every decision was retained.
 
 ## What is included
 
@@ -114,7 +74,7 @@ For Claude Code development, load the checkout as a local plugin:
 claude --plugin-dir "$PWD"
 ```
 
-The generated `allura-plugins` catalog package remains the consumer-friendly marketplace route after catalog integration. It must identify the exact standalone commit from which it was exported. See [Installation](docs/INSTALLATION.md) and [Catalog export](docs/CATALOG-EXPORT.md).
+The generated `allura-plugins` catalog package is the marketplace route. Its provenance identifies the exact standalone commit from which it was exported. See [Installation](docs/INSTALLATION.md) and [Catalog export](docs/CATALOG-EXPORT.md).
 
 ## Configure
 
@@ -161,9 +121,9 @@ See [Architecture](ARCHITECTURE.md) for authority and dependency boundaries.
 ## Validate and export
 
 ```bash
-npm test
-npm run export:check
-npm run export -- --output /tmp/team-durham-export
+python3 scripts/validate_repository.py
+python3 scripts/export_catalog.py --check
+python3 scripts/export_catalog.py --output /tmp/team-durham-export
 ```
 
 The exporter injects the source Git SHA and a SHA-256 file inventory into the generated package. CI verifies manifests, role counts, paths, JSON contracts, evaluations, and export reproducibility.
@@ -176,7 +136,7 @@ Read [SECURITY.md](SECURITY.md) before reporting vulnerabilities and [CONTRIBUTI
 
 MIT — see [LICENSE](LICENSE).
 
-## Adaptive workflow (0.4.0)
+## Adaptive workflow
 
 See [the shared operating policy](governance/adaptive-workflow.md). Choose a
 quick, standard, or sensitive route; retain one accountable producer and select
